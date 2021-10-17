@@ -1,11 +1,32 @@
-include ../pug/mixins/button.pug
+include ../pug/_mixins.pug
 
-html 
+html
   head
     title Windy
-  body
-    h1 Windy
-    p A Practio Tailwind Components Library
-    h2 Components 
-    h3 Buttons
-    +button() Hello
+  body.p-10.bg-gray-100
+    +heading(size=1).mb-3 Windy
+    +paragraph.mb-3 A Practio Tailwind Components Library.
+    +heading(size=2).mb-3 Buttons
+    .flex.mb-3
+      +primaryButton Primary Button
+      +secondaryButton.ml-3 Secondary Button
+    +heading(size=2).mb-3 Cards
+    +card.mb-3
+      +cardHeader
+        +heading(size=2) Heading
+      +cardBody
+        +paragraph.mb-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu libero eu dolor aliquam auctor in sed velit. Nam nec lobortis diam. Ut lorem est, aliquet non felis eu, consequat lacinia neque. Suspendisse imperdiet, odio id dignissim rhoncus, est lorem mollis tellus, ut pharetra risus massa non enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce quis ultricies neque, elementum laoreet lorem. Nam quis congue sapien, quis pretium justo. Nullam vitae nisi lorem. Etiam arcu massa, venenatis tempus sollicitudin sit amet, mattis vitae leo. Quisque vel ullamcorper arcu. Pellentesque id tempor lorem.
+        +paragraph.mb-3 Aliquam vel justo efficitur, dictum ante vel, rhoncus sapien. Sed arcu arcu, interdum nec diam at, suscipit bibendum erat. Sed vel dolor sit amet nisi feugiat lobortis non in orci. In non nisl eget urna auctor accumsan. Nulla quis justo massa. Vivamus auctor ultrices tellus, at ultrices est gravida ac. Nam gravida elementum nunc, vel consequat purus rhoncus ut. Suspendisse ultricies eros diam, ac sagittis velit volutpat vel.
+      +cardFooter.flex
+        +primaryButton Primary Button
+        +secondaryButton.ml-3 Secondary Button
+    +heading(size=2).mb-3 Headings
+    +heading(size=1).mb-3 Heading 1
+    +heading(size=2).mb-3 Heading 2
+    +heading(size=3).mb-3 Heading 3
+    +heading(size=4).mb-3 Heading 4
+    +heading(size=5).mb-3 Heading 5
+    +heading(size=6).mb-3 Heading 6
+    +heading(size=2).mb-3 Paragraph
+    +paragraph.mb-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu libero eu dolor aliquam auctor in sed velit. Nam nec lobortis diam. Ut lorem est, aliquet non felis eu, consequat lacinia neque. Suspendisse imperdiet, odio id dignissim rhoncus, est lorem mollis tellus, ut pharetra risus massa non enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce quis ultricies neque, elementum laoreet lorem. Nam quis congue sapien, quis pretium justo. Nullam vitae nisi lorem. Etiam arcu massa, venenatis tempus sollicitudin sit amet, mattis vitae leo. Quisque vel ullamcorper arcu. Pellentesque id tempor lorem.
+    +paragraph.mb-3 Aliquam vel justo efficitur, dictum ante vel, rhoncus sapien. Sed arcu arcu, interdum nec diam at, suscipit bibendum erat. Sed vel dolor sit amet nisi feugiat lobortis non in orci. In non nisl eget urna auctor accumsan. Nulla quis justo massa. Vivamus auctor ultrices tellus, at ultrices est gravida ac. Nam gravida elementum nunc, vel consequat purus rhoncus ut. Suspendisse ultricies eros diam, ac sagittis velit volutpat vel.
