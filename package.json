@@ -1,6 +1,6 @@
 {
   "name": "@practio/windy",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Practio TailwindCSS Components",
   "scripts": {
     "start": "parcel ./src/pug/index.pug --port 8585",
