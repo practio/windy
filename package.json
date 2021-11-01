@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "parcel ./src/pug/index.pug --port 8080",
+    "start": "parcel ./src/pug/index.pug --port 8585",
     "dev": "npm-run-all --parallel dev:*",
-    "dev:serve": "node bin/dev.js",
     "dev:css": "tailwindcss -i ./src/css/tailwind.css -o dist/css/tailwind.css --watch",
-    "build": "parcel build ./src/pug/index.pug",
-    "build:css": "tailwindcss -i ./src/css/tailwind.css -o dist/css/tailwind.css --minify"
+    "build": "npm-run-all build:css build:parcel",
+    "build:css": "tailwindcss -i ./src/css/tailwind.css -o dist/css/tailwind.css --minify",
+    "build:parcel": "parcel build ./src/pug/windy.pug --dist-dir ./dist --no-content-hash"
   },
   "devDependencies": {
     "@parcel/transformer-html": "^2.0.0",
