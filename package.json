@@ -1,7 +1,7 @@
 {
-  "name": "parcel-pug",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@practio/windy",
+  "version": "0.0.0",
+  "description": "Practio TailwindCSS Components",
   "scripts": {
     "start": "parcel ./src/pug/index.pug --port 8585",
     "dev": "npm-run-all --parallel dev:*",
