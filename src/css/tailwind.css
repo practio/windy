@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center font-bold tracking-wide text-center border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue disabled:cursor-not-allowed;
+  }
+  ,
+  .btn-md {
+    @apply px-4 py-3 text-xs leading-none;
+  }
+  ,
+  .btn-lg {
+    @apply px-6 py-2 text-base;
+  }
+  ,
+  .btn-ghost {
+    @apply bg-transparent text-ink hover:bg-blue-lighter hover:text-blue;
+  }
+  .btn-ghost:disabled {
+    @apply text-ink-lightest hover:bg-transparent
+  }
+  ,
+  .btn-primary {
+    @apply text-white bg-blue hover:bg-blue-dark disabled:bg-blue-light;
+  }
+  ,
+  .btn-secondary {
+    @apply text-ink bg-sky hover:bg-blue-lighter hover:text-blue disabled:text-ink-lightest disabled:bg-sky-light;
+  }
+  ,
+  .input-base {
+    @apply block w-full bg-white rounded-md border-sky-dark hover:border-ink-lightest focus:ring-ink focus:border-ink placeholder-ink-lightest;
+  }
+}

@@ -1,19 +1,26 @@
 {
-  "name": "@practio/windy",
+  "name": "parcel-pug",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "build": "node bin/build.js",
-    "dev": "node bin/dev.js"
+    "start": "parcel ./src/pug/index.pug --port 8080",
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:serve": "node bin/dev.js",
+    "dev:css": "tailwindcss -i ./src/css/tailwind.css -o dist/css/tailwind.css --watch",
+    "build": "parcel build ./src/pug/index.pug",
+    "build:css": "tailwindcss -i ./src/css/tailwind.css -o dist/css/tailwind.css --minify"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "css-bingo": "^1.4.6",
-    "pug": "^3.0.2",
-    "sass": "^1.43.2",
+  "devDependencies": {
+    "@parcel/transformer-html": "^2.0.0",
+    "@parcel/transformer-posthtml": "^2.0.0",
+    "@parcel/transformer-pug": "^2.0.0",
+    "autoprefixer": "^10.3.7",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.0.0",
+    "postcss": "^8.3.11",
     "tailwindcss": "^2.2.17"
   },
-  "type": "module"
+  "dependencies": {
+    "@tailwindcss/forms": "^0.3.4"
+  }
 }

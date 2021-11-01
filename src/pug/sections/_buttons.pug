@@ -1,0 +1,31 @@
+mixin section-buttons
+  +section-container('Buttons')
+    div
+      +heading(size=5) Medium
+      div(class="mt-4")
+        +heading(size=6) Default state
+        div(class="flex flex-wrap gap-4 mt-2")
+          +primaryButton(size='md') Medium primary
+          +secondaryButton(size='md') Medium secondary
+          +ghostButton(size='md') Medium ghost
+      div(class="mt-4")
+        +heading(size=6) Disabled
+        div(class="flex flex-wrap gap-4 mt-2")
+          +primaryButton(size='md' disabled) Medium primary
+          +secondaryButton(size='md' disabled) Medium secondary
+          +ghostButton(size='md' disabled) Medium ghost
+
+    div(class="mt-8")
+      +heading(size=5) Large
+      div(class="mt-4")
+        +heading(size=6) Default state
+        div(class="flex flex-wrap gap-4 mt-2")
+          +primaryButton(size='lg') Large primary
+          +secondaryButton(size='lg') Large secondary
+          +ghostButton(size='lg') Large ghost
+      div(class="mt-4")
+        +heading(size=6) Disabled
+        div(class="flex flex-wrap gap-4 mt-2")
+          +primaryButton(size='lg' disabled) Large primary
+          +secondaryButton(size='lg' disabled) Large secondary
+          +ghostButton(size='lg' disabled) Large ghost
