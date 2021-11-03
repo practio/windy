@@ -1,0 +1,15 @@
+include ./_components.pug
+include ./_sections.pug
+include ./layouts/navigation.pug
+include ./layouts/head-data.pug
+
+doctype html
+html(lang="en")
+  +head('Components')
+  body(class="h-screen font-sans bg-sky-light")
+    +navigation
+    main(class="w-11/12 mx-auto mt-16 space-y-8")
+      +section-inputs
+      +section-shadows
+      +section-spacings
+      +section-buttons
