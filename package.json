@@ -6,7 +6,8 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "parcel --port 8585",
-    "build": "parcel build"
+    "build": "parcel build",
+    "build2": "tailwindcss -i ./src/css/tailwind.css -o ./dist/windy.css"
   },
   "devDependencies": {
     "@parcel/transformer-pug": "^2.2.1",
