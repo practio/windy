@@ -821,15 +821,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-family: Inter, ui-sans-serif, system-ui;
 }.font-mono {
   font-family: ui-monospace, SFMono-Regular;
+}.text-2xl {
+  font-size: 40px;
+  line-height: 50px;
 }.text-sm {
   font-size: 14px;
   line-height: 20px;
 }.text-base {
   font-size: 16px;
   line-height: 24px;
-}.text-2xl {
-  font-size: 40px;
-  line-height: 50px;
 }.text-xl {
   font-size: 32px;
   line-height: 40px;

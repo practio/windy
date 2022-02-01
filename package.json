@@ -7,7 +7,8 @@
   "scripts": {
     "start": "parcel --port 8585",
     "build": "parcel build",
-    "build2": "tailwindcss -i ./src/css/tailwind.css -o ./dist/windy.css"
+    "build2": "tailwindcss -i ./src/css/tailwind.css -o ./dist/windy.css",
+    "watch": "tailwindcss -i ./src/css/tailwind.css -o ./dist/windy.css --watch"
   },
   "devDependencies": {
     "@parcel/transformer-pug": "^2.2.1",
