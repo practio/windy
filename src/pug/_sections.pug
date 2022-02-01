@@ -1,0 +1,15 @@
+include ./sections/_buttons.pug
+include ./sections/_forms.pug
+include ./sections/_headings.pug
+include ./sections/_menu.pug
+include ./sections/_pagination.pug
+include ./sections/_spacings.pug
+include ./sections/_shadows.pug
+include ./sections/_tables.pug
+include ./sections/_todo.pug
+
+mixin section-container(name)
+  section(class="px-8 pt-6 pb-8 mx-auto bg-white rounded-xl")
+    +heading(size=4)= name
+    div(class="mt-4")&attributes(attributes)
+      block

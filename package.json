@@ -1,0 +1,21 @@
+{
+  "name": "@practio/windy",
+  "version": "0.1.5",
+  "description": "Practio TailwindCSS Components",
+  "source": "src/index.pug",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel --port 8585",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "@parcel/transformer-pug": "^2.2.1",
+    "@tailwindcss/forms": "^0.4.0",
+    "autoprefixer": "^10.4.2",
+    "parcel": "^2.2.1",
+    "postcss": "^8.4.5",
+    "prettier": "^2.5.1",
+    "prettier-plugin-tailwindcss": "^0.1.4",
+    "tailwindcss": "^3.0.15"
+  }
+}

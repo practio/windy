@@ -1,0 +1,18 @@
+include ./../components/button.pug
+
+mixin pagination
+  - const attr = attributes;
+  nav(class="flex items-center justify-between pt-3" aria-label="Pagination")&attributes(attributes)
+    div(class="hidden sm:block")
+      p(class="text-sm text-ink-light") 
+        | Showing 
+        span(class="font-semibold") 1 
+        | to 
+        span(class="font-semibold") 10 
+        | of 
+        span(class="font-semibold") 20 
+        | results
+
+    div(class="flex justify-between flex-1 -mr-4 gap-x-0.5 sm:justify-end")
+      +ghostButton Previous
+      +ghostButton Next

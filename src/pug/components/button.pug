@@ -1,0 +1,32 @@
+mixin primaryButton
+  - const { size = 'md' } = attributes;
+  case size
+    when 'md'
+      button(type="button" class="btn btn-md btn-primary")&attributes(attributes)
+        block 
+
+    when 'lg'
+      button(type="button" class="btn btn-lg btn-primary")&attributes(attributes)
+        block
+
+mixin secondaryButton
+  - const { size = 'md' } = attributes;
+  case size
+    when 'md'
+      button(type="button" class="btn btn-md btn-secondary")&attributes(attributes)
+        block
+
+    when 'lg'
+      button(type="button" class="btn btn-lg btn-secondary")&attributes(attributes)
+        block
+
+mixin ghostButton
+  - const { size = 'md' } = attributes;
+  case size
+    when 'md'
+      button(type="button" class="btn btn-md btn-ghost")&attributes(attributes)
+        block
+
+    when 'lg'
+      button(type="button" class="btn btn-lg btn-ghost")&attributes(attributes)
+        block

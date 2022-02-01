@@ -1,0 +1,6 @@
+mixin textarea(name, id, label, rows, placeholder)
+ div(class="form-control")
+  label(for= id class="form-label")
+    block
+  div(class="mt-1")
+    textarea(rows= rows name= name id= id class="form form-field" placeholder= placeholder)&attributes(attributes)

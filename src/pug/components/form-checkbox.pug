@@ -1,0 +1,32 @@
+mixin checkbox-input
+  input(type="checkbox")&attributes(attributes)
+
+mixin checkbox-input-field
+  +field
+    +checkbox-input&attributes(attributes)
+    div
+      +label(for=attributes.id)= attributes.label
+      +field-description= attributes.description
+
+
+
+//- DEPRICATED VERSION WITH STYLING
+
+//- mixin checkboxGroup(heading, subheading, legend)
+//-   div
+//-     label(class="text-base font-medium text-ink")= heading
+//-     p(class="text-sm leading-5 text-ink-lighter")= subheading
+//-     fieldset(class="mt-4")
+//-       legend(class="sr-only")= legend
+//-       div(class="space-y-4")
+//-         block
+          
+
+//- mixin checkbox(id, label, description)
+//-   div(class="relative flex items-start")
+//-     div(class="flex items-center h-5")
+//-       input(id= id aria-describedby= `${id}-description` name= id type="checkbox" class="w-4 h-4 rounded form form-checkbox")&attributes(attributes)
+
+//-     div(class="ml-3 text-sm")
+//-       label(for= id class="form-label")= label
+//-       p(id= `${id}-description` class="font-normal text-ink-lighter")= description

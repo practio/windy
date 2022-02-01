@@ -1,0 +1,15 @@
+mixin card()
+  div(class="bg-white overflow-hidden shadow rounded-lg divide-y divide-sky-dark")&attributes(attributes)
+    block
+
+mixin cardHeader()
+  div(class="px-4 py-5 sm:px-6")&attributes(attributes)
+    block
+
+mixin cardBody()
+  div(class="px-4 py-5 sm:p-6")&attributes(attributes)
+    block
+
+mixin cardFooter()
+  div(class="bg-gray-50 px-4 py-4 sm:px-6")&attributes(attributes)
+    block

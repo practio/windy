@@ -1,0 +1,33 @@
+mixin section-buttons
+  +section-container('Buttons')
+    p(class="mb-4 -mt-3 text-sm italic text-ink-lighter") TODO: Add variant with leading icon
+
+    div
+      +heading(size=5) Variant: Primary
+        div(class="flex flex-wrap gap-4 mt-2")
+          div(class="flex flex-wrap w-full gap-4")
+            +primaryButton(size='lg') Large primary
+            +primaryButton(size='lg' disabled) Large primary
+          div(class="flex flex-wrap w-full gap-4")
+            +primaryButton(size='md') Medium primary
+            +primaryButton(size='md' disabled) Medium primary
+            
+    div(class="mt-8")
+      +heading(size=5) Variant: Secondary
+        div(class="flex flex-wrap gap-4 mt-2")
+          div(class="flex flex-wrap w-full gap-4")
+            +secondaryButton(size='lg') Large secondary
+            +secondaryButton(size='lg' disabled) Large secondary
+          div(class="flex flex-wrap w-full gap-4")
+            +secondaryButton(size='md') Medium secondary
+            +secondaryButton(size='md' disabled) Medium secondary
+
+    div(class="mt-8")
+      +heading(size=5) Variant: Ghost
+        div(class="flex flex-wrap gap-4 mt-2")
+          div(class="flex flex-wrap w-full gap-4")
+            +ghostButton(size='lg') Large ghost
+            +ghostButton(size='lg' disabled) Large ghost
+          div(class="flex flex-wrap w-full gap-4")
+            +ghostButton(size='md') Medium ghost
+            +ghostButton(size='md' disabled) Medium ghost

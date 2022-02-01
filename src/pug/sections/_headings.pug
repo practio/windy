@@ -1,0 +1,9 @@
+mixin section-headings
+  +section-container('Headings')(class="space-y-8")
+    - let sizes = [1,2,3,4,5,6];
+    each size in sizes
+      div
+        +heading(size= size) The quick brown fox jumps over the lazy dog
+        span(class="text-xs font-semibold tracking-wider uppercase text-ink-lighter") heading(size=#{size})
+
+

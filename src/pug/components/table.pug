@@ -1,0 +1,88 @@
+include ./../components/pagination.pug
+//- filter drop-shadow
+mixin table 
+  div(class="flex flex-col")
+    div(class="overflow-x-auto rounded-lg drop-shadow")
+      div(class="inline-block min-w-full align-middle")
+        div(class="overflow-hidden")
+          table(class="min-w-full divide-y divide-sky ")
+            thead(class="bg-sky-lighter")
+              +tableHeadItem Created at
+              +tableHeadItem Created by
+              +tableHeadItem Registry
+              +tableHeadItem Status
+              +tableHeadItem
+                span(class="sr-only") View
+
+            +tableBody
+              +tableRow
+                +tableRowItem-time 03/11/2021・04:05
+                +tableRowItem-id 861bae5a-a4d2-4b05-b30e-556d20b6cd8d
+                +tableRowItem-textlink DDV
+                +tableRowItem-badge(type='fail')
+                +tableRowItem-action View
+              +tableRow
+                +tableRowItem-time 01/12/2021・20:05
+                +tableRowItem-id system
+                +tableRowItem-textlink DDV
+                +tableRowItem-badge(type='success')
+                +tableRowItem-action View
+  +pagination
+
+
+mixin tableHeadItem
+  th(scope="col" class="px-6 py-3 text-xs font-semibold tracking-wider text-left uppercase min-w-max text-ink-lighter")
+    block
+
+mixin tableBody
+  tbody(class="w-full bg-white divide-y divide-sky")
+    block
+
+mixin tableRow
+  tr
+    block
+
+
+//- ROW ITEMS
+mixin tableRowItem-base
+  - const attr = attributes;
+  td(class="px-6 py-4 text-sm leading-none min-w-max text-ink whitespace-nowrap")&attributes(attributes)
+    block
+
+mixin tableRowItem-text
+  +tableRowItem-base 
+    block
+
+mixin tableRowItem-textlink 
+  +tableRowItem-base(class="font-medium underline")
+    a(href="#" class="text-blue hover:text-blue-dark")
+      block
+
+
+mixin tableRowItem-time
+  +tableRowItem-base(class="tracking-tight tabular-nums")
+    block
+
+mixin tableRowItem-id
+  +tableRowItem-base
+    span(class="px-2 py-1 font-mono text-xs font-semibold border rounded border-sky bg-sky-lighter text-ink-light")
+      //- style="color:#d63384;"
+      block
+
+mixin tableRowItem-badge
+  - const {type = 'success' } = attributes;
+  case type
+    when 'success'
+      +tableRowItem-base
+        span(class="px-2 py-1 text-xs font-semibold leading-none text-white rounded" style="background: rgba(219, 237, 219, 0.5); color: rgba(28, 56, 41, 1.0);") Success
+    when 'fail'
+      +tableRowItem-base
+        span(class="px-2 py-1 text-xs font-semibold leading-none text-white rounded" style="color: rgb(93, 23, 21); background: rgba(255, 226, 221, 0.5);") Failed
+
+mixin tableRowItem-action
+  td(class="pr-4")
+    div(class="flex items-center justify-end ")
+      button(type="button" href="#" class="p-2 duration-200 hover:translate-x-1 whitespace-nowrap text-ink-lighter hover:text-blue")
+        svg(xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 " viewBox="0 0 20 20" fill="currentColor")
+          path(fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd")
+          
