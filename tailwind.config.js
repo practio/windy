@@ -1,9 +1,11 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx,pug}'],
   safelist: [
-    'text-2xl',
     {
       pattern: /.+/,
+    },
+    {
+      pattern: /(bg|border|outline)-/,
       variants: [ 'hover' ]
     },
   ],
@@ -23,7 +25,6 @@ module.exports = {
       5: '1.25rem', // 20px
       6: '24px', // 24px
       8: '2rem', // 32px
-      10: '2.5rem', // 40px
       12: '3rem', // 48px
       16: '4rem', // 64px
       24: '6rem', // 96px
