@@ -4,6 +4,7 @@ module.exports = {
     'text-2xl',
     {
       pattern: /.+/,
+      variants: [ 'hover' ]
     },
   ],
   theme: {
