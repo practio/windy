@@ -5,10 +5,13 @@
   "source": "src/index.pug",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "parcel": "parcel --port 8585",
     "parcel:build": "parcel build",
+    "parcel": "parcel --port 8585",
+    "postversion": "git push && git push --tags",
+    "preversion": "npm test",
+    "tailwindcss:watch": "tailwindcss -i ./src/css/tailwind.css -o ./dist/windy.css --watch",
     "tailwindcss": "tailwindcss -i ./src/css/tailwind.css -o ./dist/windy.css",
-    "tailwindcss:watch": "tailwindcss -i ./src/css/tailwind.css -o ./dist/windy.css --watch"
+    "test": ""
   },
   "devDependencies": {
     "@parcel/transformer-pug": "^2.2.1",
