@@ -9,11 +9,13 @@ mixin section-forms
         +option(value="london")= London
       +fieldset
         +fieldset-heading Size
-        +radio-input-field(label="Small" name="size" id="size_small" value="small")
-        +radio-input-field(label="Medium" name="size" id="size_medium" value="medium")
-        +radio-input-field(label="Large" name="size" id="size_large" value="large")
+          +stack
+            +radio-input-field(label="Small" name="size" id="size_small" value="small")
+            +radio-input-field(label="Medium" name="size" id="size_medium" value="medium")
+            +radio-input-field(label="Large" name="size" id="size_large" value="large")
       +fieldset
         +fieldset-heading Color
-        +checkbox-input-field(label="Red" name="color" id="color_red" value="red")
-        +checkbox-input-field(label="Green" name="color" id="color_green" value="green")
-        +checkbox-input-field(label="Blue" name="color" id="color_blue" value="blue" description="Description for Blue")
+          +stack(class="")
+            +checkbox-input-field(label="Red" name="color" id="color_red" value="red")
+            +checkbox-input-field(label="Green" name="color" id="color_green" value="green")
+            +checkbox-input-field(label="Blue" name="color" id="color_blue" value="blue" description="Description for Blue")

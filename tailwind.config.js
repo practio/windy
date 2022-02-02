@@ -1,9 +1,9 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx,pug}'],
   safelist: [
-    'text-2xl',
     {
       pattern: /.+/,
+      variants: [],
     },
   ],
   theme: {

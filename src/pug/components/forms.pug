@@ -21,8 +21,8 @@ mixin label
     block
 
 mixin field
-  - const { orientation = "vertical" } = attributes;
-  case orientation
+  - const { direction = "vertical" } = attributes;
+  case direction
     when "vertical"
       div(class="flex flex-col gap-y-1")&attributes(attributes)
         block
@@ -48,10 +48,10 @@ mixin text-input
   input(type="text" class="form form-field")&attributes(attributes)
 
 mixin radio-input
-  input(type="radio")&attributes(attributes)
+  input(type="radio" class="form")&attributes(attributes)
 
 mixin checkbox-input
-  input(type="checkbox")&attributes(attributes)
+  input(type="checkbox" class="form rounded text-red")&attributes(attributes)
 
 
 //- MOLECULES
@@ -66,15 +66,15 @@ mixin email-input-field
     +text-input&attributes(attributes)
 
 mixin radio-input-field
-  +field(orientation="horizontal")
+  +field(direction="horizontal")
     +radio-input&attributes(attributes)
     div
       +label(for=attributes.id)= attributes.label
       +field-description= attributes.description
 
 mixin checkbox-input-field
-  +field(orientation="horizontal")
-    +checkbox-input&attributes(attributes)
+  +field(direction="horizontal")
+    +checkbox-input(class="mt-px")&attributes(attributes)
     div
       +label(for=attributes.id)= attributes.label
       +field-description= attributes.description

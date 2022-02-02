@@ -5,43 +5,43 @@
 @layer components {
   /* BUTTONS */
   .btn {
-    @apply inline-flex items-center font-semibold tracking-wide text-center border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue disabled:cursor-not-allowed;
+    @apply inline-flex items-center justify-center rounded-md border border-transparent text-center font-bold tracking-wide focus:outline-none focus:ring-2 focus:ring-blue focus:ring-offset-2 disabled:cursor-not-allowed;
   }
 
   .btn-md {
     @apply h-8 px-3 text-xs;
   }
-  
+
   .btn-lg {
     @apply h-12 px-5 text-base;
   }
-  
+
   .btn-primary {
-    @apply text-white bg-blue hover:bg-blue-dark disabled:bg-blue-light;
+    @apply bg-blue text-white hover:bg-blue-dark disabled:bg-blue-light;
   }
-  
+
   .btn-secondary {
-    @apply text-ink bg-sky-light hover:bg-blue-lighter hover:text-blue disabled:text-ink-lightest disabled:bg-sky-light;
+    @apply bg-sky-light text-ink hover:bg-blue-lighter hover:text-blue disabled:bg-sky-light disabled:text-ink-lightest;
   }
 
   .btn-ghost {
     @apply bg-transparent text-ink hover:bg-blue-lighter hover:text-blue disabled:text-ink-lightest disabled:hover:bg-transparent;
   }
-  
+
   /* FORMS */
   .form {
-    @apply bg-white border-sky-dark hover:border-ink-lightest focus:ring-ink focus:border-ink disabled:opacity-100 disabled:cursor-not-allowed disabled:bg-sky-light disabled:hover:border-sky-dark;
+    @apply border-2 border-sky-dark bg-white hover:border-ink-lightest focus:border-ink focus:ring-ink disabled:cursor-not-allowed disabled:bg-sky-light disabled:opacity-100 disabled:hover:border-sky-dark;
   }
-  
+
   .form-control {
-    @apply flex flex-col flex-grow;
+    @apply flex flex-grow flex-col;
   }
-  
+
   .form-field,
   .form-select {
     @apply block w-full rounded-md placeholder-ink-lightest disabled:bg-sky-light disabled:text-ink-lighter;
   }
-  
+
   .label {
     @apply block text-sm font-medium text-ink;
   }

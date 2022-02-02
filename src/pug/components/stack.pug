@@ -1,0 +1,10 @@
+mixin stack
+  - const { direction = "vertical" } = attributes;
+  - const { gap = "0" } = attributes;
+  case direction
+    when "vertical"
+      div(class=`flex flex-col`)&attributes(attributes)
+        block
+    when "horizontal"
+      div(class="flex")&attributes(attributes)
+        block
