@@ -8,6 +8,14 @@ module.exports = {
       pattern: /(bg|border|outline)-/,
       variants: [ 'hover' ]
     },
+    {
+      pattern: /(p|pt|pr|pb|pl|py|px|m|mt|mr|mb|ml|my|mx)-/,
+      variants: [ 'sm' ]
+    },
+    {
+      pattern: /(hidden|inline|inline-block|block)/,
+      variants: [ 'sm' ]
+    },
   ],
   theme: {
     // SPACING
