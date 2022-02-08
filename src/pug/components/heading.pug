@@ -1,6 +1,6 @@
 mixin heading
   - 
-    let { size = 1, as, attrs } = attributes;
+    let { size = 1, as, ...attrs } = attributes;
 
     if (!as) {
       as = `h${size}`
