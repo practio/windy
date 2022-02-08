@@ -1,6 +1,6 @@
 mixin button
   -
-    const { size = 'md', kind = 'secondary', as = 'button' } = attributes;
+    const { size = 'md', kind = 'secondary', as = 'button', attrs } = attributes;
 
     const classes = [
       'btn',
@@ -8,5 +8,5 @@ mixin button
       `btn-${kind}`
     ];
 
-  #{as}(class=classes)&attributes(attributes)
+  #{as}(class=classes)&attributes(attrs)
     block
