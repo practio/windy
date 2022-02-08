@@ -2,24 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --sky-lighter: #f9fafb;
+  --sky-light: #f4f6f8;
+  --sky: #dfe3e8;
+  --sky-dark: #c4cdd5;
+  --ink-lightest: #919eab;
+  --ink-lighter: #637381;
+  --ink-light: #3d4754;
+  --ink: #192029;
+  --blue-lighter: #e5eeff;
+  --blue-light: #b2cdff;
+  --blue: #1161fb;
+  --blue-dark: #0439cc;
+  --blue-darker: #001640;
+  --success: #27cc6a;
+  --warning: #fdba2c;
+  --alert: #ef3136;
+  --white: #ffffff;
+}
+
 @layer components {
   /* BUTTONS */
   .btn {
-    @apply inline-flex items-center font-semibold tracking-wide text-center border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue disabled:cursor-not-allowed;
+    @apply inline-flex items-center font-semibold tracking-wide text-center border border-transparent rounded-md focus:ring-blue focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:cursor-not-allowed;
   }
 
   .btn-md {
     @apply h-8 px-3 text-xs;
   }
-  
+
   .btn-lg {
     @apply h-12 px-5 text-base;
   }
-  
+
   .btn-primary {
     @apply text-white bg-blue hover:bg-blue-dark disabled:bg-blue-light;
   }
-  
+
   .btn-secondary {
     @apply text-ink bg-sky-light hover:bg-blue-lighter hover:text-blue disabled:text-ink-lightest disabled:bg-sky-light;
   }
@@ -27,21 +47,21 @@
   .btn-ghost {
     @apply bg-transparent text-ink hover:bg-blue-lighter hover:text-blue disabled:text-ink-lightest disabled:hover:bg-transparent;
   }
-  
+
   /* FORMS */
   .form {
-    @apply bg-white border-sky-dark hover:border-ink-lightest focus:ring-ink focus:border-ink disabled:opacity-100 disabled:cursor-not-allowed disabled:bg-sky-light disabled:hover:border-sky-dark;
+    @apply bg-white border-sky-dark hover:border-ink-lightest focus:ring-ink focus:border-ink disabled:bg-sky-light disabled:hover:border-sky-dark disabled:cursor-not-allowed disabled:opacity-100;
   }
-  
+
   .form-control {
     @apply flex flex-col flex-grow;
   }
-  
+
   .form-field,
   .form-select {
     @apply block w-full rounded-md placeholder-ink-lightest disabled:bg-sky-light disabled:text-ink-lighter;
   }
-  
+
   .label {
     @apply block text-sm font-medium text-ink;
   }

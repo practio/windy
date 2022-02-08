@@ -48,31 +48,31 @@ module.exports = {
 
       // Practio DS colors
       sky: {
-        lighter: "#F9FAFB",
-        light: "#F4F6F8",
-        DEFAULT: "#DFE3E8",
-        dark: "#C4CDD5",
+        lighter: "var(--sky-lighter)",
+        light: "var(--sky-light)",
+        DEFAULT: "var(--sky)",
+        dark: "var(--sky-dark)",
       },
       ink: {
-        lightest: "#919EAB",
-        lighter: "#637381",
-        light: "#3D4754",
-        DEFAULT: "#192029",
+        lightest: "var(--ink-lightest)",
+        lighter: "var(--ink-lighter)",
+        light: "var(--ink-light)",
+        DEFAULT: "var(--ink)",
       },
       blue: {
-        lighter: "#E5EEFF",
-        light: "#B2CDFF",
-        DEFAULT: "#1161FB",
-        dark: "#0439CC",
-        darker: "#001640",
+        lighter: "var(--blue-lighter)",
+        light: "var(--blue-light)",
+        DEFAULT: "var(--blue)",
+        dark: "var(--blue-dark)",
+        darker: "var(--blue-darker)",
       },
       // Interaction colors
-      success: "#27CC6A",
-      warning: "#FDBA2C",
-      alert: "#EF3136",
+      success: "var(--success)",
+      warning: "var(--warning)",
+      alert: "var(--alert)",
 
       // etc
-      white: "#FFFFFF",
+      white: "var(--white)",
     },
 
     // FONT SIZES
