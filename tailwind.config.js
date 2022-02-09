@@ -125,6 +125,5 @@ module.exports = {
       none: "none",
     },
   },
-
   plugins: [require("@tailwindcss/forms")],
 };
