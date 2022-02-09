@@ -5,7 +5,7 @@
   "source": "./docs/index.pug",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "docs": "parcel --port 8585 --dist-dir .parcel-cache/dist",
+    "docs": "parcel --port 8585 --dist-dir ./docs",
     "postversion": "git push && git push",
     "preversion": "npm test",
     "watch": "tailwindcss -i ./css/windy.css -o ./dist/windy.css --watch",
