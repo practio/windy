@@ -1,4 +1,4 @@
-include ../pug/_mixins.pug
+include ../pug/windy.pug
 
 doctype html
 html(lang="en")
@@ -9,6 +9,9 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet", href="../css/windy.css")
     link(rel="stylesheet", href="https://rsms.me/inter/inter.css")
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet")
   body(class="font-sans bg-sky-light")
     main
       +container
@@ -16,7 +19,9 @@ html(lang="en")
         +paragraph.mb-8 Practio ♥ Tailwind...
 
         include ./sections/_buttons.pug
+        include ./sections/_dialogs.pug
         include ./sections/_forms.pug
         include ./sections/_headings.pug
         include ./sections/_menu.pug
         include ./sections/_util.pug
+script(src="../js/windy.js")
