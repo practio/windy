@@ -1,28 +1,29 @@
 include ../_mixins.pug
 
-+heading2.mb-1 Dialog
-+paragraph.mb-8 Use dialogs...
++section
+  +heading2.mb-1 Dialog
+  +paragraph.mb-8 Use dialogs when...
 
-+heading4.mb-8 Show
+  +heading4.mb-8 Show
 
-+example.mb-8
-  +exampleDisplay
-    +dialog#dialog1
-      +button(kind="primary" data-action="close" size="large") Close Dialog
-    +button(kind="primary" data-target="#dialog1" size="large" data-action="show") Show Dialog
-  +exampleSourceCode.
-    +dialog#dialog1
-      +button(kind="primary" data-action="close" size="large") Close Dialog
-    +button(kind="primary" data-target="#dialog1" size="large" data-action="show") Show Dialog
+  +example.mb-8
+    +exampleDisplay
+      +dialog#dialog1
+        +button(kind="primary" data-action="close" size="large") Close Dialog
+      +button(kind="primary" data-target="#dialog1" size="large" data-action="show") Show Dialog
+    +exampleSourceCode.
+      +dialog#dialog1
+        +button(kind="primary" data-action="close" size="large") Close Dialog
+      +button(kind="primary" data-target="#dialog1" size="large" data-action="show") Show Dialog
 
-+heading4.mb-8 Show Modal
+  +heading4.mb-8 Show Modal
 
-+example.mb-8
-  +exampleDisplay
-    +dialog#dialog2
-      +button(kind="primary" data-action="close" size="large") Close Dialog
-    +button(kind="primary" data-target="#dialog2" size="large" data-action="showModal") Show Modal Dialog
-  +exampleSourceCode.
-    +dialog#dialog2
-      +button(kind="primary" data-action="close" size="large") Close Dialog
-    +button(kind="primary" data-target="#dialog2" size="large" data-action="showModal") Show Modal Dialog
+  +example.mb-8
+    +exampleDisplay
+      +dialog#dialog2
+        +button(kind="primary" data-action="close" size="large") Close Dialog
+      +button(kind="primary" data-target="#dialog2" size="large" data-action="showModal") Show Modal Dialog
+    +exampleSourceCode.
+      +dialog#dialog2
+        +button(kind="primary" data-action="close" size="large") Close Dialog
+      +button(kind="primary" data-target="#dialog2" size="large" data-action="showModal") Show Modal Dialog

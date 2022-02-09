@@ -12,3 +12,11 @@ mixin exampleSourceCode
     pre
       code.text-md(style="font-family: 'Source Code Pro', monospace;")
         block
+
+mixin section
+  +hr
+  +container
+    block
+
+mixin hr
+  hr.border-t.border-t-sky.border-b.border-b-white
