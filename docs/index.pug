@@ -1,0 +1,22 @@
+include ../pug/_mixins.pug
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Windy | Practio ♥ Tailwind
+    meta(name="description" content="Practio ♥ Tailwind")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="../css/windy.css")
+    link(rel="stylesheet", href="https://rsms.me/inter/inter.css")
+  body(class="font-sans bg-sky-light")
+    main
+      +container
+        +heading1.mb-1 Windy
+        +paragraph.mb-8 Practio ♥ Tailwind...
+
+        include ./sections/_buttons.pug
+        include ./sections/_forms.pug
+        include ./sections/_headings.pug
+        include ./sections/_menu.pug
+        include ./sections/_util.pug

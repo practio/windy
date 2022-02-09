@@ -1,0 +1,14 @@
+
+mixin example
+  .shadow.rounded-lg&attributes(attributes)
+    block
+
+mixin exampleDisplay
+  .p-6.bg-white.rounded-t-lg.flex.gap-4&attributes(attributes)
+    block
+
+mixin exampleSourceCode
+  .p-6.bg-sky-lighter.rounded-b-lg&attributes(attributes)
+    pre.font-mono
+      code.text-md.language-pug
+        block

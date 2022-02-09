@@ -1,0 +1,72 @@
+include ../_mixins.pug
+
++heading2.mb-1 Forms
++paragraph.mb-8 Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.
+
++heading3.mb-1 Examples
++paragraph.mb-8 Give textual form controls like inputs and textareas an upgrade with custom styles, sizing, focus states, and more..
+
++heading4.mb-8 Input Fields
++example.mb-8
+  +exampleDisplay
+    +textInputField(name="text1" placeholder="Text")
+    +emailInputField(name="email1" placeholder="Email")
+  +exampleSourceCode.
+    +textInputField(name="text1" placeholder="Text")
+    +emailInputField(name="email1" placeholder="Email")
+
++heading4.mb-8 Input Fields with Labels
++example.mb-8
+  +exampleDisplay
+    +textInputField(label="Text 1" name="text1" id="text1" placeholder="Text")
+    +emailInputField(label="Email 1" name="email1" id="email1" placeholder="Email")
+  +exampleSourceCode.
+    +textInputField(label="Text 1" name="text1" id="text1" placeholder="Text")
+    +emailInputField(label="Email 1" name="email1" id="email1" placeholder="Email")
+
++heading4.mb-8 Select Field
++example.mb-8
+  +exampleDisplay
+    +selectField(name="city" id="city")
+      +option(value="berlin") Berlin
+      +option(value="copenhagen") Copenhagen
+      +option(value="london") London
+  +exampleSourceCode.
+    +selectField(name="city" id="city")
+      +option(value="berlin") Berlin
+      +option(value="copenhagen") Copenhagen
+      +option(value="london") London
+
++heading4.mb-8 Select Field with Labels
++example.mb-8
+  +exampleDisplay
+    +selectField(label="City" name="city" id="city")
+      +option(value="berlin") Berlin
+      +option(value="copenhagen") Copenhagen
+      +option(value="london") London
+  +exampleSourceCode.
+    +selectField(label="City" name="city" id="city")
+      +option(value="berlin") Berlin
+      +option(value="copenhagen") Copenhagen
+      +option(value="london") London
+
++heading4.mb-8 Form
++example.mb-8
+  +exampleDisplay
+    +form
+      +textInputField(label="Name" name="name" id="name")
+      +emailInputField(label="Email" name="email" id="email")
+      +selectField(label="City" name="city" id="city")
+        +option(value="berlin") Berlin
+        +option(value="copenhagen") Copenhagen 1
+        +option(value="london") London
+      +button(type="submit" kind="primary" size="lg") Submit
+  +exampleSourceCode.
+    +form
+      +textInputField(label="Name" name="name" id="name")
+      +emailInputField(label="Email" name="email" id="email")
+      +selectField(label="City" name="city" id="city")
+        +option(value="berlin") Berlin
+        +option(value="copenhagen") Copenhagen 1
+        +option(value="london") London
+      +button(type="submit" kind="primary" size="lg") Submit

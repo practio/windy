@@ -1,0 +1,20 @@
+include _element.pug
+
+mixin container(tagName = "div")
+  -
+    const classNames = [
+      'container',
+      'mx-auto',
+      'p-6',
+      'sm:px-0',
+      'sm:py-16'
+    ];
+
+  +element(tagName)(class=classNames)&attributes(attributes)
+    block
+
+mixin narrowContainer(tagName = "div")
+  - const style = 'max-width: 552px';
+
+  +container(tagName)(style=style)&attributes(attributes)
+    block

@@ -1,0 +1,51 @@
+include ../_mixins.pug
+
++heading2.mb-1 Buttons
++paragraph.mb-8 Use Windy's custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
+
++heading3.mb-1 Examples
++paragraph.mb-8 Windy includes several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.
+
++heading4.mb-8 Buttons
++example.mb-8
+  +exampleDisplay
+    +button(kind="primary") Primary Button
+    +button(kind="secondary") Secondary Button
+    +button(kind="ghost") Ghost Button
+  +exampleSourceCode.
+    +button(kind="primary") Primary Button
+    +button(kind="secondary") Secondary Button
+    +button(kind="ghost") Ghost Button
+
++heading4.mb-8 Large Buttons
++example.mb-8
+  +exampleDisplay
+    +button(kind="primary" size="lg") Large Primary Button
+    +button(kind="secondary" size="lg") Large Secondary Button
+    +button(kind="ghost" size="lg") Large Ghost Button
+  +exampleSourceCode.
+    +button(kind="primary" size="lg") Large Primary Button
+    +button(kind="secondary" size="lg") Large Secondary Button
+    +button(kind="ghost" size="lg") Large Ghost Button
+
++heading4.mb-8 Disabled Buttons
++example.mb-8
+  +exampleDisplay
+    +button(kind="primary" disabled) Large Primary Button
+    +button(kind="secondary" disabled) Large Secondary Button
+    +button(kind="ghost" disabled) Large Ghost Button
+  +exampleSourceCode.
+    +button(kind="primary" disabled) Large Primary Button
+    +button(kind="secondary" disabled) Large Secondary Button
+    +button(kind="ghost" disabled) Large Ghost Button
+
++heading4.mb-8 Link Buttons
++example.mb-8
+  +exampleDisplay
+    +linkButton(kind="primary" href="https://practio.com/") Primary Button
+    +linkButton(kind="secondary" href="https://practio.com/") Secondary Button
+    +linkButton(kind="ghost" href="https://practio.com/") Ghost Button
+  +exampleSourceCode.
+    +linkButton(kind="primary" href="https://practio.com/") Primary Button
+    +linkButton(kind="secondary" href="https://practio.com/") Secondary Button
+    +linkButton(kind="ghost" href="https://practio.com/") Ghost Button

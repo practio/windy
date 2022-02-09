@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx,pug}"],
+  content: ["./pug/**/*.{js,ts,jsx,tsx,pug}"],
   safelist: [
     {
       pattern: /.+/,

@@ -2,16 +2,14 @@
   "name": "@practio/windy",
   "version": "0.9.1",
   "description": "Practio TailwindCSS Components",
-  "source": "src/index.pug",
+  "source": "./docs/index.pug",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "parcel:build": "parcel build",
-    "parcel": "parcel --port 8585",
+    "docs": "parcel --port 8585",
     "postversion": "git push && git push --tags",
     "preversion": "npm test",
-    "tailwindcss:watch": "tailwindcss -i ./src/css/tailwind.css -o ./dist/windy.css --watch",
-    "tailwindcss": "tailwindcss -i ./src/css/tailwind.css -o ./dist/windy.css  --minify",
-    "test": ""
+    "watch": "tailwindcss -i ./css/windy.css -o ./dist/windy.css --watch",
+    "build": "tailwindcss -i ./css/windy.css -o ./dist/windy.css  --minify"
   },
   "devDependencies": {
     "@parcel/transformer-pug": "^2.2.1",
