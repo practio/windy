@@ -8,10 +8,10 @@ mixin button(tagName = "button")
       'border-transparent',
       'border',
       'disabled:cursor-not-allowed',
-      'focus:outline-none',
-      'focus:ring-2',
-      'focus:ring-blue',
-      'focus:ring-offset-2',
+      // 'focus:outline-none',
+      // 'focus:ring-2',
+      // 'focus:ring-blue',
+      // 'focus:ring-offset-2',
       'font-semibold',
       'inline-flex',
       'items-center',
@@ -56,6 +56,12 @@ mixin button(tagName = "button")
         'hover:bg-blue-lighter',
         'hover:text-blue',
         'text-ink'
+      ],
+      critical: [
+        'bg-red',
+        'disabled:bg-red-light',
+        'hover:bg-red-dark',
+        'text-white'
       ]
     };
 

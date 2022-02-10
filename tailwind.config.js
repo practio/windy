@@ -25,7 +25,7 @@ module.exports = {
     spacing: {
       0: "0rem",
       px: "1px",
-      0.5: "0.125rem", // 2px
+      "2px": "0.125rem", // 2px
       1: "0.25rem", // 4px
       2: "0.5rem", // 8px
       3: "0.75rem", // 12px
@@ -65,6 +65,13 @@ module.exports = {
         DEFAULT: "var(--blue)",
         dark: "var(--blue-dark)",
         darker: "var(--blue-darker)",
+      },
+      red: {
+        lighter: "var(--red-lighter)",
+        light: "var(--red-light)",
+        DEFAULT: "var(--red)",
+        dark: "var(--red-dark)",
+        darker: "var(--red-darker)",
       },
       // Interaction colors
       success: "var(--success)",

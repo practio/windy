@@ -4,7 +4,7 @@
 
 :root {
   --sky-lighter: #f9fafb;
-  --sky-light: #f4f6f8;
+  --sky-light: hsl(210, 22%, 96%);
   --sky: #dfe3e8;
   --sky-dark: #c4cdd5;
   --ink-lightest: #919eab;
@@ -16,6 +16,11 @@
   --blue: #1161fb;
   --blue-dark: #0439cc;
   --blue-darker: #001640;
+  --red-lighter: #ffe5e6;
+  --red-light: #ffa6a8;
+  --red: #ef3136;
+  --red-dark: #bf0005;
+  --red-darker: #400002;
   --success: #27cc6a;
   --warning: #fdba2c;
   --alert: #ef3136;

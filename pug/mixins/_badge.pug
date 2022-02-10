@@ -1,0 +1,30 @@
+include _element.pug
+
+mixin badge(tagName = "div")
+  -
+    const { color = 'grey', ...attrs } = attributes;
+
+    const colors = {
+      green: '#D6E8E3',
+      orange: '#F9E2D4',
+      pink: '#F2D4E6',
+      blue: '#D6E5F7',
+      yellow: '#FAF3DD',
+      grey: '#DFE3E8',
+    }
+
+    const style = {
+      'background-color': colors[color]
+    }
+
+    const classNames = [
+      'px-2',
+      'py-1',
+      'text-xs',
+      'text-ink',
+      'rounded-full',
+      'leading-none'
+    ];
+
+  +element(tagName)(class=classNames style=style)&attributes(attrs)
+    block
