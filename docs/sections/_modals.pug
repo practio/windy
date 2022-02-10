@@ -7,7 +7,7 @@ include ../_mixins.pug
   +example.mb-8
     +exampleDisplay
       +button(data-action="showModal" data-target="#modal1") Show modal
-      +modal#modal1
+      +modalDialog#modal1
         +modalHeader
           +modalTitle Modal title
         +modalBody
@@ -18,7 +18,7 @@ include ../_mixins.pug
           +button(kind="primary") Primary Action
     +exampleSourceCode.
       +button(data-action="showModal" data-target="#modal1") Show modal
-      +modal#modal1
+      +modalDialog#modal1
         +modalHeader
           +modalTitle Modal title
         +modalBody
@@ -31,7 +31,7 @@ include ../_mixins.pug
   +example.mb-8
     +exampleDisplay
       +button(data-action="showModal" data-target="#modal2") Show modal
-      +modal#modal2
+      +modalDialog#modal2
         +modalHeader
           +modalTitle Modal title
           +modalSubTitle Step 1 of 2
@@ -61,7 +61,7 @@ include ../_mixins.pug
           +button(kind="primary") Primary Action
     +exampleSourceCode.
       +button(data-action="showModal" data-target="#modal2") Show modal
-      +modal#modal2
+      +modalDialog#modal2
         +modalHeader
           +modalTitle Modal title
           +modalSubTitle Step 1 of 2

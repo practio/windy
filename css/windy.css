@@ -31,3 +31,9 @@ dialog::backdrop {
   background-color: #192029;
   opacity: 0.7;
 }
+
+dialog {
+  padding: 0;
+  max-width: calc(100% - 4rem);
+  max-height: calc(100% - 4rem);
+}

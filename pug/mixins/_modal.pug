@@ -1,11 +1,15 @@
 include _element.pug
 include _dialog.pug
 
+mixin modalDialog(tagName = "dialog")
+  +dialog&attributes(attributes)
+    +modal
+      block
 
-mixin modal(tagName = "dialog")
+mixin modal(tagName = "div")
   - const classNames = 'rounded-lg bg-white shadow-xl';
 
-  +dialog(class=classNames style="width: 552px;")&attributes(attributes)
+  +element(tagName)(class=classNames style="max-width: 552px;")&attributes(attributes)
     block
 
 
@@ -33,7 +37,17 @@ mixin closeButton
     +solidIcon("x").text-ink-lighter
 
 mixin modalFooter(tagName = "footer")
-  footer.p-6.flex.gap-x-4.justify-end
+  -
+    const classNames = [
+      'p-6',
+      'flex',
+      'flex-col',
+      'gap-4',
+      'sm:flex-row',
+      'sm:justify-end',
+    ];
+
+  +element('footer')(class=classNames)&attributes(attributes)
     block 
 
 mixin modalHeader(tagName = "header")
