@@ -9,7 +9,7 @@ mixin modalDialog(tagName = "dialog")
 mixin modal(tagName = "div")
   - const classNames = 'rounded-lg bg-white shadow-xl';
 
-  +element(tagName)(class=classNames style="max-width: 552px;")&attributes(attributes)
+  +element(tagName)(class=classNames style="width: min(552px, calc(100vw - 4rem))")&attributes(attributes)
     block
 
 
