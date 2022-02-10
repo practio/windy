@@ -1,0 +1,112 @@
+include _element.pug
+
+mixin avatar(tagName = "div")
+  -
+    const { kind = 'one', size = 'medium', ...attrs } = attributes;
+
+    const spec = {
+      default: {
+        classes: [
+          'text-white',
+          'rounded-full',
+          'leading-none',
+          'flex',
+          'justify-center',
+          'items-center',
+        ],
+        styles: {}
+      },
+      kinds:  {
+        one: {
+          classes: [],
+          styles: {
+            'background-color': '#1BD1C5',
+          },
+        },
+        two: {
+          classes: [],
+          styles: {
+            'background-color': '#8B6BFF',
+          },
+        },
+        three: {
+          classes: [],
+          styles: {
+            'background-color': '#EF3136',
+          },
+        },
+        four: {
+          classes: [],
+          styles: {
+            'background-color': '#FDBA2C',
+          },
+        },
+        five: {
+          classes: [],
+          styles: {
+            'background-color': '#00857C',
+          },
+        },
+        six: {
+          classes: [],
+          styles: {
+            'background-color': '#4A2ABF',
+          },
+        },
+        seven: {
+          classes: [],
+          styles: {
+            'background-color': '#BF0005',
+          },
+        },
+        eight: {
+          classes: [],
+          styles: {
+            'background-color': '#B87D00',
+          },
+        },
+      },
+      sizes: {
+        small: {
+          classes: [
+            'h-6',
+            'w-6',
+            'text-xs',
+            'tracking-tight',
+          ],
+          styles: {
+            'font-size': '9px',
+            'font-weight': '900',
+            'line-height': '10px',
+          },
+        },
+        medium: {
+          classes: [
+            'h-8',
+            'w-8',
+            'text-xs',
+            'tracking-tight',
+          ],
+          styles: {
+            'font-size': '12px',
+            'font-weight': '800',
+          },
+        },
+        large: {
+          classes: [
+            'h-12',
+            'w-12',
+          ],
+          styles: {
+            'font-size': '18px',
+            'font-weight': '700',
+          },
+        },
+      },
+    };
+
+    const classNames = [...spec.default.classes, ...spec.kinds[kind].classes, ...spec.sizes[size].classes].sort();
+    const styles = { ...spec.default.styles, ...spec.kinds[kind].styles, ...spec.sizes[size].styles };
+
+  +element(tagName)(class=classNames style=styles)&attributes(attrs)
+    block
