@@ -13,51 +13,51 @@ html(lang="en")
     link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
     link(href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet")
   body(class="font-sans bg-sky-light")
-    main
+    main.bg-sky-lightest
       +container
         +heading1.mb-1 Windy
         +paragraph.mb-8 Practio ♥ Tailwind...
 
-      include ./sections/_avatars.pug
-      include ./sections/_badges.pug
-      include ./sections/_buttons.pug
-      include ./sections/_callouts.pug
-      include ./sections/_dialogs.pug
-      include ./sections/_forms.pug
-      include ./sections/_headings.pug
-      include ./sections/_icons.pug
-      include ./sections/_util.pug
+        include ./sections/_avatars.pug
+        include ./sections/_badges.pug
+        include ./sections/_buttons.pug
+        include ./sections/_callouts.pug
+        include ./sections/_dialogs.pug
+        include ./sections/_forms.pug
+        include ./sections/_headings.pug
+        include ./sections/_icons.pug
+        include ./sections/_modals.pug
+        include ./sections/_util.pug
 
-      +section
-        +heading2.mb-1 Examples
-        +paragraph.mb-8 A full page with a header, paragraph and form.
-        +example
-          +narrowContainer("main")
-            +heading1.mb-1(size=3) New Thing
-            +paragraph.mb-8 Create a new thing.
-            +form(action="" method="POST")
-              input(name="_csrf" type="hidden" value=csrfToken)
-              input(name="callbackUrl" type="hidden" value=callbackUrl)
-              +textInputField.mb-8(
-                id="field1"
-                label="Field 1"
-                maxlength="5"
-                name="authorizationId"
-                pattern="[0-9A-Z]{5}"
-                placeholder="AB123"
-                type="text"
-              )
-              +textInputField.mb-12(
-                id="field2"
-                label="Field 2"
-                maxlength="10"
-                name="cpr"
-                pattern="[0-9]{10}"
-                placeholder="1507841121"
-                type="text"
-              )
-              +button.w-full(kind="primary" size="large" type="submit")
-                +solidIcon("plus-sm")
-                | Create new thing
+        +section
+          +heading2.mb-1 Examples
+          +paragraph.mb-8 A full page with a header, paragraph and form.
+          +example
+            +narrowContainer("main")
+              +heading1.mb-1(size=3) New Thing
+              +paragraph.mb-8 Create a new thing.
+              +form(action="" method="POST")
+                +fieldset
+                  +textInputField(
+                    id="field1"
+                    label="Field 1"
+                    maxlength="5"
+                    name="authorizationId"
+                    pattern="[0-9A-Z]{5}"
+                    placeholder="AB123"
+                    type="text"
+                  )
+                  +textInputField(
+                    id="field2"
+                    label="Field 2"
+                    maxlength="10"
+                    name="cpr"
+                    pattern="[0-9]{10}"
+                    placeholder="1507841121"
+                    type="text"
+                  )
+                +button.w-full(kind="primary" size="large" type="submit")
+                  +solidIcon("plus-sm")
+                  | Create new thing
           
 script(src="../js/windy.js")

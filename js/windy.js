@@ -1,7 +1,15 @@
 document.addEventListener("click", handleClickEvent);
 
 function handleClickEvent(e) {
-  const { action, target } = e.target.dataset;
+  let action, target;
+
+  let element = e.target;
+
+  while (element && !action && !target) {
+    action = element.dataset.action;
+    target = element.dataset.target;
+    element = element.parentElement;
+  }
 
   if (action === "show" || action === "showModal") {
     let targetElement = document.querySelector(target);

@@ -8143,6 +8143,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   --warning: #fdba2c;
   --alert: #ef3136;
   --white: #ffffff;
+}dialog::-webkit-backdrop {
+  background-color: #192029;
+  opacity: 0.7;
+}dialog::backdrop {
+  background-color: #192029;
+  opacity: 0.7;
 }.hover\:border-collapse:hover {
   border-collapse: collapse;
 }.hover\:border-separate:hover {

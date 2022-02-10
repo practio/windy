@@ -1,0 +1,51 @@
+include _element.pug
+include _dialog.pug
+
+
+mixin modal(tagName = "dialog")
+  - const classNames = 'rounded-lg bg-white shadow-xl';
+
+  +dialog(class=classNames style="width: 552px;")&attributes(attributes)
+    block
+
+
+mixin modalBody(tagName = "section")
+  -
+    const { scroll = false, ...attrs } = attributes;
+
+    const classNames = {
+      'px-6': true,
+      'py-6': scroll,
+      'border-y': scroll,
+      'border-y-sky': scroll,
+      'scroll-auto': scroll,
+      'scroll-smooth': scroll,
+      'flex': true,
+      'flex-col': true,
+      'gap-y-6': true,
+    };
+
+  +element(tagName)(class=classNames)&attributes(attrs)
+    block
+      
+mixin closeButton
+  button(data-action="close").h-5.w-5&attributes(attributes)
+    +solidIcon("x").text-ink-lighter
+
+mixin modalFooter(tagName = "footer")
+  footer.p-6.flex.gap-x-4.justify-end
+    block 
+
+mixin modalHeader(tagName = "header")
+  header.px-6.pt-6.pb-4.flex.justify-between
+    .flex.flex-col.gap-y-1
+      block
+    +closeButton
+
+mixin modalTitle(tagName = "h4")
+  +element(tagName).font-bold.text-md.leading-none
+    block
+
+mixin modalSubTitle(tagName = "h4")
+  +element(tagName).text-sm.text-ink-lighter
+    block

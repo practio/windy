@@ -55,19 +55,21 @@ include ../_mixins.pug
   +example.mb-8
     +exampleDisplay
       +form
-        +textInputField.mb-8(label="Name" name="name" id="name")
-        +emailInputField.mb-8(label="Email" name="email" id="email")
-        +selectField.mb-12(label="City" name="city" id="city")
-          +option(value="berlin") Berlin
-          +option(value="copenhagen") Copenhagen 1
-          +option(value="london") London
+        +fieldset
+          +textInputField(label="Name" name="name" id="name")
+          +emailInputField(label="Email" name="email" id="email")
+          +selectField(label="City" name="city" id="city")
+            +option(value="berlin") Berlin
+            +option(value="copenhagen") Copenhagen 1
+            +option(value="london") London
         +button(type="submit" kind="primary" size="large") Submit
     +exampleSourceCode.
       +form
-        +textInputField.mb-8(label="Name" name="name" id="name")
-        +emailInputField.mb-8(label="Email" name="email" id="email")
-        +selectField.mb-12(label="City" name="city" id="city")
-          +option(value="berlin") Berlin
-          +option(value="copenhagen") Copenhagen 1
-          +option(value="london") London
+        +fieldset
+          +textInputField(label="Name" name="name" id="name")
+          +emailInputField(label="Email" name="email" id="email")
+          +selectField(label="City" name="city" id="city")
+            +option(value="berlin") Berlin
+            +option(value="copenhagen") Copenhagen 1
+            +option(value="london") London
         +button(type="submit" kind="primary" size="large") Submit

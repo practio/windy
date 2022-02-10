@@ -1,12 +1,13 @@
 include _element.pug
 
 mixin form
-  form&attributes(attributes)
+  form(class="flex flex-col gap-y-12")&attributes(attributes)
     block
 
 mixin fieldset
-  fieldset(class="mt-4")&attributes(attributes)
-    legend(class="sr-only")= attributes.legend
+  fieldset(class="flex flex-col gap-y-6")&attributes(attributes)
+    if attributes.legend
+      legend(class="sr-only")= attributes.legend
     block
 
 mixin fieldsetHeading

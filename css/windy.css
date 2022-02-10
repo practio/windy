@@ -26,3 +26,8 @@
   --alert: #ef3136;
   --white: #ffffff;
 }
+
+dialog::backdrop {
+  background-color: #192029;
+  opacity: 0.7;
+}
