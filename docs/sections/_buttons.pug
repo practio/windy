@@ -55,3 +55,123 @@ include ../_mixins.pug
       +linkButton(kind="secondary" href="https://practio.com/") Secondary Link Button
       +linkButton(kind="ghost" href="https://practio.com/") Ghost Link Button
       +linkButton(kind="critical" href="https://practio.com/") Critical Link Button
+
+
+  +heading3.mb-8 Buttons with Icons
+
+  +heading4.mb-8 Icon Start
+  +example.mb-8
+    +exampleDisplay
+      +button
+        +solidIcon("plus-sm")
+        | Label
+      +button(kind="secondary")
+        +solidIcon("plus-sm")
+        | Label
+      +button(kind="ghost")
+        +solidIcon("plus-sm")
+        | Label
+      +button(kind="critical")
+        +solidIcon("plus-sm")
+        | Label
+    +exampleSourceCode.
+      +button
+        +solidIcon("plus-sm")
+        | Label
+      +button(kind="secondary")
+        +solidIcon("plus-sm")
+        | Label
+      +button(kind="ghost")
+        +solidIcon("plus-sm")
+        | Label
+      +button(kind="critical")
+        +solidIcon("plus-sm")
+        | Label
+
+  +heading4.mb-8 Icon End
+  +example.mb-8
+    +exampleDisplay
+      +button
+        | Label
+        +solidIcon("chevron-down")
+      +button(kind="secondary")
+        | Label
+        +solidIcon("chevron-down")
+      +button(kind="ghost")
+        | Label
+        +solidIcon("chevron-down")
+      +button(kind="critical")
+        | Label
+        +solidIcon("chevron-down")
+    +exampleSourceCode.
+      +button
+        | Label
+        +solidIcon("chevron-down")
+      +button(kind="secondary")
+        | Label
+        +solidIcon("chevron-down")
+      +button(kind="ghost")
+        | Label
+        +solidIcon("chevron-down")
+      +button(kind="critical")
+        | Label
+        +solidIcon("chevron-down")
+
+  +heading4.mb-8 Icon Start + End
+  +example.mb-8
+    +exampleDisplay
+      +button
+        +solidIcon("plus-sm")
+        | Label
+        +solidIcon("chevron-down")
+      +button(kind="secondary")
+        +solidIcon("plus-sm")
+        | Label
+        +solidIcon("chevron-down")
+      +button(kind="ghost")
+        +solidIcon("plus-sm")
+        | Label
+        +solidIcon("chevron-down")
+      +button(kind="critical")
+        +solidIcon("plus-sm")
+        | Label
+        +solidIcon("chevron-down")
+    +exampleSourceCode.
+      +button
+        +solidIcon("plus-sm")
+        | Label
+        +solidIcon("chevron-down")
+      +button(kind="secondary")
+        +solidIcon("plus-sm")
+        | Label
+        +solidIcon("chevron-down")
+      +button(kind="ghost")
+        +solidIcon("plus-sm")
+        | Label
+        +solidIcon("chevron-down")
+      +button(kind="critical")
+        +solidIcon("plus-sm")
+        | Label
+        +solidIcon("chevron-down")
+
+  +heading4.mb-8 Icon only
+
+  +example.mb-8
+    +exampleDisplay
+      +button
+        +solidIcon("plus-sm")
+      +button(kind="secondary")
+        +solidIcon("plus-sm")
+      +button(kind="ghost")
+        +solidIcon("plus-sm")
+      +button(kind="critical")
+        +solidIcon("plus-sm")
+    +exampleSourceCode.
+      +button
+        +solidIcon("plus-sm")
+      +button(kind="secondary")
+        +solidIcon("plus-sm")
+      +button(kind="ghost")
+        +solidIcon("plus-sm")
+      +button(kind="critical")
+        +solidIcon("plus-sm")

@@ -23,11 +23,11 @@ mixin callout(tagName = "div")
     };
 
     const classNames = [...base, ...sizes[size]].sort();
+
   +element(tagName)(class=classNames)&attributes(attrs)
     if icon
       +calloutIcon
-      div.mt-2px
-        block
+    block
 
 mixin calloutIcon
   +outlineIcon("information-circle").text-blue
