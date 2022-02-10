@@ -33,6 +33,7 @@ dialog::backdrop {
 }
 
 dialog {
+  border: none !important;
   padding: 0;
   max-width: calc(100% - 4rem);
   max-height: calc(100% - 4rem);
