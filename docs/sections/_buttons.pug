@@ -17,6 +17,21 @@ include ../_mixins.pug
       +button(kind="ghost") Ghost Button
       +button(kind="critical") Critical Button
 
+  +heading4.mb-1 Shorthands
+  +paragraph.mb-8 Use the button shorthands to create Primary, Secondary, Ghost and Critical buttons.
+
+  +example.mb-8
+    +exampleDisplay
+      +primaryButton Primary Button
+      +secondaryButton Secondary Button
+      +ghostButton Ghost Button
+      +criticalButton Critical Button
+    +exampleSourceCode.
+      +primaryButton Primary Button
+      +secondaryButton Secondary Button
+      +ghostButton Ghost Button
+      +criticalButton Critical Button
+
   +heading3.mb-8 Large Buttons
   +example.mb-8
     +exampleDisplay
@@ -43,19 +58,20 @@ include ../_mixins.pug
       +button(kind="ghost" disabled) Disabled Ghost Button
       +button(kind="critical" disabled) Disabled Critical Button
 
-  +heading3.mb-8 Link Buttons
+  +heading3.mb-1 Link Buttons
+  +paragraph.mb-8 Use the href attribute to make a link button.
+
   +example.mb-8
     +exampleDisplay
-      +linkButton(kind="primary" href="https://practio.com/") Primary Link Button
-      +linkButton(kind="secondary" href="https://practio.com/") Secondary Link Button
-      +linkButton(kind="ghost" href="https://practio.com/") Ghost Link Button
-      +linkButton(kind="critical" href="https://practio.com/") Critical Link Button
+      +button(kind="primary" href="https://practio.com/") Primary Link Button
+      +button(kind="secondary" href="https://practio.com/") Secondary Link Button
+      +button(kind="ghost" href="https://practio.com/") Ghost Link Button
+      +button(kind="critical" href="https://practio.com/") Critical Link Button
     +exampleSourceCode.
-      +linkButton(kind="primary" href="https://practio.com/") Primary Link Button
-      +linkButton(kind="secondary" href="https://practio.com/") Secondary Link Button
-      +linkButton(kind="ghost" href="https://practio.com/") Ghost Link Button
-      +linkButton(kind="critical" href="https://practio.com/") Critical Link Button
-
+      +button(kind="primary" href="https://practio.com/") Primary Link Button
+      +button(kind="secondary" href="https://practio.com/") Secondary Link Button
+      +button(kind="ghost" href="https://practio.com/") Ghost Link Button
+      +button(kind="critical" href="https://practio.com/") Critical Link Button
 
   +heading3.mb-8 Buttons with Icons
 

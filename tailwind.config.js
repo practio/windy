@@ -6,7 +6,7 @@ module.exports = {
     },
     {
       pattern: /(bg|border|outline)-/,
-      variants: ["hover"],
+      variants: ["active", "focus", "hover"],
     },
     {
       pattern: /(p|pt|pr|pb|pl|py|px|m|mt|mr|mb|ml|my|mx)-/,
@@ -132,5 +132,4 @@ module.exports = {
       none: "none",
     },
   },
-  plugins: [require("@tailwindcss/forms")],
 };
