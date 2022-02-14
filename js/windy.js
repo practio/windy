@@ -27,6 +27,19 @@ function handleClickEvent(e) {
       return;
     }
 
-    targetElement.close();
+    if (targetElement.close) {
+      targetElement.close();
+    }
+  } else if (action === "remove") {
+    let targetElement =
+      e.target.closest(target) || document.querySelector(target);
+
+    if (!targetElement) {
+      return;
+    }
+
+    if (targetElement.remove) {
+      targetElement.remove();
+    }
   }
 }

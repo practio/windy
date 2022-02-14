@@ -28,6 +28,7 @@ html(lang="en")
         include ./sections/_headings.pug
         include ./sections/_icons.pug
         include ./sections/_modals.pug
+        include ./sections/_toast.pug
         include ./sections/_util.pug
 
         +section
@@ -35,6 +36,7 @@ html(lang="en")
           +paragraph.mb-8 A full page with a header, paragraph and form.
           +example
             +narrowContainer("main")
+              +criticalToast.mb-8 Oh no!
               +heading1.mb-1(size=3) New Thing
               +paragraph.mb-8 Create a new thing.
               +form(action="" method="POST")

@@ -14,7 +14,11 @@ function handleClickEvent(e) {
     } else if (action === "close") {
         let targetElement = document.querySelector(target) || e.target.closest("dialog");
         if (!targetElement) return;
-        targetElement.close();
+        if (targetElement.close) targetElement.close();
+    } else if (action === "remove") {
+        let targetElement = e.target.closest(target) || document.querySelector(target);
+        if (!targetElement) return;
+        if (targetElement.remove) targetElement.remove();
     }
 }
 
