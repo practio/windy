@@ -66,12 +66,18 @@ module.exports = {
         dark: "var(--blue-dark)",
         darker: "var(--blue-darker)",
       },
+      green: {
+        DEFAULT: "var(--green)",
+      },
       red: {
         lighter: "var(--red-lighter)",
         light: "var(--red-light)",
         DEFAULT: "var(--red)",
         dark: "var(--red-dark)",
         darker: "var(--red-darker)",
+      },
+      yellow: {
+        DEFAULT: "var(--yellow)",
       },
       // Interaction colors
       success: "var(--success)",
@@ -111,25 +117,24 @@ module.exports = {
       "2xl": "1.75rem", // 20px
       full: "9999px",
     },
+    extend: {
+      boxShadow: {
+        sm: "0px 1px 2px rgba(25, 32, 41, 0.15)",
+        DEFAULT:
+          "0px 1px 3px rgba(25, 32, 41, 0.15), 0px 1px 2px rgba(25, 32, 41, 0.05)",
+        md: "0px 2px 16px rgba(25, 32, 41, 0.08), 0px 1px 3px rgba(25, 32, 41, 0.1)",
+        lg: "0px 31px 41px rgba(25, 32, 41, 0.1), 0px 2px 16px rgba(25, 32, 41, 0.08)",
+        none: "none",
+      },
 
-    // BOX SHADOWS
-    boxShadows: {
-      sm: "0px 1px 2px rgba(25, 32, 41, 0.15)",
-      DEFAULT:
-        "0px 1px 3px rgba(25, 32, 41, 0.15), 0px 1px 2px rgba(25, 32, 41, 0.05)",
-      md: "0px 2px 16px rgba(25, 32, 41, 0.08), 0px 1px 3px rgba(25, 32, 41, 0.1)",
-      lg: "0px 31px 41px rgba(25, 32, 41, 0.1), 0px 2px 16px rgba(25, 32, 41, 0.08)",
-      none: "none",
-    },
-
-    // DROP SHADOWS (Copy of box shadows)
-    dropShadows: {
-      sm: "0px 1px 2px rgba(25, 32, 41, 0.15)",
-      DEFAULT:
-        "0px 1px 3px rgba(25, 32, 41, 0.15), 0px 1px 2px rgba(50, 50, 51, 0.05)",
-      md: "0px 2px 16px rgba(25, 32, 41, 0.08), 0px 1px 3px rgba(25, 32, 41, 0.1)",
-      lg: "0px 31px 41px rgba(25, 32, 41, 0.1), 0px 2px 16px rgba(25, 32, 41, 0.08)",
-      none: "none",
+      dropShadow: {
+        sm: "0px 1px 2px rgba(25, 32, 41, 0.15)",
+        DEFAULT:
+          "0px 1px 3px rgba(25, 32, 41, 0.15), 0px 1px 2px rgba(50, 50, 51, 0.05)",
+        md: "0px 2px 16px rgba(25, 32, 41, 0.08), 0px 1px 3px rgba(25, 32, 41, 0.1)",
+        lg: "0px 31px 41px rgba(25, 32, 41, 0.1), 0px 2px 16px rgba(25, 32, 41, 0.08)",
+        none: "none",
+      },
     },
   },
 };
