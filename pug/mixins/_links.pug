@@ -1,12 +1,6 @@
 include _element.pug
 include _icons.pug
 
-mixin backLink(href)
-  +link.font-semibold.text-xs.mb-4.text-ink-lighter.flex.items-center.uppercase&attributes(attributes)
-    +backIcon
-    span.ml-1
-      block
-
 mixin link
   a&attributes(attributes)
     block
