@@ -1,0 +1,45 @@
+include ../_mixins.pug
+
++section
+  +heading2.mb-1 Headings
+  +paragraph.mb-8 Use headings for all headlines.
+
+  +heading3.mb-1 Examples
+  +paragraph.mb-8 Use shorthand headings when the heading size and tag name should match.
+
+  +example.mb-8
+    +exampleDisplay.flex-col
+      +heading1 The quick brown fox jumps over the lazy dog
+      +heading2 The quick brown fox jumps over the lazy dog
+      +heading3 The quick brown fox jumps over the lazy dog
+      +heading4 The quick brown fox jumps over the lazy dog
+      +heading5 The quick brown fox jumps over the lazy dog
+      +heading6 The quick brown fox jumps over the lazy dog
+    +exampleSourceCode.
+      +heading1 The quick brown fox jumps over the lazy dog
+      +heading2 The quick brown fox jumps over the lazy dog
+      +heading3 The quick brown fox jumps over the lazy dog
+      +heading4 The quick brown fox jumps over the lazy dog
+      +heading5 The quick brown fox jumps over the lazy dog
+      +heading6 The quick brown fox jumps over the lazy dog
+
+  +heading3.mb-1 Size attribute
+  +paragraph.mb-8 Use the size attribute to set the display size of headers.
+
+  +example.mb-8
+    +exampleDisplay.flex-col
+      +heading(size=3) The quick brown fox jumps over the lazy dog
+      +heading4(size=2) The quick brown fox jumps over the lazy dog
+    +exampleSourceCode.
+      +heading(size=3) The quick brown fox jumps over the lazy dog
+      +heading4(size=2) The quick brown fox jumps over the lazy dog
+
+  +heading3.mb-1 Tag name
+  +paragraph.mb-8 Use the tagName argument to dynamically set the tag name of the heading.
+
+  +example.mb-8
+    +exampleDisplay.flex-col
+      +heading("h4")(size=2) The quick brown fox jumps over the lazy dog
+    +exampleSourceCode.
+      +heading("h4")(size=2) The quick brown fox jumps over the lazy dog
+

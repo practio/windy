@@ -1,0 +1,18 @@
+include ../_mixins.pug
+
++section
+  +heading2.mb-1 Toasts
+  +paragraph.mb-8 Use the toasts...
+
+  +example.mb-8
+    +exampleDisplay
+      +toast(kind="positive") Positive message
+      +toast(kind="warning") Warning message
+      +toast(kind="critical") Critical message
+      +toast(kind="neutral") Neutral message
+    +exampleSourceCode.
+      +toast(kind="positive") Positive message
+      +toast(kind="warning") Warning message
+      +toast(kind="critical") Critical message
+      +toast(kind="neutral") Neutral message
+      

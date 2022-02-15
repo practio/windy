@@ -1,0 +1,55 @@
+include ../_mixins.pug
+
++section
+  +heading2.mb-1 Callouts
+  +paragraph.mb-8 Use callouts to bring attention to important information.
+
+  +heading3.mb-8 Size
+
+  +heading4.mb-8 Small
+  +example.mb-8
+    +exampleDisplay
+      +callout(size="small")
+        +heading(size="5").mb-1 This is the heading
+        +paragraph This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
+    +exampleSourceCode.
+      +callout(size="small")
+        +heading(size="5").mb-1 This is the heading
+        +paragraph This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
+  
+  +heading4.mb-8 Medium
+  +example.mb-8
+    +exampleDisplay
+      +callout(size="medium")
+        +heading(size="5").mb-2 This is the heading
+        +paragraph This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
+    +exampleSourceCode.
+      +callout(size="medium")
+        +heading(size="4").mb-2 This is the heading
+        +paragraph This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
+
+  +heading3.mb-8 With Icon
+
+  +heading4.mb-8 Small
+
+  +example.mb-8
+    +exampleDisplay
+      +callout(size="small" icon)
+        +heading(size="5").mb-1 This is the heading
+        +paragraph This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
+    +exampleSourceCode.
+      +callout(size="small" icon)
+        +heading(size="5").mb-1 This is the heading
+        +paragraph This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
+  
+  +heading4.mb-8 Medium
+
+  +example.mb-8
+    +exampleDisplay
+      +callout(size="medium" icon)
+        +calloutHeading(size="medium") This is the heading
+        +calloutBody(size="medium") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
+    +exampleSourceCode.
+      +callout(size="medium" icon)
+        +calloutHeading(size="medium") This is the heading
+        +calloutBody(size="medium") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.

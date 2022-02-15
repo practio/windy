@@ -1,0 +1,91 @@
+include ../_mixins.pug
+
++section
+  +heading2.mb-1 Modals
+  +paragraph.mb-8 Use the menu mixins to create dropdowns and context menus.
+
+  +example.mb-8
+    +exampleDisplay
+      +button(data-action="showModal" data-target="#modal1") Show modal
+      +modalDialog#modal1
+        +modalHeader
+          +modalTitle Modal title
+        +modalBody
+          +paragraph I forbindelse med rejsevacciner bliver der ofte lagt et program, hvor en vaccine skal gives over flere omgange.
+          +paragraph Alle doser, efter den første i et program, bliver betragtet som en re-vaccination, såfremt det er lagt af Sikker Vaccination.
+        +modalFooter
+          +button(kind="ghost" data-action="close") Cancel
+          +button(kind="primary") Primary Action
+    +exampleSourceCode.
+      +button(data-action="showModal" data-target="#modal1") Show modal
+      +modalDialog#modal1
+        +modalHeader
+          +modalTitle Modal title
+        +modalBody
+          +paragraph I forbindelse med rejsevacciner bliver der ofte lagt et program, hvor en vaccine skal gives over flere omgange.
+          +paragraph Alle doser, efter den første i et program, bliver betragtet som en re-vaccination, såfremt det er lagt af Sikker Vaccination.
+        +modalFooter
+          +button(kind="ghost" data-action="close") Cancel
+          +button(kind="primary") Primary Action
+
+  +example.mb-8
+    +exampleDisplay
+      +button(data-action="showModal" data-target="#modal2") Show modal
+      +modalDialog#modal2
+        +modalHeader
+          +modalTitle Modal title
+          +modalSubTitle Step 1 of 2
+        +modalBody(scroll=true)
+          +form
+            +fieldset
+              +textInputField(
+                id="field1"
+                label="Field 1"
+                maxlength="5"
+                name="authorizationId"
+                pattern="[0-9A-Z]{5}"
+                placeholder="AB123"
+                type="text"
+              )
+              +textInputField(
+                id="field2"
+                label="Field 2"
+                maxlength="10"
+                name="cpr"
+                pattern="[0-9]{10}"
+                placeholder="1507841121"
+                type="text"
+              )
+        +modalFooter
+          +button(kind="ghost" data-action="close") Cancel
+          +button(kind="primary") Primary Action
+    +exampleSourceCode.
+      +button(data-action="showModal" data-target="#modal2") Show modal
+      +modalDialog#modal2
+        +modalHeader
+          +modalTitle Modal title
+          +modalSubTitle Step 1 of 2
+        +modalBody(scroll=true)
+          +form
+            +fieldset
+              +textInputField(
+                id="field1"
+                label="Field 1"
+                maxlength="5"
+                name="authorizationId"
+                pattern="[0-9A-Z]{5}"
+                placeholder="AB123"
+                type="text"
+              )
+              +textInputField(
+                id="field2"
+                label="Field 2"
+                maxlength="10"
+                name="cpr"
+                pattern="[0-9]{10}"
+                placeholder="1507841121"
+                type="text"
+              )
+        +modalFooter
+          +button(kind="ghost" data-action="close") Cancel
+          +button(kind="primary") Primary Action

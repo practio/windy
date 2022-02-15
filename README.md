@@ -1,20 +1,16 @@
 # @practio/windy
 
-A Practio Tailwind Component Library.
+Practio Tailwind Configuration and Pug Mixins.
 
 ## Usage
 
-### Dev
-
-Starts dev server on port 8585.
+### Docs
 
 ```bash
-$ npm run dev
+$ npm run docs
 ```
 
 ### Build
-
-Builds css.
 
 ```bash
 $ npm run build

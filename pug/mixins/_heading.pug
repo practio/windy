@@ -1,0 +1,48 @@
+include _element.pug
+
+mixin heading(tagName = "h1")
+  -
+    const { size, ...attrs } = attributes;
+
+    const base = [
+      'font-bold',
+      'text-ink',
+    ];
+
+    const sizes = {
+      '1': [ 'text-2xl' ],
+      '2': [ 'text-xl' ],
+      '3': [ 'text-lg' ],
+      '4': [ 'text-md' ],
+      '5': [ 'text-sm' ],
+      '6': [ 'text-xs' ]
+    };
+
+    const classNames = [...base, ...sizes[size]];
+
+  +element(tagName)(class=classNames)&attributes(attrs)
+    block
+
+mixin heading1
+  +heading("h1")(size=1)&attributes(attributes)
+    block
+
+mixin heading2
+  +heading("h2")(size=2)&attributes(attributes)
+    block
+
+mixin heading3
+  +heading("h3")(size=3)&attributes(attributes)
+    block
+
+mixin heading4
+  +heading("h4")(size=4)&attributes(attributes)
+    block
+
+mixin heading5
+  +heading("h5")(size=5)&attributes(attributes)
+    block
+
+mixin heading6
+  +heading("h6")(size=6)&attributes(attributes)
+    block

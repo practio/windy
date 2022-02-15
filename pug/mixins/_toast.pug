@@ -1,0 +1,49 @@
+include _element.pug
+
+mixin toast(tagName = "aside")
+  -
+    const { kind = 'primary', ...attrs } = attributes;
+
+    const classNames = [
+      'flex',
+      'bg-white',
+      'shadow-md',
+      'rounded-md',
+      'p-3',
+      'gap-x-2',
+      'font-medium',
+      'items-center',
+    ];
+
+  +element(tagName)(class=classNames data-role="toast")&attributes(attrs)
+    case kind
+      when "positive"
+        +outlineIcon("check-circle").text-green
+      when "warning"
+        +outlineIcon("exclamation").text-yellow
+      when "critical"
+        +outlineIcon("exclamation-circle").text-red
+      when "neutral"
+        +outlineIcon("exclamation-circle").text-blue
+    block
+    +toastCloseButton
+
+mixin toastCloseButton
+  button(data-action="remove" data-target="[data-role=toast]").h-5.w-5.font-light.ml-auto&attributes(attributes)
+    +solidIcon("x").text-sky-dark
+
+mixin positiveToast
+  +toast(kind="positive")&attributes(attributes)
+    block
+
+mixin warningToast
+  +toast(kind="warning")&attributes(attributes)
+    block
+
+mixin criticalToast
+  +toast(kind="critical")&attributes(attributes)
+    block
+
+mixin neutrallToast
+  +toast(kind="neutral")&attributes(attributes)
+    block

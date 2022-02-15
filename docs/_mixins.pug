@@ -1,0 +1,23 @@
+
+mixin example
+  .shadow.rounded-lg.bg-white&attributes(attributes)
+    block
+
+mixin exampleDisplay
+  .p-6.rounded-t-lg.flex.flex-wrap.gap-4&attributes(attributes)
+    block
+
+mixin exampleSourceCode
+  pre.p-6.bg-sky-lighter.rounded-b-lg.overflow-auto&attributes(attributes)
+    code.text-md(style="font-family: 'Source Code Pro', monospace;")
+      block
+
+mixin section
+  section
+    block
+
+mixin sectionHeader
+  block
+
+mixin hr
+  hr.border-t.border-t-sky.border-b.border-b-white

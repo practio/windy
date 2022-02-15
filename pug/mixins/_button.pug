@@ -1,0 +1,97 @@
+include _element.pug
+
+mixin button(tagName = "button")
+  -
+    const { size = 'medium', kind = 'primary', ...attrs } = attributes;
+
+    if (attributes.href) {
+      tagName = 'a';
+    }
+
+    const base = [
+      'disabled:cursor-not-allowed',
+      'focus:outline-none',
+      'active:focus:ring-0',
+      'focus:ring-2',
+      'focus:ring-blue-light',
+      'focus:ring-offset-0',
+      'font-semibold',
+      'gap-x-2',
+      'inline-flex',
+      'items-center',
+      'justify-center',
+      'rounded-md',
+      'text-center',
+      'tracking-wide',
+      'transition',
+    ];
+
+    const sizes = {
+      medium: [
+        'h-8',
+        'px-3',
+        'text-xs'
+      ],
+      large: [
+        'h-12',
+        'px-5',
+        'text-base'
+      ]
+    };
+
+    const kinds = {
+      primary: [
+        'bg-blue',
+        'disabled:bg-blue-light',
+        'hover:bg-blue-dark',
+        'text-white',
+      ],
+      secondary: [
+        'active:bg-blue-lighter',
+        'active:text-blue',
+        'bg-sky-light',
+        'disabled:bg-sky-light',
+        'disabled:text-ink-lightest',
+        'focus:bg-sky-light',
+        'hover:bg-sky',
+        'text-ink',
+      ],
+      ghost: [
+        'active:bg-blue-lighter',
+        'active:text-blue',
+        'bg-transparent',
+        'disabled:bg-transparent',
+        'disabled:hover:bg-transparent',
+        'disabled:text-ink-lightest',
+        'focus:bg-sky-light',
+        'hover:bg-sky',
+        'text-ink',
+      ],
+      critical: [
+        'bg-red',
+        'disabled:bg-red-light',
+        'hover:bg-red-dark',
+        'text-white',
+      ]
+    };
+
+    const classNames = [...base, ...kinds[kind], ...sizes[size]].sort();
+
+  +element(tagName)(class=classNames)&attributes(attrs)
+    block
+
+mixin primaryButton
+  +button(kind="primary")&attributes(attributes)
+    block
+
+mixin secondaryButton
+  +button(kind="secondary")&attributes(attributes)
+    block
+
+mixin ghostButton
+  +button(kind="ghost")&attributes(attributes)
+    block
+
+mixin criticalButton
+  +button(kind="critical")&attributes(attributes)
+    block

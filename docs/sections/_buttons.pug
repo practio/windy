@@ -1,0 +1,193 @@
+include ../_mixins.pug
+
++section
+  +heading2.mb-1 Buttons
+  +paragraph.mb-8 Use buttons for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
+
+  +heading3.mb-8 Buttons
+  +example.mb-8
+    +exampleDisplay
+      +button(kind="primary") Primary Button
+      +button(kind="secondary") Secondary Button
+      +button(kind="ghost") Ghost Button
+      +button(kind="critical") Critical Button
+    +exampleSourceCode.
+      +button(kind="primary") Primary Button
+      +button(kind="secondary") Secondary Button
+      +button(kind="ghost") Ghost Button
+      +button(kind="critical") Critical Button
+
+  +heading4.mb-1 Shorthands
+  +paragraph.mb-8 Use the button shorthands to create Primary, Secondary, Ghost and Critical buttons.
+
+  +example.mb-8
+    +exampleDisplay
+      +primaryButton Primary Button
+      +secondaryButton Secondary Button
+      +ghostButton Ghost Button
+      +criticalButton Critical Button
+    +exampleSourceCode.
+      +primaryButton Primary Button
+      +secondaryButton Secondary Button
+      +ghostButton Ghost Button
+      +criticalButton Critical Button
+
+  +heading3.mb-8 Large Buttons
+  +example.mb-8
+    +exampleDisplay
+      +button(kind="primary" size="large") Large Primary Button
+      +button(kind="secondary" size="large") Large Secondary Button
+      +button(kind="ghost" size="large") Large Ghost Button
+      +button(kind="critical" size="large") Large Critical Button
+    +exampleSourceCode.
+      +button(kind="primary" size="large") Large Primary Button
+      +button(kind="secondary" size="large") Large Secondary Button
+      +button(kind="ghost" size="large") Large Ghost Button
+      +button(kind="critical" size="large") Large Critical Button
+
+  +heading3.mb-8 Disabled Buttons
+  +example.mb-8
+    +exampleDisplay
+      +button(kind="primary" disabled) Disabled Primary Button
+      +button(kind="secondary" disabled) Disabled Secondary Button
+      +button(kind="ghost" disabled) Disabled Ghost Button
+      +button(kind="critical" disabled) Disabled Critical Button
+    +exampleSourceCode.
+      +button(kind="primary" disabled) Disabled Primary Button
+      +button(kind="secondary" disabled) Disabled Secondary Button
+      +button(kind="ghost" disabled) Disabled Ghost Button
+      +button(kind="critical" disabled) Disabled Critical Button
+
+  +heading3.mb-1 Link Buttons
+  +paragraph.mb-8 Use the href attribute to make a link button.
+
+  +example.mb-8
+    +exampleDisplay
+      +button(kind="primary" href="https://practio.com/") Primary Link Button
+      +button(kind="secondary" href="https://practio.com/") Secondary Link Button
+      +button(kind="ghost" href="https://practio.com/") Ghost Link Button
+      +button(kind="critical" href="https://practio.com/") Critical Link Button
+    +exampleSourceCode.
+      +button(kind="primary" href="https://practio.com/") Primary Link Button
+      +button(kind="secondary" href="https://practio.com/") Secondary Link Button
+      +button(kind="ghost" href="https://practio.com/") Ghost Link Button
+      +button(kind="critical" href="https://practio.com/") Critical Link Button
+
+  +heading3.mb-8 Buttons with Icons
+
+  +heading4.mb-8 Icon Start
+  +example.mb-8
+    +exampleDisplay
+      +button
+        +solidIcon("plus-sm")
+        | Label
+      +button(kind="secondary")
+        +solidIcon("plus-sm")
+        | Label
+      +button(kind="ghost")
+        +solidIcon("plus-sm")
+        | Label
+      +button(kind="critical")
+        +solidIcon("plus-sm")
+        | Label
+    +exampleSourceCode.
+      +button
+        +solidIcon("plus-sm")
+        | Label
+      +button(kind="secondary")
+        +solidIcon("plus-sm")
+        | Label
+      +button(kind="ghost")
+        +solidIcon("plus-sm")
+        | Label
+      +button(kind="critical")
+        +solidIcon("plus-sm")
+        | Label
+
+  +heading4.mb-8 Icon End
+  +example.mb-8
+    +exampleDisplay
+      +button
+        | Label
+        +solidIcon("chevron-down")
+      +button(kind="secondary")
+        | Label
+        +solidIcon("chevron-down")
+      +button(kind="ghost")
+        | Label
+        +solidIcon("chevron-down")
+      +button(kind="critical")
+        | Label
+        +solidIcon("chevron-down")
+    +exampleSourceCode.
+      +button
+        | Label
+        +solidIcon("chevron-down")
+      +button(kind="secondary")
+        | Label
+        +solidIcon("chevron-down")
+      +button(kind="ghost")
+        | Label
+        +solidIcon("chevron-down")
+      +button(kind="critical")
+        | Label
+        +solidIcon("chevron-down")
+
+  +heading4.mb-8 Icon Start + End
+  +example.mb-8
+    +exampleDisplay
+      +button
+        +solidIcon("plus-sm")
+        | Label
+        +solidIcon("chevron-down")
+      +button(kind="secondary")
+        +solidIcon("plus-sm")
+        | Label
+        +solidIcon("chevron-down")
+      +button(kind="ghost")
+        +solidIcon("plus-sm")
+        | Label
+        +solidIcon("chevron-down")
+      +button(kind="critical")
+        +solidIcon("plus-sm")
+        | Label
+        +solidIcon("chevron-down")
+    +exampleSourceCode.
+      +button
+        +solidIcon("plus-sm")
+        | Label
+        +solidIcon("chevron-down")
+      +button(kind="secondary")
+        +solidIcon("plus-sm")
+        | Label
+        +solidIcon("chevron-down")
+      +button(kind="ghost")
+        +solidIcon("plus-sm")
+        | Label
+        +solidIcon("chevron-down")
+      +button(kind="critical")
+        +solidIcon("plus-sm")
+        | Label
+        +solidIcon("chevron-down")
+
+  +heading4.mb-8 Icon only
+
+  +example.mb-8
+    +exampleDisplay
+      +button
+        +solidIcon("plus-sm")
+      +button(kind="secondary")
+        +solidIcon("plus-sm")
+      +button(kind="ghost")
+        +solidIcon("plus-sm")
+      +button(kind="critical")
+        +solidIcon("plus-sm")
+    +exampleSourceCode.
+      +button
+        +solidIcon("plus-sm")
+      +button(kind="secondary")
+        +solidIcon("plus-sm")
+      +button(kind="ghost")
+        +solidIcon("plus-sm")
+      +button(kind="critical")
+        +solidIcon("plus-sm")

@@ -1,0 +1,11 @@
+include _element.pug
+
+mixin paragraph
+  -
+    const classNames = [
+      'font-normal',
+      'text-ink'
+    ];
+
+  +element("p")(class=classNames)&attributes(attributes)
+    block

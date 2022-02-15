@@ -1,0 +1,83 @@
+include _element.pug
+
+mixin callout(tagName = "div")
+  -
+    const { size = 'medium', icon, ...attrs } = attributes;
+
+    const base = [
+      'bg-sky-light',
+      'rounded-md',
+      'flex',
+      'gap-x-2',
+    ];
+
+    const sizes = {
+      small: [
+        'p-4',
+        'text-sm'
+      ],
+      medium: [
+        'p-6',
+        'text-base'
+      ]
+    };
+
+    const classNames = [...base, ...sizes[size]].sort();
+
+  +element(tagName)(class=classNames)&attributes(attrs)
+    if icon
+      +calloutIcon
+    block
+
+mixin calloutIcon
+  +outlineIcon("information-circle").text-blue
+
+mixin calloutHeading(tagName = "h1")
+  -
+    const { size = 'medium', ...attrs } = attributes;
+
+    const base = [
+      'font-bold'
+    ];
+
+    const sizes = {
+      small: [
+        'mb-1',
+        'text-sm',
+        'leading-4',
+      ],
+      medium: [
+        'mb-2',
+        'text-base',
+        'leading-5',
+      ]
+    };
+
+    const classNames = [...base, ...sizes[size]].sort();
+
+  +element(tagName)(class=classNames)&attributes(attrs)
+    block
+
+mixin calloutBody(tagName = "div")
+  -
+    const { size = 'medium', ...attrs } = attributes;
+
+    const base = [
+      'font-normal',
+    ];
+
+    const sizes = {
+      small: [
+        'text-sm',
+        'gap-y-2',
+      ],
+      medium: [
+        'text-base',
+        'gap-y-4',
+      ]
+    };
+
+    const classNames = [...base, ...sizes[size]].sort();
+
+  +element(tagName)(class=classNames)&attributes(attrs)
+    block
