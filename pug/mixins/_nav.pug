@@ -1,0 +1,24 @@
+mixin nav
+  nav.flex.gap-x-6.items-center.bg-white.h-16.border-b-sky.border-b.w-full.px-6
+    block
+
+mixin navLink
+  - 
+    const { active, ...attrs } = attributes;
+
+    const classNames = [
+      'border-b-2',
+      'font-medium',
+      'h-16',
+      'hover:border-ink-lightest',
+      'inline-flex',
+      'items-center',
+      'pt-1',
+      'px-1',
+      'text-sm',
+      active ? 'border-blue' : 'border-transparent',
+      active ? 'text-ink' : 'text-ink-lightest'
+    ];
+
+  +link(class=classNames)&attributes(attrs)
+    block

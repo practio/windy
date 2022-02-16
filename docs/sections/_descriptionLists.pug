@@ -1,0 +1,21 @@
+include ../_mixins.pug
+
++section
+  +heading2.mb-1.flex.items-center.gap-x-2
+    | Description Lists
+    +badge(color="pink") Experimental
+  +paragraph.mb-8 Use description lists for displaying entity details...
+
+  +example.mb-8
+    +exampleDisplay
+      +descriptionList
+        +descriptionTerm Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        +descriptionDetails Fusce justo nisl, imperdiet ac pharetra nec, sollicitudin nec nisi.
+        +descriptionTerm Donec et purus at sem imperdiet blandit
+        +descriptionDetails Quisque laoreet nisi eu vulputate tincidunt. Phasellus nec imperdiet tortor.
+    +exampleSourceCode.
+      +descriptionList
+        +descriptionTerm Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        +descriptionDetails Fusce justo nisl, imperdiet ac pharetra nec, sollicitudin nec nisi.
+        +descriptionTerm Donec et purus at sem imperdiet blandit
+        +descriptionDetails Quisque laoreet nisi eu vulputate tincidunt. Phasellus nec imperdiet tortor.

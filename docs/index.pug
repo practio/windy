@@ -14,6 +14,14 @@ html(lang="en")
     link(href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet")
 
   body(class="font-sans bg-sky-light")
+    nav.bg-white.border-b.border-sky-light
+      .container
+        .flex.gap-x-4.items-center.mx-4
+          a.h-16.border-blue.text-ink.inline-flex.items-center.px-1.pt-1.border-b-2.text-sm.font-medium(href='#' aria-current='page') Dashboard 
+          a.h-16.border-transparent.text-ink-lightest.inline-flex.items-center.px-1.pt-1.border-b-2.text-sm.font-medium(href='#' class='hover:border-gray-300 hover:text-gray-700') Team 
+          a.h-16.border-transparent.text-ink-lightest.inline-flex.items-center.px-1.pt-1.border-b-2.text-sm.font-medium(href='#' class='hover:border-gray-300 hover:text-gray-700') Projects 
+          a.h-16.border-transparent.text-ink-lightest.inline-flex.items-center.px-1.pt-1.border-b-2.text-sm.font-medium(href='#' class='hover:border-gray-300 hover:text-gray-700') Calendar 
+
     main.bg-sky-lightest
       +container
         +heading1.mb-1 Windy
@@ -23,11 +31,14 @@ html(lang="en")
         include ./sections/_badges.pug
         include ./sections/_buttons.pug
         include ./sections/_callouts.pug
+        include ./sections/_cards.pug
+        include ./sections/_descriptionLists.pug
         include ./sections/_dialogs.pug
         include ./sections/_forms.pug
         include ./sections/_headings.pug
         include ./sections/_icons.pug
         include ./sections/_modals.pug
+        include ./sections/_nav.pug
         include ./sections/_toast.pug
         include ./sections/_util.pug
 
@@ -60,5 +71,8 @@ html(lang="en")
                 +button.w-full(kind="primary" size="large" type="submit")
                   +solidIcon("plus-sm")
                   | Create new thing
-          
+
+
+
+
 script(src="../js/windy.js")
