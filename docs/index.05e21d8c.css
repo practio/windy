@@ -8951,6 +8951,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   outline-color: var(--alert);
 }.hover\:outline-white:hover {
   outline-color: var(--white);
+}.hover\:ease-in:hover {
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }.focus\:border-collapse:focus {
   border-collapse: collapse;
 }.focus\:border-separate:focus {
