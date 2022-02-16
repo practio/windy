@@ -8,16 +8,20 @@ mixin navLink
 
     const classNames = [
       'border-b-2',
+      'duration-300',
+      'ease-out',
       'font-medium',
       'h-16',
       'hover:border-ink-lightest',
+      'hover:ease-in',
       'inline-flex',
       'items-center',
       'pt-1',
       'px-1',
       'text-sm',
+      'transition',
       active ? 'border-blue' : 'border-transparent',
-      active ? 'text-ink' : 'text-ink-lightest'
+      active ? 'text-ink' : 'text-ink-lightest',
     ];
 
   +link(class=classNames)&attributes(attrs)
