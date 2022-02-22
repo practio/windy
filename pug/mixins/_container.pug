@@ -6,7 +6,8 @@ mixin container(tagName = "div")
       'container',
       'mx-auto',
       'py-8',
-      'sm:py-16'
+      'sm:py-16',
+      'box-content'
     ];
 
   +element(tagName)(class=classNames)&attributes(attributes)
