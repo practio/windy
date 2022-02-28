@@ -13,7 +13,7 @@ mixin container(tagName = "div")
     block
 
 mixin narrowContainer(tagName = "div")
-  - const style = 'max-width: 552px';
+  - const style = 'max-width: calc(552px + 4rem)';
 
   +container(tagName)(style=style)&attributes(attributes)
     block
