@@ -6,7 +6,7 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "docs": "parcel --port 8585 --dist-dir ./docs",
-    "postversion": "git push && git push",
+    "postversion": "git push && git push --tags",
     "preversion": "npm test",
     "watch": "tailwindcss -i ./css/windy.css -o ./dist/windy.css --watch",
     "build": "tailwindcss -i ./css/windy.css -o ./dist/windy.css  --minify",
