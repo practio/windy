@@ -1,4 +1,4 @@
-include _element.pug
+include ./element.pug
 
 mixin container(tagName = "div")
   -
@@ -6,8 +6,7 @@ mixin container(tagName = "div")
       'container',
       'mx-auto',
       'py-8',
-      'sm:py-16',
-      'box-content'
+      'sm:py-16'
     ];
 
   +element(tagName)(class=classNames)&attributes(attributes)

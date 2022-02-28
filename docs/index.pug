@@ -1,6 +1,7 @@
-include ../pug/windy.pug
-
 doctype html
+
+include ../pug/mixins.pug
+
 html(lang="en")
   head
     meta(charset="UTF-8")
@@ -14,58 +15,54 @@ html(lang="en")
     link(href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet")
 
   body(class="font-sans bg-sky-light")
-    main.bg-sky-lightest
-      +container
-        +heading1.mb-1 Windy
-        +paragraph.mb-8 Practio ♥ Tailwind...
+    +container
+      +heading1.mb-1 Windy
+      +paragraph.mb-8 Practio ♥ Tailwind...
 
-        include ./sections/_avatars.pug
-        include ./sections/_badges.pug
-        include ./sections/_buttons.pug
-        include ./sections/_callouts.pug
-        include ./sections/_cards.pug
-        include ./sections/_descriptionLists.pug
-        include ./sections/_dialogs.pug
-        include ./sections/_forms.pug
-        include ./sections/_headings.pug
-        include ./sections/_icons.pug
-        include ./sections/_modals.pug
-        include ./sections/_nav.pug
-        include ./sections/_table.pug
-        include ./sections/_toast.pug
-        include ./sections/_util.pug
+      include ./sections/_avatars.pug
+      include ./sections/_badges.pug
+      include ./sections/_buttons.pug
+      include ./sections/_callouts.pug
+      include ./sections/_cards.pug
+      include ./sections/_descriptionLists.pug
+      include ./sections/_dialogs.pug
+      include ./sections/_forms.pug
+      include ./sections/_headings.pug
+      include ./sections/_icons.pug
+      include ./sections/_modals.pug
+      include ./sections/_nav.pug
+      include ./sections/_table.pug
+      include ./sections/_toast.pug
+      include ./sections/_util.pug
 
-        +section
-          +heading2.mb-1 Examples
-          +paragraph.mb-8 A full page with a header, paragraph and form.
-          +example
-            +narrowContainer("main")
-              +criticalToast.mb-8 Oh no!
-              +heading1.mb-1(size=3) New Thing
-              +paragraph.mb-8 Create a new thing.
-              +form(action="" method="POST")
-                +fieldset
-                  +textInputField(
-                    id="field1"
-                    label="Field 1"
-                    maxlength="5"
-                    name="authorizationId"
-                    pattern="[0-9A-Z]{5}"
-                    placeholder="AB123"
-                  )
-                  +textInputField(
-                    id="field2"
-                    label="Field 2"
-                    maxlength="10"
-                    name="cpr"
-                    pattern="[0-9]{10}"
-                    placeholder="1507841121"
-                  )
-                +button.w-full(kind="primary" size="large" type="submit")
-                  +solidIcon("plus-sm")
-                  | Create new thing
-
-
-
+      +section
+        +heading2.mb-1 Examples
+        +paragraph.mb-8 A full page with a header, paragraph and form.
+        +example
+          +narrowContainer("main")
+            +criticalToast.mb-8 Oh no!
+            +heading1.mb-1(size=3) New Thing
+            +paragraph.mb-8 Create a new thing.
+            +form(action="" method="POST")
+              +fieldset
+                +textInputField(
+                  id="field1"
+                  label="Field 1"
+                  maxlength="5"
+                  name="authorizationId"
+                  pattern="[0-9A-Z]{5}"
+                  placeholder="AB123"
+                )
+                +textInputField(
+                  id="field2"
+                  label="Field 2"
+                  maxlength="10"
+                  name="cpr"
+                  pattern="[0-9]{10}"
+                  placeholder="1507841121"
+                )
+              +button.w-full(kind="primary" size="large" type="submit")
+                +solidIcon("plus-sm")
+                | Create new thing
 
 script(src="../js/windy.js")

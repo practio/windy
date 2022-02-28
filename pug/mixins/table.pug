@@ -25,3 +25,18 @@ mixin td
 mixin th
   th.px-5.py-3.text-xs.font-semibold.tracking-wider.text-left.uppercase.min-w-max.text-ink-lighter(scope="col")&attributes(attributes)
     block
+
+
+mixin pagination(skip = 0, limit = 100, count = 0)
+  .d-flex.align-items-center&attributes(attributes)
+    p.mb-0= `${skip + 1} to ${Math.min(skip + limit, count)} of ${count}`
+    ul.pagination.my-0.ms-auto
+      li.page-item(class=[skip === 0 && 'disabled'])
+        a.page-link(href=href(null, { limit, skip: skip - limit } )) Previous
+      li.page-item(class=[(limit + skip) >= count && 'disabled'])
+        a.page-link(href=href(null, { limit, skip: skip + limit } )) Next
+
+mixin search(search)
+  .form-control-container
+    +icon("search").form-control-icon
+    input.form-control(type="search" name="search" value=search placeholder="Search")&attributes(attributes)
