@@ -1,6 +1,6 @@
 {
   "name": "@practio/windy",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Practio Tailwind Configuration and Pug Mixins.",
   "source": "./docs/index.pug",
   "browserslist": "> 0.5%, last 2 versions, not dead",
