@@ -1,4 +1,8 @@
 include ./element.pug
+include ./icons/solid/x.pug
+include ./icons/outline/checkCircle.pug
+include ./icons/outline/exclamation.pug
+include ./icons/outline/exclamationCircle.pug
 
 mixin toast(tagName = "aside")
   -
@@ -18,19 +22,19 @@ mixin toast(tagName = "aside")
   +element(tagName)(class=classNames data-role="toast")&attributes(attrs)
     case kind
       when "positive"
-        +outlineIcon("check-circle").text-green
+        +checkCircleOutlineIcon.text-green
       when "warning"
-        +outlineIcon("exclamation").text-yellow
+        +exclamationOutlineIcon.text-yellow
       when "critical"
-        +outlineIcon("exclamation-circle").text-red
+        +exclamationCircleOutlineIcon.text-red
       when "neutral"
-        +outlineIcon("exclamation-circle").text-blue
+        +exclamationCircleOutlineIcon.text-blue
     block
     +toastCloseButton
 
 mixin toastCloseButton
   button(data-action="remove" data-target="[data-role=toast]").h-5.w-5.font-light.ml-auto&attributes(attributes)
-    +solidIcon("x").text-sky-dark
+    +xSolidIcon.text-sky-dark
 
 mixin positiveToast
   +toast(kind="positive")&attributes(attributes)

@@ -1,6 +1,8 @@
 include ./element.pug
 include ./dialog.pug
 
+include ./icons/solid/x.pug
+
 mixin modalDialog(tagName = "dialog")
   +dialog&attributes(attributes)
     +modal
@@ -11,7 +13,6 @@ mixin modal(tagName = "div")
 
   +element(tagName)(class=classNames style="width: min(552px, calc(100vw - 4rem))")&attributes(attributes)
     block
-
 
 mixin modalBody(tagName = "section")
   -
@@ -34,7 +35,7 @@ mixin modalBody(tagName = "section")
       
 mixin modalCloseButton
   button(data-action="close" tabindex="-1").h-5.w-5&attributes(attributes)
-    +solidIcon("x").text-ink-lighter
+    +xSolidIcon.text-ink-lighter
 
 mixin modalFooter(tagName = "footer")
   -

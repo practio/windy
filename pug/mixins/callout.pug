@@ -1,5 +1,7 @@
 include ./element.pug
 
+include ./icons/outline/informationCircle.pug
+
 mixin callout(tagName = "div")
   -
     const { size = 'medium', icon, ...attrs } = attributes;
@@ -30,7 +32,7 @@ mixin callout(tagName = "div")
     block
 
 mixin calloutIcon
-  +outlineIcon("information-circle").text-blue
+  +informationCircleOutlineIcon.text-blue
 
 mixin calloutHeading(tagName = "h1")
   -

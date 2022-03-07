@@ -1,5 +1,8 @@
 include ../_mixins.pug
 
+include ../../pug/mixins/icons/solid/plusSm.pug
+include ../../pug/mixins/icons/solid/chevronDown.pug
+
 +section
   +heading2.mb-1 Buttons
   +paragraph.mb-8 Use buttons for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
@@ -79,29 +82,29 @@ include ../_mixins.pug
   +example.mb-8
     +exampleDisplay
       +button
-        +solidIcon("plus-sm")
+        +plusSmSolidIcon
         | Label
       +button(kind="secondary")
-        +solidIcon("plus-sm")
+        +plusSmSolidIcon
         | Label
       +button(kind="ghost")
-        +solidIcon("plus-sm")
+        +plusSmSolidIcon
         | Label
       +button(kind="critical")
-        +solidIcon("plus-sm")
+        +plusSmSolidIcon
         | Label
     +exampleSourceCode.
       +button
-        +solidIcon("plus-sm")
+        +plusSmSolidIcon
         | Label
       +button(kind="secondary")
-        +solidIcon("plus-sm")
+        +plusSmSolidIcon
         | Label
       +button(kind="ghost")
-        +solidIcon("plus-sm")
+        +plusSmSolidIcon
         | Label
       +button(kind="critical")
-        +solidIcon("plus-sm")
+        +plusSmSolidIcon
         | Label
 
   +heading4.mb-8 Icon End
@@ -109,85 +112,85 @@ include ../_mixins.pug
     +exampleDisplay
       +button
         | Label
-        +solidIcon("chevron-down")
+        +chevronDownSolidIcon
       +button(kind="secondary")
         | Label
-        +solidIcon("chevron-down")
+        +chevronDownSolidIcon
       +button(kind="ghost")
         | Label
-        +solidIcon("chevron-down")
+        +chevronDownSolidIcon
       +button(kind="critical")
         | Label
-        +solidIcon("chevron-down")
+        +chevronDownSolidIcon
     +exampleSourceCode.
       +button
         | Label
-        +solidIcon("chevron-down")
+        +chevronDownSolidIcon
       +button(kind="secondary")
         | Label
-        +solidIcon("chevron-down")
+        +chevronDownSolidIcon
       +button(kind="ghost")
         | Label
-        +solidIcon("chevron-down")
+        +chevronDownSolidIcon
       +button(kind="critical")
         | Label
-        +solidIcon("chevron-down")
+        +chevronDownSolidIcon
 
   +heading4.mb-8 Icon Start + End
   +example.mb-8
     +exampleDisplay
       +button
-        +solidIcon("plus-sm")
+        +plusSmSolidIcon
         | Label
-        +solidIcon("chevron-down")
+        +chevronDownSolidIcon
       +button(kind="secondary")
-        +solidIcon("plus-sm")
+        +plusSmSolidIcon
         | Label
-        +solidIcon("chevron-down")
+        +chevronDownSolidIcon
       +button(kind="ghost")
-        +solidIcon("plus-sm")
+        +plusSmSolidIcon
         | Label
-        +solidIcon("chevron-down")
+        +chevronDownSolidIcon
       +button(kind="critical")
-        +solidIcon("plus-sm")
+        +plusSmSolidIcon
         | Label
-        +solidIcon("chevron-down")
+        +chevronDownSolidIcon
     +exampleSourceCode.
       +button
-        +solidIcon("plus-sm")
+        +plusSmSolidIcon
         | Label
-        +solidIcon("chevron-down")
+        +chevronDownSolidIcon
       +button(kind="secondary")
-        +solidIcon("plus-sm")
+        +plusSmSolidIcon
         | Label
-        +solidIcon("chevron-down")
+        +chevronDownSolidIcon
       +button(kind="ghost")
-        +solidIcon("plus-sm")
+        +plusSmSolidIcon
         | Label
-        +solidIcon("chevron-down")
+        +chevronDownSolidIcon
       +button(kind="critical")
-        +solidIcon("plus-sm")
+        +plusSmSolidIcon
         | Label
-        +solidIcon("chevron-down")
+        +chevronDownSolidIcon
 
   +heading4.mb-8 Icon only
 
   +example.mb-8
     +exampleDisplay
       +button
-        +solidIcon("plus-sm")
+        +plusSmSolidIcon
       +button(kind="secondary")
-        +solidIcon("plus-sm")
+        +plusSmSolidIcon
       +button(kind="ghost")
-        +solidIcon("plus-sm")
+        +plusSmSolidIcon
       +button(kind="critical")
-        +solidIcon("plus-sm")
+        +plusSmSolidIcon
     +exampleSourceCode.
       +button
-        +solidIcon("plus-sm")
+        +plusSmSolidIcon
       +button(kind="secondary")
-        +solidIcon("plus-sm")
+        +plusSmSolidIcon
       +button(kind="ghost")
-        +solidIcon("plus-sm")
+        +plusSmSolidIcon
       +button(kind="critical")
-        +solidIcon("plus-sm")
+        +plusSmSolidIcon
