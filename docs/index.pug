@@ -29,6 +29,7 @@ html(lang="en")
       include ./sections/_forms.pug
       include ./sections/_headings.pug
       include ./sections/_icons.pug
+      include ./sections/_menu.pug
       include ./sections/_modals.pug
       include ./sections/_nav.pug
       include ./sections/_table.pug
@@ -46,7 +47,7 @@ html(lang="en")
             +form(action="" method="POST")
               +fieldset
                 +textInputField(
-                  id="field1"
+                  id="field_1"
                   label="Field 1"
                   maxlength="5"
                   name="authorizationId"
@@ -54,7 +55,7 @@ html(lang="en")
                   placeholder="AB123"
                 )
                 +textInputField(
-                  id="field2"
+                  id="field_2"
                   label="Field 2"
                   maxlength="10"
                   name="cpr"
