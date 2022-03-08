@@ -1,0 +1,20 @@
+include ./element.pug
+
+mixin tag(tagName = "span")
+  -
+    const style = {
+      'padding': '5px 8px 5px 8px'
+    }
+
+    const classNames = [
+      'h-6',
+      'bg-blue',
+      'text-sm',
+      'text-white',
+      'rounded',
+      'leading-none',
+      'font-normal'
+    ];
+
+  +element(tagName)(class=classNames style=style)&attributes(attrs)
+    block
