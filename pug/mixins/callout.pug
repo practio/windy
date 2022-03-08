@@ -25,14 +25,16 @@ mixin callout(tagName = "div")
     };
 
     const classNames = [...base, ...sizes[size]].sort();
+    const blockClassNames = { 'pt-2px': icon };
 
   +element(tagName)(class=classNames)&attributes(attrs)
     if icon
       +calloutIcon
-    block
+    div(class=blockClassNames)
+      block
 
 mixin calloutIcon
-  +informationCircleOutlineIcon.text-blue
+  +informationCircleOutlineIcon.grow-0.shrink-0.text-blue
 
 mixin calloutHeading(tagName = "h1")
   -
@@ -65,6 +67,8 @@ mixin calloutBody(tagName = "div")
     const { size = 'medium', ...attrs } = attributes;
 
     const base = [
+      'flex',
+      'flex-col',
       'font-normal',
     ];
 
