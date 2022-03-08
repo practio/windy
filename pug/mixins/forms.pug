@@ -1,5 +1,10 @@
 include ./element.pug
 
+include ./icons/solid/lockClosed.pug
+include ./icons/solid/mail.pug
+include ./icons/solid/search.pug
+
+
 mixin form
   form(class="flex flex-col gap-y-12")&attributes(attributes)
     block
@@ -36,22 +41,118 @@ mixin fieldDescription
   div&attributes(attributes)
     block
 
-mixin input
-  input&attributes(attributes)
+mixin inputGroup(tagName = "div")
+  -
+    const { size = 'medium', tags = [], ...attrs } = attributes;
+
+    const base = [
+      'flex',
+      'gap-x-2',
+      'border',
+      'border-sky-dark',
+      'disabled:bg-sky-light',
+      'w-full',
+      'hover:border-ink-lightest',
+      'focus-within:border-blue',
+      'focus-within:hover:border-blue',
+      'focus:outline-0',
+      'items-center'
+    ];
+
+    let disabled = [];
+
+    if (attributes.disabled) {
+      disabled = [
+        'bg-sky-light',
+        'cursor-not-allowed'
+      ];
+    }
+
+    const sizes = {
+      small: [
+        'h-10',
+        'px-2',
+        'rounded-md',
+        'text-sm'
+      ],
+      medium: [
+        'h-12',
+        'px-3',
+        'rounded-lg',
+      ]
+    };
+
+    const classNames = [...base, ...disabled, ...sizes[size]].sort();
+
+  +element(tagName)(class=classNames)&attributes(attrs)
+    block
+    each tag in tags
+      +tag= tag
+
+mixin input(tagName = "input")
+  -
+    const { size = 'medium', ...attrs } = attributes;
+
+    const base = [
+      'focus:outline-0',
+      'border-0',
+      'bg-transparent',
+      'disabled:bg-transparent',
+      'disabled:cursor-not-allowed',
+      'grow-1',
+      'w-full',
+    ];
+
+    const sizes = {
+      small: [
+        'h-5',
+        'text-sm'
+      ],
+      medium: [
+        'h-6',
+      ]
+    };
+
+    const classNames = [...base, ...sizes[size]].sort();
+
+  +element(tagName)(class=classNames id=(attrs.id || attrs.name))&attributes(attrs)
+    block
 
 mixin select
-  select.border.border-sky.rounded-lg.w-full.h-12.p-3&attributes(attributes)
-    block
+  +inputGroup&attributes(attributes)
+    +input("select")&attributes(attributes)
+      block
 
 mixin option
   option&attributes(attributes)
     block
 
-mixin textInput
-  +input.border.border-sky.rounded-lg.w-full.h-12.p-3(type="text")&attributes(attributes)
-
 mixin emailInput
-  +input.border.border-sky.rounded-lg.w-full.h-12.p-3(type="email")&attributes(attributes)
+  - const { size, tags } = attributes;
+
+  +inputGroup&attributes({ size, tags })
+    +mailSolidIcon.text-ink-lightest.shrink-0
+    +input(type="email")&attributes(attributes)
+
+mixin passwordInput
+  - const { size, tags } = attributes;
+
+  +inputGroup&attributes({ size, tags })
+    +lockClosedSolidIcon.text-ink-lightest.shrink-0
+    +input(type="password")&attributes(attributes)
+
+mixin searchInput
+  - const { size, tags } = attributes;
+
+  +inputGroup&attributes({ size, tags })
+    +searchSolidIcon.text-ink-lightest.shrink-0
+    +input(type="search")&attributes(attributes)
+
+mixin textInput
+  - const { size, tags } = attributes;
+
+  +inputGroup&attributes({ size, tags })
+    +input(type="text")&attributes(attributes)
 
 mixin radioInput
   +input(type="radio")&attributes(attributes)
@@ -59,15 +160,27 @@ mixin radioInput
 mixin checkboxInput
   +input(type="checkbox")&attributes(attributes)
 
-mixin textInputField
+mixin inputField
   +field
-    +label(for=attributes.id)= attributes.label
-    +textInput&attributes(attributes)
+    if attributes.label
+      +label(for=(attributes.id || attributes.name))= attributes.label
+    block
 
 mixin emailInputField
-  +field
-    +label(for=attributes.id)= attributes.label
+  +inputField&attributes(attributes)
     +emailInput&attributes(attributes)
+
+mixin passwordInputField
+  +inputField&attributes(attributes)
+    +passwordInput&attributes(attributes)
+
+mixin searchInputField
+  +inputField&attributes(attributes)
+    +searchInput&attributes(attributes)
+
+mixin textInputField
+  +inputField&attributes(attributes)
+    +textInput&attributes(attributes)
 
 mixin radioInputField
   +field(orientation="horizontal")

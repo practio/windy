@@ -10,30 +10,77 @@ include ../_mixins.pug
   +heading4.mb-8 Input Fields
   +example.mb-8
     +exampleDisplay
-      +textInputField(name="text1" placeholder="Text")
       +emailInputField(name="email1" placeholder="Email")
+      +passwordInputField(name="password1" placeholder="Password")
+      +searchInputField(name="search1" placeholder="Search")
+      +textInputField(name="text1" placeholder="Text")
     +exampleSourceCode.
-      +textInputField(name="text1" placeholder="Text")
       +emailInputField(name="email1" placeholder="Email")
+      +passwordInputField(name="password1" placeholder="Password")
+      +searchInputField(name="search1" placeholder="Search")
+      +textInputField(name="text1" placeholder="Text")
+
+  +heading4.mb-8 Input Fields with Tags
+  +example.mb-8
+    +exampleDisplay
+      +emailInputField(name="email2" placeholder="Email" tags=["Tag"])
+      +passwordInputField(name="password2" placeholder="Password" tags=["Tag"])
+      +searchInputField(name="search2" placeholder="Search" tags=["Tag"])
+      +textInputField(name="text2" placeholder="Text" tags=["Tag"])
+    +exampleSourceCode.
+      +emailInputField(name="email2" placeholder="Email" tags=["Tag"])
+      +passwordInputField(name="password2" placeholder="Password" tags=["Tag"])
+      +searchInputField(name="search2" placeholder="Search" tags=["Tag"])
+      +textInputField(name="text2" placeholder="Text" tags=["Tag"])
+
+  +heading4.mb-8 Disabled Input Fields
+  +example.mb-8
+    +exampleDisplay
+      +emailInputField(name="emai3" placeholder="Email" disabled)
+      +passwordInputField(name="password3" placeholder="Password" disabled)
+      +searchInputField(name="search3" placeholder="Search" disabled)
+      +textInputField(name="text3" placeholder="Text" disabled)
+    +exampleSourceCode.
+      +emailInputField(name="emai3" placeholder="Email" disabled)
+      +passwordInputField(name="password3" placeholder="Password" disabled)
+      +searchInputField(name="search3" placeholder="Search" disabled)
+      +textInputField(name="text3" placeholder="Text" disabled)
+
+  +heading4.mb-8 Small Input Fields
+  +example.mb-8
+    +exampleDisplay
+      +emailInputField(name="email4" placeholder="Email" size="small")
+      +passwordInputField(name="password4" placeholder="Password" size="small")
+      +searchInputField(name="search4" placeholder="Search" size="small")
+      +textInputField(name="text4" placeholder="Text" size="small")
+    +exampleSourceCode.
+      +emailInputField(name="email4" placeholder="Email" size="small")
+      +passwordInputField(name="password4" placeholder="Password" size="small")
+      +searchInputField(name="search4" placeholder="Search" size="small")
+      +textInputField(name="text4" placeholder="Text" size="small")
 
   +heading4.mb-8 Input Fields with Labels
   +example.mb-8
     +exampleDisplay
-      +textInputField(label="Text 1" name="text1" id="text1" placeholder="Text")
-      +emailInputField(label="Email 1" name="email1" id="email1" placeholder="Email")
+      +emailInputField(name="email5" label="Email")
+      +passwordInputField(name="password5" label="Password")
+      +searchInputField(name="search5" label="Search")
+      +textInputField(name="text5" label="Text")
     +exampleSourceCode.
-      +textInputField(label="Text 1" name="text1" id="text1" placeholder="Text")
-      +emailInputField(label="Email 1" name="email1" id="email1" placeholder="Email")
+      +emailInputField(name="email5" label="Email")
+      +passwordInputField(name="password5" label="Password")
+      +searchInputField(name="search5" label="Search")
+      +textInputField(name="text5" label="Text")
 
   +heading4.mb-8 Select Field
   +example.mb-8
     +exampleDisplay
-      +selectField(name="city" id="city")
+      +selectField(name="city" id="city1")
         +option(value="berlin") Berlin
         +option(value="copenhagen") Copenhagen
         +option(value="london") London
     +exampleSourceCode.
-      +selectField(name="city" id="city")
+      +selectField(name="city" id="city1")
         +option(value="berlin") Berlin
         +option(value="copenhagen") Copenhagen
         +option(value="london") London
@@ -41,12 +88,12 @@ include ../_mixins.pug
   +heading4.mb-8 Select Field with Labels
   +example.mb-8
     +exampleDisplay
-      +selectField(label="City" name="city" id="city")
+      +selectField(label="City" name="city" id="city2")
         +option(value="berlin") Berlin
         +option(value="copenhagen") Copenhagen
         +option(value="london") London
     +exampleSourceCode.
-      +selectField(label="City" name="city" id="city")
+      +selectField(label="City" name="city" id="city2")
         +option(value="berlin") Berlin
         +option(value="copenhagen") Copenhagen
         +option(value="london") London
@@ -56,9 +103,9 @@ include ../_mixins.pug
     +exampleDisplay
       +form
         +fieldset
-          +textInputField(label="Name" name="name" id="name")
-          +emailInputField(label="Email" name="email" id="email")
-          +selectField(label="City" name="city" id="city")
+          +textInputField(label="Name" name="name" id="name6")
+          +emailInputField(label="Email" name="email" id="email6")
+          +selectField(label="City" name="city" id="city6")
             +option(value="berlin") Berlin
             +option(value="copenhagen") Copenhagen 1
             +option(value="london") London
@@ -66,9 +113,9 @@ include ../_mixins.pug
     +exampleSourceCode.
       +form
         +fieldset
-          +textInputField(label="Name" name="name" id="name")
-          +emailInputField(label="Email" name="email" id="email")
-          +selectField(label="City" name="city" id="city")
+          +textInputField(label="Name" name="name" id="name6")
+          +emailInputField(label="Email" name="email" id="email6")
+          +selectField(label="City" name="city" id="city6")
             +option(value="berlin") Berlin
             +option(value="copenhagen") Copenhagen 1
             +option(value="london") London

@@ -403,6 +403,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 2rem;
   bottom: 2rem;
   left: 2rem;
+}.inset-10 {
+  top: 2.5rem;
+  right: 2.5rem;
+  bottom: 2.5rem;
+  left: 2.5rem;
 }.inset-12 {
   top: 3rem;
   right: 3rem;
@@ -518,6 +523,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: -2rem;
   bottom: -2rem;
   left: -2rem;
+}.-inset-10 {
+  top: -2.5rem;
+  right: -2.5rem;
+  bottom: -2.5rem;
+  left: -2.5rem;
 }.-inset-12 {
   top: -3rem;
   right: -3rem;
@@ -612,6 +622,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.inset-x-8 {
   left: 2rem;
   right: 2rem;
+}.inset-x-10 {
+  left: 2.5rem;
+  right: 2.5rem;
 }.inset-x-12 {
   left: 3rem;
   right: 3rem;
@@ -681,6 +694,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.-inset-x-8 {
   left: -2rem;
   right: -2rem;
+}.-inset-x-10 {
+  left: -2.5rem;
+  right: -2.5rem;
 }.-inset-x-12 {
   left: -3rem;
   right: -3rem;
@@ -747,6 +763,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.inset-y-8 {
   top: 2rem;
   bottom: 2rem;
+}.inset-y-10 {
+  top: 2.5rem;
+  bottom: 2.5rem;
 }.inset-y-12 {
   top: 3rem;
   bottom: 3rem;
@@ -816,6 +835,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.-inset-y-8 {
   top: -2rem;
   bottom: -2rem;
+}.-inset-y-10 {
+  top: -2.5rem;
+  bottom: -2.5rem;
 }.-inset-y-12 {
   top: -3rem;
   bottom: -3rem;
@@ -874,6 +896,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 24px;
 }.top-8 {
   top: 2rem;
+}.top-10 {
+  top: 2.5rem;
 }.top-12 {
   top: 3rem;
 }.top-16 {
@@ -920,6 +944,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: -24px;
 }.-top-8 {
   top: -2rem;
+}.-top-10 {
+  top: -2.5rem;
 }.-top-12 {
   top: -3rem;
 }.-top-16 {
@@ -964,6 +990,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 24px;
 }.right-8 {
   right: 2rem;
+}.right-10 {
+  right: 2.5rem;
 }.right-12 {
   right: 3rem;
 }.right-16 {
@@ -1010,6 +1038,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: -24px;
 }.-right-8 {
   right: -2rem;
+}.-right-10 {
+  right: -2.5rem;
 }.-right-12 {
   right: -3rem;
 }.-right-16 {
@@ -1054,6 +1084,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   bottom: 24px;
 }.bottom-8 {
   bottom: 2rem;
+}.bottom-10 {
+  bottom: 2.5rem;
 }.bottom-12 {
   bottom: 3rem;
 }.bottom-16 {
@@ -1100,6 +1132,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   bottom: -24px;
 }.-bottom-8 {
   bottom: -2rem;
+}.-bottom-10 {
+  bottom: -2.5rem;
 }.-bottom-12 {
   bottom: -3rem;
 }.-bottom-16 {
@@ -1144,6 +1178,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 24px;
 }.left-8 {
   left: 2rem;
+}.left-10 {
+  left: 2.5rem;
 }.left-12 {
   left: 3rem;
 }.left-16 {
@@ -1190,6 +1226,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: -24px;
 }.-left-8 {
   left: -2rem;
+}.-left-10 {
+  left: -2.5rem;
 }.-left-12 {
   left: -3rem;
 }.-left-16 {
@@ -1470,6 +1508,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: 24px;
 }.m-8 {
   margin: 2rem;
+}.m-10 {
+  margin: 2.5rem;
 }.m-12 {
   margin: 3rem;
 }.m-16 {
@@ -1502,6 +1542,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: -24px;
 }.-m-8 {
   margin: -2rem;
+}.-m-10 {
+  margin: -2.5rem;
 }.-m-12 {
   margin: -3rem;
 }.-m-16 {
@@ -1540,6 +1582,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.mx-8 {
   margin-left: 2rem;
   margin-right: 2rem;
+}.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
 }.mx-12 {
   margin-left: 3rem;
   margin-right: 3rem;
@@ -1588,6 +1633,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.-mx-8 {
   margin-left: -2rem;
   margin-right: -2rem;
+}.-mx-10 {
+  margin-left: -2.5rem;
+  margin-right: -2.5rem;
 }.-mx-12 {
   margin-left: -3rem;
   margin-right: -3rem;
@@ -1633,6 +1681,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }.my-12 {
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -1681,6 +1732,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.-my-8 {
   margin-top: -2rem;
   margin-bottom: -2rem;
+}.-my-10 {
+  margin-top: -2.5rem;
+  margin-bottom: -2.5rem;
 }.-my-12 {
   margin-top: -3rem;
   margin-bottom: -3rem;
@@ -1718,6 +1772,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 24px;
 }.mt-8 {
   margin-top: 2rem;
+}.mt-10 {
+  margin-top: 2.5rem;
 }.mt-12 {
   margin-top: 3rem;
 }.mt-16 {
@@ -1750,6 +1806,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: -24px;
 }.-mt-8 {
   margin-top: -2rem;
+}.-mt-10 {
+  margin-top: -2.5rem;
 }.-mt-12 {
   margin-top: -3rem;
 }.-mt-16 {
@@ -1780,6 +1838,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 24px;
 }.mr-8 {
   margin-right: 2rem;
+}.mr-10 {
+  margin-right: 2.5rem;
 }.mr-12 {
   margin-right: 3rem;
 }.mr-16 {
@@ -1812,6 +1872,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: -24px;
 }.-mr-8 {
   margin-right: -2rem;
+}.-mr-10 {
+  margin-right: -2.5rem;
 }.-mr-12 {
   margin-right: -3rem;
 }.-mr-16 {
@@ -1842,6 +1904,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 24px;
 }.mb-8 {
   margin-bottom: 2rem;
+}.mb-10 {
+  margin-bottom: 2.5rem;
 }.mb-12 {
   margin-bottom: 3rem;
 }.mb-16 {
@@ -1874,6 +1938,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: -24px;
 }.-mb-8 {
   margin-bottom: -2rem;
+}.-mb-10 {
+  margin-bottom: -2.5rem;
 }.-mb-12 {
   margin-bottom: -3rem;
 }.-mb-16 {
@@ -1904,6 +1970,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 24px;
 }.ml-8 {
   margin-left: 2rem;
+}.ml-10 {
+  margin-left: 2.5rem;
 }.ml-12 {
   margin-left: 3rem;
 }.ml-16 {
@@ -1936,6 +2004,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: -24px;
 }.-ml-8 {
   margin-left: -2rem;
+}.-ml-10 {
+  margin-left: -2.5rem;
 }.-ml-12 {
   margin-left: -3rem;
 }.-ml-16 {
@@ -2018,6 +2088,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 24px;
 }.h-8 {
   height: 2rem;
+}.h-10 {
+  height: 2.5rem;
 }.h-12 {
   height: 3rem;
 }.h-16 {
@@ -2096,6 +2168,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-height: 24px;
 }.max-h-8 {
   max-height: 2rem;
+}.max-h-10 {
+  max-height: 2.5rem;
 }.max-h-12 {
   max-height: 3rem;
 }.max-h-16 {
@@ -2160,6 +2234,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 24px;
 }.w-8 {
   width: 2rem;
+}.w-10 {
+  width: 2.5rem;
 }.w-12 {
   width: 3rem;
 }.w-16 {
@@ -2356,6 +2432,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-basis: 24px;
 }.basis-8 {
   flex-basis: 2rem;
+}.basis-10 {
+  flex-basis: 2.5rem;
 }.basis-12 {
   flex-basis: 3rem;
 }.basis-16 {
@@ -2476,6 +2554,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.translate-x-8 {
   --tw-translate-x: 2rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}.translate-x-10 {
+  --tw-translate-x: 2.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }.translate-x-12 {
   --tw-translate-x: 3rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2541,6 +2622,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }.-translate-x-8 {
   --tw-translate-x: -2rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}.-translate-x-10 {
+  --tw-translate-x: -2.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }.-translate-x-12 {
   --tw-translate-x: -3rem;
@@ -2608,6 +2692,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.translate-y-8 {
   --tw-translate-y: 2rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}.translate-y-10 {
+  --tw-translate-y: 2.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }.translate-y-12 {
   --tw-translate-y: 3rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2673,6 +2760,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }.-translate-y-8 {
   --tw-translate-y: -2rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}.-translate-y-10 {
+  --tw-translate-y: -2.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }.-translate-y-12 {
   --tw-translate-y: -3rem;
@@ -3295,6 +3385,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   scroll-margin: 24px;
 }.scroll-m-8 {
   scroll-margin: 2rem;
+}.scroll-m-10 {
+  scroll-margin: 2.5rem;
 }.scroll-m-12 {
   scroll-margin: 3rem;
 }.scroll-m-16 {
@@ -3325,6 +3417,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   scroll-margin: -24px;
 }.-scroll-m-8 {
   scroll-margin: -2rem;
+}.-scroll-m-10 {
+  scroll-margin: -2.5rem;
 }.-scroll-m-12 {
   scroll-margin: -3rem;
 }.-scroll-m-16 {
@@ -3363,6 +3457,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.scroll-mx-8 {
   scroll-margin-left: 2rem;
   scroll-margin-right: 2rem;
+}.scroll-mx-10 {
+  scroll-margin-left: 2.5rem;
+  scroll-margin-right: 2.5rem;
 }.scroll-mx-12 {
   scroll-margin-left: 3rem;
   scroll-margin-right: 3rem;
@@ -3408,6 +3505,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.-scroll-mx-8 {
   scroll-margin-left: -2rem;
   scroll-margin-right: -2rem;
+}.-scroll-mx-10 {
+  scroll-margin-left: -2.5rem;
+  scroll-margin-right: -2.5rem;
 }.-scroll-mx-12 {
   scroll-margin-left: -3rem;
   scroll-margin-right: -3rem;
@@ -3453,6 +3553,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.scroll-my-8 {
   scroll-margin-top: 2rem;
   scroll-margin-bottom: 2rem;
+}.scroll-my-10 {
+  scroll-margin-top: 2.5rem;
+  scroll-margin-bottom: 2.5rem;
 }.scroll-my-12 {
   scroll-margin-top: 3rem;
   scroll-margin-bottom: 3rem;
@@ -3498,6 +3601,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.-scroll-my-8 {
   scroll-margin-top: -2rem;
   scroll-margin-bottom: -2rem;
+}.-scroll-my-10 {
+  scroll-margin-top: -2.5rem;
+  scroll-margin-bottom: -2.5rem;
 }.-scroll-my-12 {
   scroll-margin-top: -3rem;
   scroll-margin-bottom: -3rem;
@@ -3535,6 +3641,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   scroll-margin-top: 24px;
 }.scroll-mt-8 {
   scroll-margin-top: 2rem;
+}.scroll-mt-10 {
+  scroll-margin-top: 2.5rem;
 }.scroll-mt-12 {
   scroll-margin-top: 3rem;
 }.scroll-mt-16 {
@@ -3565,6 +3673,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   scroll-margin-top: -24px;
 }.-scroll-mt-8 {
   scroll-margin-top: -2rem;
+}.-scroll-mt-10 {
+  scroll-margin-top: -2.5rem;
 }.-scroll-mt-12 {
   scroll-margin-top: -3rem;
 }.-scroll-mt-16 {
@@ -3595,6 +3705,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   scroll-margin-right: 24px;
 }.scroll-mr-8 {
   scroll-margin-right: 2rem;
+}.scroll-mr-10 {
+  scroll-margin-right: 2.5rem;
 }.scroll-mr-12 {
   scroll-margin-right: 3rem;
 }.scroll-mr-16 {
@@ -3625,6 +3737,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   scroll-margin-right: -24px;
 }.-scroll-mr-8 {
   scroll-margin-right: -2rem;
+}.-scroll-mr-10 {
+  scroll-margin-right: -2.5rem;
 }.-scroll-mr-12 {
   scroll-margin-right: -3rem;
 }.-scroll-mr-16 {
@@ -3655,6 +3769,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   scroll-margin-bottom: 24px;
 }.scroll-mb-8 {
   scroll-margin-bottom: 2rem;
+}.scroll-mb-10 {
+  scroll-margin-bottom: 2.5rem;
 }.scroll-mb-12 {
   scroll-margin-bottom: 3rem;
 }.scroll-mb-16 {
@@ -3685,6 +3801,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   scroll-margin-bottom: -24px;
 }.-scroll-mb-8 {
   scroll-margin-bottom: -2rem;
+}.-scroll-mb-10 {
+  scroll-margin-bottom: -2.5rem;
 }.-scroll-mb-12 {
   scroll-margin-bottom: -3rem;
 }.-scroll-mb-16 {
@@ -3715,6 +3833,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   scroll-margin-left: 24px;
 }.scroll-ml-8 {
   scroll-margin-left: 2rem;
+}.scroll-ml-10 {
+  scroll-margin-left: 2.5rem;
 }.scroll-ml-12 {
   scroll-margin-left: 3rem;
 }.scroll-ml-16 {
@@ -3745,6 +3865,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   scroll-margin-left: -24px;
 }.-scroll-ml-8 {
   scroll-margin-left: -2rem;
+}.-scroll-ml-10 {
+  scroll-margin-left: -2.5rem;
 }.-scroll-ml-12 {
   scroll-margin-left: -3rem;
 }.-scroll-ml-16 {
@@ -3775,6 +3897,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   scroll-padding: 24px;
 }.scroll-p-8 {
   scroll-padding: 2rem;
+}.scroll-p-10 {
+  scroll-padding: 2.5rem;
 }.scroll-p-12 {
   scroll-padding: 3rem;
 }.scroll-p-16 {
@@ -3813,6 +3937,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.scroll-px-8 {
   scroll-padding-left: 2rem;
   scroll-padding-right: 2rem;
+}.scroll-px-10 {
+  scroll-padding-left: 2.5rem;
+  scroll-padding-right: 2.5rem;
 }.scroll-px-12 {
   scroll-padding-left: 3rem;
   scroll-padding-right: 3rem;
@@ -3858,6 +3985,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.scroll-py-8 {
   scroll-padding-top: 2rem;
   scroll-padding-bottom: 2rem;
+}.scroll-py-10 {
+  scroll-padding-top: 2.5rem;
+  scroll-padding-bottom: 2.5rem;
 }.scroll-py-12 {
   scroll-padding-top: 3rem;
   scroll-padding-bottom: 3rem;
@@ -3895,6 +4025,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   scroll-padding-top: 24px;
 }.scroll-pt-8 {
   scroll-padding-top: 2rem;
+}.scroll-pt-10 {
+  scroll-padding-top: 2.5rem;
 }.scroll-pt-12 {
   scroll-padding-top: 3rem;
 }.scroll-pt-16 {
@@ -3925,6 +4057,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   scroll-padding-right: 24px;
 }.scroll-pr-8 {
   scroll-padding-right: 2rem;
+}.scroll-pr-10 {
+  scroll-padding-right: 2.5rem;
 }.scroll-pr-12 {
   scroll-padding-right: 3rem;
 }.scroll-pr-16 {
@@ -3955,6 +4089,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   scroll-padding-bottom: 24px;
 }.scroll-pb-8 {
   scroll-padding-bottom: 2rem;
+}.scroll-pb-10 {
+  scroll-padding-bottom: 2.5rem;
 }.scroll-pb-12 {
   scroll-padding-bottom: 3rem;
 }.scroll-pb-16 {
@@ -3985,6 +4121,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   scroll-padding-left: 24px;
 }.scroll-pl-8 {
   scroll-padding-left: 2rem;
+}.scroll-pl-10 {
+  scroll-padding-left: 2.5rem;
 }.scroll-pl-12 {
   scroll-padding-left: 3rem;
 }.scroll-pl-16 {
@@ -4312,6 +4450,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 24px;
 }.gap-8 {
   gap: 2rem;
+}.gap-10 {
+  gap: 2.5rem;
 }.gap-12 {
   gap: 3rem;
 }.gap-16 {
@@ -4350,6 +4490,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.gap-x-8 {
   -moz-column-gap: 2rem;
        column-gap: 2rem;
+}.gap-x-10 {
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
 }.gap-x-12 {
   -moz-column-gap: 3rem;
        column-gap: 3rem;
@@ -4387,6 +4530,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   row-gap: 24px;
 }.gap-y-8 {
   row-gap: 2rem;
+}.gap-y-10 {
+  row-gap: 2.5rem;
 }.gap-y-12 {
   row-gap: 3rem;
 }.gap-y-16 {
@@ -4433,6 +4578,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-space-x-reverse: 0;
   margin-right: calc(2rem * var(--tw-space-x-reverse));
   margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+}.space-x-10 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(2.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
 }.space-x-12 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(3rem * var(--tw-space-x-reverse));
@@ -4493,6 +4642,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-space-x-reverse: 0;
   margin-right: calc(-2rem * var(--tw-space-x-reverse));
   margin-left: calc(-2rem * calc(1 - var(--tw-space-x-reverse)));
+}.-space-x-10 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(-2.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(-2.5rem * calc(1 - var(--tw-space-x-reverse)));
 }.-space-x-12 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(-3rem * var(--tw-space-x-reverse));
@@ -4553,6 +4706,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}.space-y-10 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
 }.space-y-12 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
@@ -4613,6 +4770,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-space-y-reverse: 0;
   margin-top: calc(-2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(-2rem * var(--tw-space-y-reverse));
+}.-space-y-10 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(-2.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(-2.5rem * var(--tw-space-y-reverse));
 }.-space-y-12 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(-3rem * calc(1 - var(--tw-space-y-reverse)));
@@ -6128,6 +6289,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 24px;
 }.p-8 {
   padding: 2rem;
+}.p-10 {
+  padding: 2.5rem;
 }.p-12 {
   padding: 3rem;
 }.p-16 {
@@ -6166,6 +6329,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }.px-12 {
   padding-left: 3rem;
   padding-right: 3rem;
@@ -6211,6 +6377,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }.py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -6248,6 +6417,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 24px;
 }.pt-8 {
   padding-top: 2rem;
+}.pt-10 {
+  padding-top: 2.5rem;
 }.pt-12 {
   padding-top: 3rem;
 }.pt-16 {
@@ -6278,6 +6449,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 24px;
 }.pr-8 {
   padding-right: 2rem;
+}.pr-10 {
+  padding-right: 2.5rem;
 }.pr-12 {
   padding-right: 3rem;
 }.pr-16 {
@@ -6308,6 +6481,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 24px;
 }.pb-8 {
   padding-bottom: 2rem;
+}.pb-10 {
+  padding-bottom: 2.5rem;
 }.pb-12 {
   padding-bottom: 3rem;
 }.pb-16 {
@@ -6338,6 +6513,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 24px;
 }.pl-8 {
   padding-left: 2rem;
+}.pl-10 {
+  padding-left: 2.5rem;
 }.pl-12 {
   padding-left: 3rem;
 }.pl-16 {
@@ -6376,6 +6553,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-indent: 24px;
 }.indent-8 {
   text-indent: 2rem;
+}.indent-10 {
+  text-indent: 2.5rem;
 }.indent-12 {
   text-indent: 3rem;
 }.indent-16 {
@@ -6406,6 +6585,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-indent: -24px;
 }.-indent-8 {
   text-indent: -2rem;
+}.-indent-10 {
+  text-indent: -2.5rem;
 }.-indent-12 {
   text-indent: -3rem;
 }.-indent-16 {
@@ -8157,6 +8338,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 0;
   max-width: calc(100% - 4rem);
   max-height: calc(100% - 4rem);
+}.focus-within\:border-blue:focus-within {
+  border-color: var(--blue);
 }.hover\:border-collapse:hover {
   border-collapse: collapse;
 }.hover\:border-separate:hover {
@@ -8971,6 +9154,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   outline-color: var(--white);
 }.hover\:ease-in:hover {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}.focus-within\:hover\:border-blue:hover:focus-within {
+  border-color: var(--blue);
 }.focus\:border-collapse:focus {
   border-collapse: collapse;
 }.focus\:border-separate:focus {
@@ -10657,6 +10842,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     top: 2rem;
   }
 
+  .sm\:top-10 {
+    top: 2.5rem;
+  }
+
   .sm\:top-12 {
     top: 3rem;
   }
@@ -10749,6 +10938,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     top: -2rem;
   }
 
+  .sm\:-top-10 {
+    top: -2.5rem;
+  }
+
   .sm\:-top-12 {
     top: -3rem;
   }
@@ -10835,6 +11028,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:bottom-8 {
     bottom: 2rem;
+  }
+
+  .sm\:bottom-10 {
+    bottom: 2.5rem;
   }
 
   .sm\:bottom-12 {
@@ -10929,6 +11126,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     bottom: -2rem;
   }
 
+  .sm\:-bottom-10 {
+    bottom: -2.5rem;
+  }
+
   .sm\:-bottom-12 {
     bottom: -3rem;
   }
@@ -11017,6 +11218,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin: 2rem;
   }
 
+  .sm\:m-10 {
+    margin: 2.5rem;
+  }
+
   .sm\:m-12 {
     margin: 3rem;
   }
@@ -11079,6 +11284,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:-m-8 {
     margin: -2rem;
+  }
+
+  .sm\:-m-10 {
+    margin: -2.5rem;
   }
 
   .sm\:-m-12 {
@@ -11147,6 +11356,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .sm\:mx-8 {
     margin-left: 2rem;
     margin-right: 2rem;
+  }
+
+  .sm\:mx-10 {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
   }
 
   .sm\:mx-12 {
@@ -11229,6 +11443,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-right: -2rem;
   }
 
+  .sm\:-mx-10 {
+    margin-left: -2.5rem;
+    margin-right: -2.5rem;
+  }
+
   .sm\:-mx-12 {
     margin-left: -3rem;
     margin-right: -3rem;
@@ -11302,6 +11521,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .sm\:my-8 {
     margin-top: 2rem;
     margin-bottom: 2rem;
+  }
+
+  .sm\:my-10 {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
   }
 
   .sm\:my-12 {
@@ -11384,6 +11608,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-bottom: -2rem;
   }
 
+  .sm\:-my-10 {
+    margin-top: -2.5rem;
+    margin-bottom: -2.5rem;
+  }
+
   .sm\:-my-12 {
     margin-top: -3rem;
     margin-bottom: -3rem;
@@ -11451,6 +11680,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-top: 2rem;
   }
 
+  .sm\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
   .sm\:mt-12 {
     margin-top: 3rem;
   }
@@ -11515,6 +11748,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-top: -2rem;
   }
 
+  .sm\:-mt-10 {
+    margin-top: -2.5rem;
+  }
+
   .sm\:-mt-12 {
     margin-top: -3rem;
   }
@@ -11573,6 +11810,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:mr-8 {
     margin-right: 2rem;
+  }
+
+  .sm\:mr-10 {
+    margin-right: 2.5rem;
   }
 
   .sm\:mr-12 {
@@ -11639,6 +11880,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-right: -2rem;
   }
 
+  .sm\:-mr-10 {
+    margin-right: -2.5rem;
+  }
+
   .sm\:-mr-12 {
     margin-right: -3rem;
   }
@@ -11697,6 +11942,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:mb-8 {
     margin-bottom: 2rem;
+  }
+
+  .sm\:mb-10 {
+    margin-bottom: 2.5rem;
   }
 
   .sm\:mb-12 {
@@ -11763,6 +12012,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-bottom: -2rem;
   }
 
+  .sm\:-mb-10 {
+    margin-bottom: -2.5rem;
+  }
+
   .sm\:-mb-12 {
     margin-bottom: -3rem;
   }
@@ -11821,6 +12074,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:ml-8 {
     margin-left: 2rem;
+  }
+
+  .sm\:ml-10 {
+    margin-left: 2.5rem;
   }
 
   .sm\:ml-12 {
@@ -11885,6 +12142,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:-ml-8 {
     margin-left: -2rem;
+  }
+
+  .sm\:-ml-10 {
+    margin-left: -2.5rem;
   }
 
   .sm\:-ml-12 {
@@ -12063,6 +12324,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     scroll-margin: 2rem;
   }
 
+  .sm\:scroll-m-10 {
+    scroll-margin: 2.5rem;
+  }
+
   .sm\:scroll-m-12 {
     scroll-margin: 3rem;
   }
@@ -12121,6 +12386,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:-scroll-m-8 {
     scroll-margin: -2rem;
+  }
+
+  .sm\:-scroll-m-10 {
+    scroll-margin: -2.5rem;
   }
 
   .sm\:-scroll-m-12 {
@@ -12189,6 +12458,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .sm\:scroll-mx-8 {
     scroll-margin-left: 2rem;
     scroll-margin-right: 2rem;
+  }
+
+  .sm\:scroll-mx-10 {
+    scroll-margin-left: 2.5rem;
+    scroll-margin-right: 2.5rem;
   }
 
   .sm\:scroll-mx-12 {
@@ -12266,6 +12540,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     scroll-margin-right: -2rem;
   }
 
+  .sm\:-scroll-mx-10 {
+    scroll-margin-left: -2.5rem;
+    scroll-margin-right: -2.5rem;
+  }
+
   .sm\:-scroll-mx-12 {
     scroll-margin-left: -3rem;
     scroll-margin-right: -3rem;
@@ -12339,6 +12618,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .sm\:scroll-my-8 {
     scroll-margin-top: 2rem;
     scroll-margin-bottom: 2rem;
+  }
+
+  .sm\:scroll-my-10 {
+    scroll-margin-top: 2.5rem;
+    scroll-margin-bottom: 2.5rem;
   }
 
   .sm\:scroll-my-12 {
@@ -12416,6 +12700,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     scroll-margin-bottom: -2rem;
   }
 
+  .sm\:-scroll-my-10 {
+    scroll-margin-top: -2.5rem;
+    scroll-margin-bottom: -2.5rem;
+  }
+
   .sm\:-scroll-my-12 {
     scroll-margin-top: -3rem;
     scroll-margin-bottom: -3rem;
@@ -12483,6 +12772,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     scroll-margin-top: 2rem;
   }
 
+  .sm\:scroll-mt-10 {
+    scroll-margin-top: 2.5rem;
+  }
+
   .sm\:scroll-mt-12 {
     scroll-margin-top: 3rem;
   }
@@ -12541,6 +12834,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:-scroll-mt-8 {
     scroll-margin-top: -2rem;
+  }
+
+  .sm\:-scroll-mt-10 {
+    scroll-margin-top: -2.5rem;
   }
 
   .sm\:-scroll-mt-12 {
@@ -12603,6 +12900,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     scroll-margin-right: 2rem;
   }
 
+  .sm\:scroll-mr-10 {
+    scroll-margin-right: 2.5rem;
+  }
+
   .sm\:scroll-mr-12 {
     scroll-margin-right: 3rem;
   }
@@ -12661,6 +12962,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:-scroll-mr-8 {
     scroll-margin-right: -2rem;
+  }
+
+  .sm\:-scroll-mr-10 {
+    scroll-margin-right: -2.5rem;
   }
 
   .sm\:-scroll-mr-12 {
@@ -12723,6 +13028,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     scroll-margin-bottom: 2rem;
   }
 
+  .sm\:scroll-mb-10 {
+    scroll-margin-bottom: 2.5rem;
+  }
+
   .sm\:scroll-mb-12 {
     scroll-margin-bottom: 3rem;
   }
@@ -12781,6 +13090,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:-scroll-mb-8 {
     scroll-margin-bottom: -2rem;
+  }
+
+  .sm\:-scroll-mb-10 {
+    scroll-margin-bottom: -2.5rem;
   }
 
   .sm\:-scroll-mb-12 {
@@ -12843,6 +13156,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     scroll-margin-left: 2rem;
   }
 
+  .sm\:scroll-ml-10 {
+    scroll-margin-left: 2.5rem;
+  }
+
   .sm\:scroll-ml-12 {
     scroll-margin-left: 3rem;
   }
@@ -12903,6 +13220,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     scroll-margin-left: -2rem;
   }
 
+  .sm\:-scroll-ml-10 {
+    scroll-margin-left: -2.5rem;
+  }
+
   .sm\:-scroll-ml-12 {
     scroll-margin-left: -3rem;
   }
@@ -12961,6 +13282,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:scroll-p-8 {
     scroll-padding: 2rem;
+  }
+
+  .sm\:scroll-p-10 {
+    scroll-padding: 2.5rem;
   }
 
   .sm\:scroll-p-12 {
@@ -13029,6 +13354,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .sm\:scroll-px-8 {
     scroll-padding-left: 2rem;
     scroll-padding-right: 2rem;
+  }
+
+  .sm\:scroll-px-10 {
+    scroll-padding-left: 2.5rem;
+    scroll-padding-right: 2.5rem;
   }
 
   .sm\:scroll-px-12 {
@@ -13106,6 +13436,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     scroll-padding-bottom: 2rem;
   }
 
+  .sm\:scroll-py-10 {
+    scroll-padding-top: 2.5rem;
+    scroll-padding-bottom: 2.5rem;
+  }
+
   .sm\:scroll-py-12 {
     scroll-padding-top: 3rem;
     scroll-padding-bottom: 3rem;
@@ -13173,6 +13508,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     scroll-padding-top: 2rem;
   }
 
+  .sm\:scroll-pt-10 {
+    scroll-padding-top: 2.5rem;
+  }
+
   .sm\:scroll-pt-12 {
     scroll-padding-top: 3rem;
   }
@@ -13231,6 +13570,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:scroll-pr-8 {
     scroll-padding-right: 2rem;
+  }
+
+  .sm\:scroll-pr-10 {
+    scroll-padding-right: 2.5rem;
   }
 
   .sm\:scroll-pr-12 {
@@ -13293,6 +13636,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     scroll-padding-bottom: 2rem;
   }
 
+  .sm\:scroll-pb-10 {
+    scroll-padding-bottom: 2.5rem;
+  }
+
   .sm\:scroll-pb-12 {
     scroll-padding-bottom: 3rem;
   }
@@ -13351,6 +13698,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:scroll-pl-8 {
     scroll-padding-left: 2rem;
+  }
+
+  .sm\:scroll-pl-10 {
+    scroll-padding-left: 2.5rem;
   }
 
   .sm\:scroll-pl-12 {
@@ -13477,6 +13828,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     gap: 2rem;
   }
 
+  .sm\:gap-10 {
+    gap: 2.5rem;
+  }
+
   .sm\:gap-12 {
     gap: 3rem;
   }
@@ -13545,6 +13900,11 @@ Ensure the default browser behavior of the `hidden` attribute.
          column-gap: 2rem;
   }
 
+  .sm\:gap-x-10 {
+    -moz-column-gap: 2.5rem;
+         column-gap: 2.5rem;
+  }
+
   .sm\:gap-x-12 {
     -moz-column-gap: 3rem;
          column-gap: 3rem;
@@ -13610,6 +13970,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:gap-y-8 {
     row-gap: 2rem;
+  }
+
+  .sm\:gap-y-10 {
+    row-gap: 2.5rem;
   }
 
   .sm\:gap-y-12 {
@@ -13835,6 +14199,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding: 2rem;
   }
 
+  .sm\:p-10 {
+    padding: 2.5rem;
+  }
+
   .sm\:p-12 {
     padding: 3rem;
   }
@@ -13901,6 +14269,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .sm\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .sm\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 
   .sm\:px-12 {
@@ -13978,6 +14351,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-bottom: 2rem;
   }
 
+  .sm\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
   .sm\:py-12 {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -14045,6 +14423,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-top: 2rem;
   }
 
+  .sm\:pt-10 {
+    padding-top: 2.5rem;
+  }
+
   .sm\:pt-12 {
     padding-top: 3rem;
   }
@@ -14103,6 +14485,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:pr-8 {
     padding-right: 2rem;
+  }
+
+  .sm\:pr-10 {
+    padding-right: 2.5rem;
   }
 
   .sm\:pr-12 {
@@ -14165,6 +14551,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-bottom: 2rem;
   }
 
+  .sm\:pb-10 {
+    padding-bottom: 2.5rem;
+  }
+
   .sm\:pb-12 {
     padding-bottom: 3rem;
   }
@@ -14223,6 +14613,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:pl-8 {
     padding-left: 2rem;
+  }
+
+  .sm\:pl-10 {
+    padding-left: 2.5rem;
   }
 
   .sm\:pl-12 {
