@@ -90,8 +90,8 @@ include ../_mixins.pug
     +exampleDisplay
       +emailInputField(name="email2" label="Email" errorText="Lorem ipsum" value="an invalid email")
       +passwordInputField(name="password2" label="Password" errorText="Lorem ipsum" value="an invalid password" pattern="[`\s]")
-      +searchInputField(name="search2" label="Search" errorText="Lorem ipsum")
-      +textInputField(name="text2" label="Text" errorText="Lorem ipsum")
+      +searchInputField(name="search2" label="Search" errorText="Lorem ipsum" required)
+      +textInputField(name="text2" label="Text" errorText="Lorem ipsum" required)
     +exampleSourceCode.
       +emailInputField(name="email2" label="Email" errorText="Lorem ipsum")
       +passwordInputField(name="password2" label="Password" errorText="Lorem ipsum")

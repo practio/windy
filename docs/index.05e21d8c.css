@@ -10810,6 +10810,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: var(--ink-lightest);
 }.disabled\:hover\:bg-transparent:hover:disabled {
   background-color: transparent;
+}.peer:invalid ~ .peer-invalid\:visible {
+  visibility: visible;
+}.peer:invalid ~ .peer-invalid\:invisible {
+  visibility: hidden;
+}.peer:invalid ~ .peer-invalid\:overflow-visible {
+  overflow: visible;
+}.peer:invalid ~ .peer-invalid\:overflow-x-visible {
+  overflow-x: visible;
+}.peer:invalid ~ .peer-invalid\:overflow-y-visible {
+  overflow-y: visible;
 }@media (min-width: 640px) {
 
   .sm\:top-0 {

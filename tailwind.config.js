@@ -9,6 +9,10 @@ module.exports = {
       variants: ["active", "focus", "hover"],
     },
     {
+      pattern: /visible/,
+      variants: ["peer-invalid"],
+    },
+    {
       pattern: /(p|pt|pr|pb|pl|py|px|m|mt|mr|mb|ml|my|mx)-/,
       variants: ["sm"],
     },
