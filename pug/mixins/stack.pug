@@ -1,0 +1,59 @@
+include ./element.pug
+
+mixin stack(tagName = "div")
+  -
+    const { size = '1' } = attributes;
+
+    const stack = {
+      default: {
+        classNames: [
+          'flex', 
+          'flex-col',
+        ]
+      },
+      sizes: {
+        1: {
+          classNames: [
+            'gap-y-1'
+          ]
+        },
+        2: {
+          classNames: [
+            'gap-y-2'
+          ]
+        },
+        3: {
+          classNames: [
+            'gap-y-3'
+          ]
+        },
+        4: {
+          classNames: [
+            'gap-y-4'
+          ]
+        },
+        6: {
+          classNames: [
+            'gap-y-6'
+          ]
+        },
+        8: {
+          classNames: [
+            'gap-y-8'
+          ]
+        },
+        12: {
+          classNames: [
+            'gap-y-12'
+          ]
+        }
+      }
+    };
+
+    const classNames = [
+      ...stack.default.classNames,
+      ...stack.sizes[size].classNames
+    ].sort();
+
+  +element(tagName)(class=classNames)&attributes(attributes)
+    block

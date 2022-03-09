@@ -23,7 +23,7 @@ include ../_mixins.pug
   +heading4.mb-8 Input Fields with Tags
   +example.mb-8
     +exampleDisplay
-      +emailInputField(name="email2" placeholder="Email" tags=["Tag"])
+      +emailInputField(name="email2" placeholder="Email" tags=["Tag 1", "Tag 2"])
       +passwordInputField(name="password2" placeholder="Password" tags=["Tag"])
       +searchInputField(name="search2" placeholder="Search" tags=["Tag"])
       +textInputField(name="text2" placeholder="Text" tags=["Tag"])
@@ -72,6 +72,32 @@ include ../_mixins.pug
       +searchInputField(name="search5" label="Search")
       +textInputField(name="text5" label="Text")
 
+  +heading4.mb-8 Input Fields with Label and Help Text
+  +example.mb-8
+    +exampleDisplay
+      +emailInputField(name="email2" label="Email" helpText="Lorem ipsum")
+      +passwordInputField(name="password2" label="Password" helpText="Lorem ipsum")
+      +searchInputField(name="search2" label="Search" helpText="Lorem ipsum")
+      +textInputField(name="text2" label="Text" helpText="Lorem ipsum")
+    +exampleSourceCode.
+      +emailInputField(name="email2" label="Email" helpText="Lorem ipsum")
+      +passwordInputField(name="password2" label="Password" helpText="Lorem ipsum")
+      +searchInputField(name="search2" label="Search" helpText="Lorem ipsum")
+      +textInputField(name="text2" label="Text" helpText="Lorem ipsum")
+
+  +heading4.mb-8 Input Fields with Label and Error Text
+  +example.mb-8
+    +exampleDisplay
+      +emailInputField(name="email2" label="Email" errorText="Lorem ipsum" value="an invalid email")
+      +passwordInputField(name="password2" label="Password" errorText="Lorem ipsum" value="an invalid password" pattern="[`\s]")
+      +searchInputField(name="search2" label="Search" errorText="Lorem ipsum")
+      +textInputField(name="text2" label="Text" errorText="Lorem ipsum")
+    +exampleSourceCode.
+      +emailInputField(name="email2" label="Email" errorText="Lorem ipsum")
+      +passwordInputField(name="password2" label="Password" errorText="Lorem ipsum")
+      +searchInputField(name="search2" label="Search" errorText="Lorem ipsum")
+      +textInputField(name="text2" label="Text" errorText="Lorem ipsum")
+
   +heading4.mb-8 Select Field
   +example.mb-8
     +exampleDisplay
@@ -97,26 +123,3 @@ include ../_mixins.pug
         +option(value="berlin") Berlin
         +option(value="copenhagen") Copenhagen
         +option(value="london") London
-
-  +heading4.mb-8 Form
-  +example.mb-8
-    +exampleDisplay
-      +form
-        +fieldset
-          +textInputField(label="Name" name="name" id="name6")
-          +emailInputField(label="Email" name="email" id="email6")
-          +selectField(label="City" name="city" id="city6")
-            +option(value="berlin") Berlin
-            +option(value="copenhagen") Copenhagen 1
-            +option(value="london") London
-        +button(type="submit" kind="primary" size="large") Submit
-    +exampleSourceCode.
-      +form
-        +fieldset
-          +textInputField(label="Name" name="name" id="name6")
-          +emailInputField(label="Email" name="email" id="email6")
-          +selectField(label="City" name="city" id="city6")
-            +option(value="berlin") Berlin
-            +option(value="copenhagen") Copenhagen 1
-            +option(value="london") London
-        +button(type="submit" kind="primary" size="large") Submit

@@ -1,15 +1,16 @@
 include ./element.pug
+include ./stack.pug
 
 include ./icons/solid/lockClosed.pug
 include ./icons/solid/mail.pug
 include ./icons/solid/search.pug
 
 mixin form
-  form(class="flex flex-col gap-y-12")&attributes(attributes)
+  +stack("form")(size=12)&attributes(attributes)
     block
 
 mixin fieldset
-  fieldset(class="flex flex-col gap-y-6")&attributes(attributes)
+  +stack("fieldset")(size=6)&attributes(attributes)
     if attributes.legend
       legend(class="sr-only")= attributes.legend
     block
@@ -27,180 +28,143 @@ mixin label
     block
 
 mixin field
-  - const { orientation = "vertical" } = attributes;
-  case orientation
-    when "vertical"
-      div(class="flex flex-col gap-y-1")&attributes(attributes)
-        block
-    when "horizontal"
-      div(class="flex gap-x-2")&attributes(attributes)
-        block
+  +stack(size=2)
+    if attributes.label
+      +label(for=(attributes.id || attributes.name))= attributes.label
+    +stack(size=1)
+      block
+      if attributes.errorText
+        +fieldErrorText= attributes.errorText
+      else if attributes.helpText
+        +fieldHelpText= attributes.helpText
 
-mixin fieldDescription
-  div&attributes(attributes)
+mixin fieldErrorText
+  p.text-red.text-xs
     block
 
-mixin inputGroup(tagName = "label")
-  -
-    const { size = 'medium', tags = [], ...attrs } = attributes;
-
-    const base = [
-      'flex',
-      'border',
-      'border-sky-dark',
-      'disabled:bg-sky-light',
-      'hover:border-ink-lightest',
-      'focus-within:border-blue',
-      'focus-within:hover:border-blue',
-      'focus:outline-0',
-      'items-center',
-      'bg-white'
-    ];
-
-    let disabled = [];
-
-    if (attributes.disabled) {
-      disabled = [
-        'bg-sky-light',
-        'cursor-not-allowed'
-      ];
-    } else {
-      disabled = [
-        'cursor-text'
-      ]
-    }
-
-    const sizes = {
-      small: [
-        'h-8',
-        'px-2',
-        'rounded-md',
-        'text-sm',
-        'gap-x-1',
-      ],
-      medium: [
-        'h-12',
-        'px-3',
-        'rounded-lg',
-        'gap-x-2',
-      ]
-    };
-
-    const classNames = [...base, ...disabled, ...sizes[size]].sort();
-
-  +element(tagName)(class=classNames)&attributes(attrs)
+mixin fieldHelpText
+  p.text-ink-lighter.text-xs
     block
-    each tag in tags
-      +tag= tag
 
 mixin input(tagName = "input")
   -
-    const { size = 'medium', ...attrs } = attributes;
+    const { type = 'text', invalid = false, icon = false, size = 'medium', tags = [] } = attributes;
 
-    const base = [
-      'focus:outline-0',
-      'border-0',
-      'bg-transparent',
-      'disabled:bg-transparent',
-      'disabled:cursor-not-allowed',
-      'grow-0'
-    ];
-
-    const sizes = {
-      small: [
-        'h-5',
-        'text-sm'
-      ],
-      medium: [
-        'h-6',
-      ]
+    const input = {
+      default: {
+        classNames: [
+          'bg-white',
+          'border-sky-dark',
+          'border',
+          'disabled:bg-sky-light',
+          'disabled:cursor-not-allowed',
+          'flex',
+          'focus-within:border-blue',
+          'focus-within:hover:border-blue',
+          'focus:outline-0',
+          'hover:border-ink-lightest',
+          'items-center',
+          'w-full',
+          'transition',
+          'invalid:border-red'
+        ]
+      },
+      icon: {
+        true: {
+          classNames: [
+            'pl-10'
+          ]
+        },
+        false: {
+          classNames: []
+        }
+      },
+      sizes: {
+        small: {
+          classNames: [
+            'h-8',
+            'px-2',
+            'rounded-md',
+            'text-sm',
+          ]
+        },
+        medium: {
+          classNames:[
+            'h-12',
+            'px-3',
+            'rounded-lg',
+          ]
+        }
+      }
     };
 
-    const classNames = [...base, ...sizes[size]].sort();
+    const classNames = [
+      ...input.default.classNames,
+      ...input.icon[icon].classNames,
+      ...input.sizes[size].classNames
+    ].sort();
 
-  +element(tagName)(class=classNames id=(attrs.id || attrs.name))&attributes(attrs)
-    block
+    const iconClassNames = [
+      'text-ink-lightest',
+      'h-full',
+      'flex',
+      'justify-center',
+      'items-center',
+      'absolute',
+      'm-1px',
+      'p-3'
+    ];
+
+  .relative
+    if icon
+      +element("div")(class=iconClassNames)
+        +inputIcon(type)
+    +element(tagName)(class=classNames)&attributes(attributes)
+      block
+
+mixin inputIcon(type)
+  case type
+    when "email"
+      +mailSolidIcon&attributes(attributes)
+    when "password"
+      +lockClosedSolidIcon&attributes(attributes)
+    when "search"
+      +searchSolidIcon&attributes(attributes)
 
 mixin select
-  +inputGroup&attributes(attributes)
-    +input("select")&attributes(attributes)
-      block
+  +input("select")&attributes(attributes)
+    block
 
 mixin option
   option&attributes(attributes)
     block
 
-mixin emailInput
-  - const { size, disabled, tags } = attributes;
+mixin selectField
+  -
+    const { label, errorText, helpText, ...selectAttributes } = attributes;
+    const fieldAttributes = { label, errorText, helpText };
 
-  +inputGroup&attributes({ size, disabled, tags })
-    +mailSolidIcon.text-ink-lightest.shrink-0
-    +input(type="email")&attributes(attributes)
-
-mixin passwordInput
-  - const { size, disabled, tags } = attributes;
-
-  +inputGroup&attributes({ size, disabled, tags })
-    +lockClosedSolidIcon.text-ink-lightest.shrink-0
-    +input(type="password")&attributes(attributes)
-
-mixin searchInput
-  - const { size, disabled, tags } = attributes;
-
-  +inputGroup&attributes({ size, disabled, tags })
-    +searchSolidIcon.text-ink-lightest.shrink-0
-    +input(type="search")&attributes(attributes)
-
-mixin textInput
-  - const { size, disabled, tags } = attributes;
-
-  +inputGroup&attributes({ size, disabled, tags })
-    +input(type="text")&attributes(attributes)
-
-mixin radioInput
-  +input(type="radio")&attributes(attributes)
-
-mixin checkboxInput
-  +input(type="checkbox")&attributes(attributes)
+  +field&attributes(fieldAttributes)
+    +select&attributes(selectAttributes)
+      block
 
 mixin inputField
-  +field
-    if attributes.label
-      +label(for=(attributes.id || attributes.name))= attributes.label
-    block
+  -
+    const { label, errorText, helpText, ...inputAttributes } = attributes;
+    const fieldAttributes = { label, errorText, helpText };
+
+  +field&attributes(fieldAttributes)
+    +input&attributes(inputAttributes)
 
 mixin emailInputField
-  +inputField&attributes(attributes)
-    +emailInput&attributes(attributes)
+  +inputField(type="email" icon)&attributes(attributes)
 
 mixin passwordInputField
-  +inputField&attributes(attributes)
-    +passwordInput&attributes(attributes)
+  +inputField(type="password" icon)&attributes(attributes)
 
 mixin searchInputField
-  +inputField&attributes(attributes)
-    +searchInput&attributes(attributes)
+  +inputField(type="search" icon)&attributes(attributes)
 
 mixin textInputField
-  +inputField&attributes(attributes)
-    +textInput&attributes(attributes)
+  +inputField(type="text")&attributes(attributes)
 
-mixin radioInputField
-  +field(orientation="horizontal")
-    +radioInput&attributes(attributes)
-    div
-      +label(for=attributes.id)= attributes.label
-      +fieldDescription= attributes.description
-
-mixin checkboxInputField
-  +field(orientation="horizontal")
-    +checkboxInput&attributes(attributes)
-    div
-      +label(for=attributes.id)= attributes.label
-      +fieldDescription= attributes.description
-
-mixin selectField
-  +field
-    +label(for=attributes.id)= attributes.label
-    +select&attributes(attributes)
-      block
