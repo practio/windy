@@ -18,7 +18,7 @@ mixin dropdownMenu
       default: {
         classNames: [
           'absolute',
-          'mt-2'
+          'mt-2',
         ]
       },
       align: {
@@ -33,5 +33,5 @@ mixin dropdownMenu
 
     const classNames = [ ...dropdownMenu.default.classNames, ...dropdownMenu.align[align].classNames ];
 
-  +menu(class=classNames)&attributes(attrs)
+  +menu(hidden=true class=classNames)&attributes(attrs)
     block

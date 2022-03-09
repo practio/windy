@@ -1,19 +1,13 @@
 main();
 
 function main() {
-  menus();
+  dropdowns();
   modals();
 }
 
-function menus() {
+function dropdowns() {
   document.addEventListener("click", handleClickEvent);
   document.addEventListener("keydown", handleKeydownEvent);
-
-  function handleKeydownEvent(e) {
-    if (e.key === "Escape") {
-      hideMenus();
-    }
-  }
 
   function handleClickEvent(e) {
     let action, target;
@@ -34,13 +28,13 @@ function menus() {
     }
 
     if (!element) {
-      hideMenus();
+      hideDropdownMenus();
 
       return;
     }
 
     if (action === "toggle") {
-      hideMenus();
+      hideDropdownMenus();
 
       let targetElement = document.querySelector(target);
 
@@ -52,12 +46,20 @@ function menus() {
     }
   }
 
-  function hideMenus() {
-    const menus = document.querySelectorAll("[role=menu]");
+  function handleKeydownEvent(e) {
+    if (e.key === "Escape") {
+      hideDropdownMenus();
+    }
+  }
 
-    for (let menu of menus) {
-      if (!menu.classList.contains("hidden")) {
-        menu.classList.add("hidden");
+  function hideDropdownMenus() {
+    const dropdownMenus = document.querySelectorAll(
+      "[role=dropdown] > [role=menu]"
+    );
+
+    for (let dropdownMenu of dropdownMenus) {
+      if (!dropdownMenu.classList.contains("hidden")) {
+        dropdownMenu.classList.add("hidden");
       }
     }
   }

@@ -84,51 +84,28 @@ html(lang="en")
                   size="small"
                 )
               +dropdown
-                +dropdownButton(data-target="#menuA") Menu A
-                +dropdownMenu#menuA
-                  +menuLink(href="#") A thing
-                  +menuLink(href="#") Another thing
-                  +menuDivider
-                  +menuLink(href="#") A third thing
-                  +menuDivider
-                  +form.p-3
-                    .grid.gap-y-3
-                      +textInputField(label="Kind" size="small")
-                      +primaryButton.w-full Submit
+                +dropdownButton(data-target="#filter1") Filter 1
+                +dropdownMenu#filter1
+                  +menuLink(href="#") Value 1.1
+                  +menuLink(href="#") Value 1.2
               +dropdown
-                +dropdownButton(data-target="#menu4") Menu 4
-                +dropdownMenu#menu4
-                  +menuLink(href="#")
-                    .w-3.h-3.bg-red
-                    | Red
-                  +menuLink(href="#")
-                    .w-3.h-3.bg-green
-                    | Green
-                  +menuLink(href="#")
-                    .w-3.h-3.bg-blue
-                    | Blue
-              +dropdown.ml-auto
-                +dropdownButton(data-target="#menu5") Menu 5
-                +dropdownMenu#menu5(align="right")
-                  +menuLink(href="#") Lorem ipsum
-                  +menuLink(href="#") Foobarbazqux
-                  +menuLink(href="#") Bingo Bango Bob
+                +dropdownButton(data-target="#filter2") Filter 2
+                +dropdownMenu#filter2
+                  +menuLink(href="#") Value 2.1
+                  +menuLink(href="#") Value 2.2
             .mb-8
               +table
                 +thead
                   +tr 
-                    +th #
-                    +th Name
-                    +th Type
+                    +th Field 1
+                    +th Field 2
                 +tbody
                   +tr 
-                    +td 1
-                    +td Foo
-                    +td A thing
+                    +td Value 1.1
+                    +td Value 1.2
                   +tr 
-                    +td 2
-                    +td Bar
-                    +td Another thing
+                    +td Value 2.1
+                    +td Value 2.2
             .flex.gap-x-3.justify-end
               +secondaryButton
                 +chevronLeftSolidIcon

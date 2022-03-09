@@ -9,13 +9,37 @@ include ../_mixins.pug
   +example.mb-8
     +exampleDisplay
       +dropdown
-        +dropdownButton(data-target="#menu123") Dropdown 1
-        +dropdownMenu#menu123
+        +dropdownButton(data-target="#things") Things
+        +dropdownMenu#things
           +menuLink(href="#") One thing
           +menuLink(href="#") Another thing
+      +dropdown
+        +dropdownButton(data-target="#colors") Colors
+        +dropdownMenu#colors
+          +menuLink(href="#")
+            .w-3.h-3.bg-red
+            | Red
+          +menuLink(href="#")
+            .w-3.h-3.bg-green
+            | Green
+          +menuLink(href="#")
+            .w-3.h-3.bg-blue
+            | Blue
     +exampleSourceCode.
       +dropdown
-        +dropdownButton(data-target="#menu123") Dropdown 1
-        +dropdownMenu#menu123
+        +dropdownButton(data-target="#things") Dropdown 1
+        +dropdownMenu#things
           +menuLink(href="#") One thing
           +menuLink(href="#") Another thing
+      +dropdown
+        +dropdownButton(data-target="#colors") Menu 4
+        +dropdownMenu#colors
+          +menuLink(href="#")
+            .w-3.h-3.bg-red
+            | Red
+          +menuLink(href="#")
+            .w-3.h-3.bg-green
+            | Green
+          +menuLink(href="#")
+            .w-3.h-3.bg-blue
+            | Blue
