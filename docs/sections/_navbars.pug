@@ -1,0 +1,35 @@
+include ../_mixins.pug
+
++section
+  +heading2.mb-1.flex.items-center.gap-x-2
+    | Navbars
+    +badge(color="pink") Experimental
+  +paragraph.mb-8 Use for list filtering...
+
+  +example.mb-8
+    +exampleDisplay
+      +navbar
+        +form
+          +searchInput(
+            name="search"
+            placeholder="Name"
+            size="small"
+          )
+        +dropdown
+          +dropdownButton(data-target="#menu3") Menu 3
+          +dropdownMenu#menu3
+            +menuLink(href="#") One thing
+            +menuLink(href="#") Another thing
+    +exampleSourceCode.
+      +navbar
+        +form
+          +searchInput(
+            name="search"
+            placeholder="Name"
+            size="small"
+          )
+        +dropdown
+          +dropdownButton(data-target="#menu3") Menu 3
+          +dropdownMenu#menu3
+            +menuLink(href="#") One thing
+            +menuLink(href="#") Another thing

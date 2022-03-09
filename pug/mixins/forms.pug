@@ -40,22 +40,21 @@ mixin fieldDescription
   div&attributes(attributes)
     block
 
-mixin inputGroup(tagName = "div")
+mixin inputGroup(tagName = "label")
   -
     const { size = 'medium', tags = [], ...attrs } = attributes;
 
     const base = [
       'flex',
-      'gap-x-2',
       'border',
       'border-sky-dark',
       'disabled:bg-sky-light',
-      'w-full',
       'hover:border-ink-lightest',
       'focus-within:border-blue',
       'focus-within:hover:border-blue',
       'focus:outline-0',
-      'items-center'
+      'items-center',
+      'bg-white'
     ];
 
     let disabled = [];
@@ -65,19 +64,25 @@ mixin inputGroup(tagName = "div")
         'bg-sky-light',
         'cursor-not-allowed'
       ];
+    } else {
+      disabled = [
+        'cursor-text'
+      ]
     }
 
     const sizes = {
       small: [
-        'h-10',
+        'h-8',
         'px-2',
         'rounded-md',
-        'text-sm'
+        'text-sm',
+        'gap-x-1',
       ],
       medium: [
         'h-12',
         'px-3',
         'rounded-lg',
+        'gap-x-2',
       ]
     };
 
@@ -98,8 +103,7 @@ mixin input(tagName = "input")
       'bg-transparent',
       'disabled:bg-transparent',
       'disabled:cursor-not-allowed',
-      'grow-1',
-      'w-full',
+      'grow-0'
     ];
 
     const sizes = {
@@ -127,30 +131,30 @@ mixin option
     block
 
 mixin emailInput
-  - const { size, tags } = attributes;
+  - const { size, disabled, tags } = attributes;
 
-  +inputGroup&attributes({ size, tags })
+  +inputGroup&attributes({ size, disabled, tags })
     +mailSolidIcon.text-ink-lightest.shrink-0
     +input(type="email")&attributes(attributes)
 
 mixin passwordInput
-  - const { size, tags } = attributes;
+  - const { size, disabled, tags } = attributes;
 
-  +inputGroup&attributes({ size, tags })
+  +inputGroup&attributes({ size, disabled, tags })
     +lockClosedSolidIcon.text-ink-lightest.shrink-0
     +input(type="password")&attributes(attributes)
 
 mixin searchInput
-  - const { size, tags } = attributes;
+  - const { size, disabled, tags } = attributes;
 
-  +inputGroup&attributes({ size, tags })
+  +inputGroup&attributes({ size, disabled, tags })
     +searchSolidIcon.text-ink-lightest.shrink-0
     +input(type="search")&attributes(attributes)
 
 mixin textInput
-  - const { size, tags } = attributes;
+  - const { size, disabled, tags } = attributes;
 
-  +inputGroup&attributes({ size, tags })
+  +inputGroup&attributes({ size, disabled, tags })
     +input(type="text")&attributes(attributes)
 
 mixin radioInput

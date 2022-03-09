@@ -26,20 +26,24 @@ html(lang="en")
       include ./sections/_cards.pug
       include ./sections/_descriptionLists.pug
       include ./sections/_dialogs.pug
+      include ./sections/_dropdowns.pug
       include ./sections/_forms.pug
       include ./sections/_headings.pug
       include ./sections/_icons.pug
       include ./sections/_menu.pug
       include ./sections/_modals.pug
       include ./sections/_nav.pug
+      include ./sections/_navbars.pug
       include ./sections/_table.pug
       include ./sections/_toast.pug
       include ./sections/_util.pug
 
       +section
-        +heading2.mb-1 Examples
+        +heading2.mb-8 Examples
+
+        +heading3.mb-1 Form Page
         +paragraph.mb-8 A full page with a header, paragraph and form.
-        +example
+        +example.mb-8
           +narrowContainer("main")
             +criticalToast.mb-8 Oh no!
             +heading1.mb-1(size=3) New Thing
@@ -65,5 +69,72 @@ html(lang="en")
               +button.w-full(kind="primary" size="large" type="submit")
                 +plusSmSolidIcon
                 | Create new thing
+
+        +heading3.mb-1 List Page
+        +paragraph.mb-8 A full page with a header, subheader, and filterable list
+        +example
+          +container("main")
+            +heading1.mb-1(size=3) Things
+            +paragraph.mb-8 List of all the things.
+            +navbar.mb-8
+              +form
+                +searchInput(
+                  name="search"
+                  placeholder="Name"
+                  size="small"
+                )
+              +dropdown
+                +dropdownButton(data-target="#menuA") Menu A
+                +dropdownMenu#menuA
+                  +menuLink(href="#") A thing
+                  +menuLink(href="#") Another thing
+                  +menuDivider
+                  +menuLink(href="#") A third thing
+                  +menuDivider
+                  +form.p-3
+                    .grid.gap-y-3
+                      +textInputField(label="Kind" size="small")
+                      +primaryButton.w-full Submit
+              +dropdown
+                +dropdownButton(data-target="#menu4") Menu 4
+                +dropdownMenu#menu4
+                  +menuLink(href="#")
+                    .w-3.h-3.bg-red
+                    | Red
+                  +menuLink(href="#")
+                    .w-3.h-3.bg-green
+                    | Green
+                  +menuLink(href="#")
+                    .w-3.h-3.bg-blue
+                    | Blue
+              +dropdown.ml-auto
+                +dropdownButton(data-target="#menu5") Menu 5
+                +dropdownMenu#menu5(align="right")
+                  +menuLink(href="#") Lorem ipsum
+                  +menuLink(href="#") Foobarbazqux
+                  +menuLink(href="#") Bingo Bango Bob
+            .mb-8
+              +table
+                +thead
+                  +tr 
+                    +th #
+                    +th Name
+                    +th Type
+                +tbody
+                  +tr 
+                    +td 1
+                    +td Foo
+                    +td A thing
+                  +tr 
+                    +td 2
+                    +td Bar
+                    +td Another thing
+            .flex.gap-x-3.justify-end
+              +secondaryButton
+                +chevronLeftSolidIcon
+                | Previous
+              +secondaryButton
+                | Next
+                +chevronRightSolidIcon
 
 script(src="../js/windy.js")

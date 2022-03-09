@@ -2,56 +2,34 @@ include ../_mixins.pug
 
 +section
   +heading2.mb-1.flex.items-center.gap-x-2
-    | Menu
+    | Menus
     +badge(color="pink") Experimental
 
   +paragraph.mb-8 Use the menu mixins to create dropdowns and context menus.
 
   +example.mb-8
     +exampleDisplay
-      .relative
-        div
-          +ghostButton(data-target="#menu1" data-action="toggle")
-            | Menu 1
-            +chevronDownSolidIcon
-        +menu#menu1.absolute.mt-2.left-0.w-32
-          +menuLink(href="#menuLink1") Menu item 1
-          +menuLink(href="#menuLink2") Menu item 2
-          +menuLink(href="#menuLink3") Menu item 3
-      
-      .relative
-        div
-          +ghostButton(data-target="#menu2" data-action="toggle")
-            | Menu 2
-            +chevronDownSolidIcon
-        +menu#menu2.absolute.mt-2.right-0.w-32
-          +menuLink(href="#menuLink4") Menu item 4
-          +menuLink(href="#menuLink5" disabled) Menu item 5
-          +menuDivider
-          +menuHeading Heading
-          +menuLink(href="#menuLink6") Menu item 6
-          +menuLink(href="#menuLink7") Menu item 7
+      +menu(hidden=false)
+        +menuLink(href="#menuLink1") Menu item 1
+        +menuLink(href="#menuLink2") Menu item 2
+        +menuLink(href="#menuLink3") Menu item 3
+      +menu(hidden=false)
+        +menuLink(href="#menuLink4") Menu item 4
+        +menuLink(href="#menuLink5" disabled) Menu item 5
+        +menuDivider
+        +menuHeading Heading
+        +menuLink(href="#menuLink6") Menu item 6
+        +menuLink(href="#menuLink7") Menu item 7
       
     +exampleSourceCode.
-      .relative
-        div
-          +ghostButton(data-target="#menu1" data-action="toggle")
-            | Menu 1
-            +chevronDownSolidIcon
-        +menu#menu1.absolute.mt-2.left-0.w-32
-          +menuLink(href="#menuLink1") Menu item 1
-          +menuLink(href="#menuLink2") Menu item 2
-          +menuLink(href="#menuLink3") Menu item 3
-      
-      .relative
-        div
-          +ghostButton(data-target="#menu2" data-action="toggle")
-            | Menu 2
-            +chevronDownSolidIcon
-        +menu#menu2.absolute.mt-2.right-0.w-32
-          +menuLink(href="#menuLink4") Menu item 4
-          +menuLink(href="#menuLink5" disabled) Menu item 5
-          +menuDivider
-          +menuHeading Heading
-          +menuLink(href="#menuLink6") Menu item 6
-          +menuLink(href="#menuLink7") Menu item 7
+      +menu(hidden=false)
+        +menuLink(href="#menuLink1") Menu item 1
+        +menuLink(href="#menuLink2") Menu item 2
+        +menuLink(href="#menuLink3") Menu item 3
+      +menu(hidden=false)
+        +menuLink(href="#menuLink4") Menu item 4
+        +menuLink(href="#menuLink5" disabled) Menu item 5
+        +menuDivider
+        +menuHeading Heading
+        +menuLink(href="#menuLink6") Menu item 6
+        +menuLink(href="#menuLink7") Menu item 7

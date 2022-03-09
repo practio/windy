@@ -1,0 +1,37 @@
+include ./button.pug
+include ./menu.pug
+
+mixin dropdown
+  .relative(role="dropdown")&attributes(attributes)
+    block
+
+mixin dropdownButton
+  button.text-sm.h-8.px-3.text-ink-light.items-center.flex.gap-x-1(data-action="toggle")&attributes(attributes)
+    block
+    +chevronDownSolidIcon
+
+mixin dropdownMenu
+  -
+    const { align = 'left', ...attrs } = attributes;
+
+    const dropdownMenu = {
+      default: {
+        classNames: [
+          'absolute',
+          'mt-2'
+        ]
+      },
+      align: {
+        left: {
+          classNames: ['left-0']
+        },
+        right: {
+          classNames: ['right-0']
+        }
+      }
+    }
+
+    const classNames = [ ...dropdownMenu.default.classNames, ...dropdownMenu.align[align].classNames ];
+
+  +menu(class=classNames)&attributes(attrs)
+    block

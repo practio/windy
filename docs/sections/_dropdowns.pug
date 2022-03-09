@@ -1,0 +1,21 @@
+include ../_mixins.pug
+
++section
+  +heading2.mb-1.flex.items-center.gap-x-2
+    | Dropdowns
+    +badge(color="pink") Experimental
+  +paragraph.mb-8 Use for filtering and contextual menus...
+
+  +example.mb-8
+    +exampleDisplay
+      +dropdown
+        +dropdownButton(data-target="#menu123") Dropdown 1
+        +dropdownMenu#menu123
+          +menuLink(href="#") One thing
+          +menuLink(href="#") Another thing
+    +exampleSourceCode.
+      +dropdown
+        +dropdownButton(data-target="#menu123") Dropdown 1
+        +dropdownMenu#menu123
+          +menuLink(href="#") One thing
+          +menuLink(href="#") Another thing

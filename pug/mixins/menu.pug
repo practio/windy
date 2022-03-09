@@ -1,5 +1,32 @@
 mixin menu
-  ul(class="py-1 bg-white border hidden rounded-md shadow-md border-sky-light" role="menu")&attributes(attributes)
+  -
+    const { hidden = true, ...attrs } = attributes;
+
+    const menu = {
+      default: {
+        classNames: [
+          'py-1',
+          'bg-white',
+          'border',
+          'rounded-md',
+          'shadow-md',
+          'border-sky-light',
+        ],
+      },
+      hidden: {
+        classNames: [
+          'hidden',
+        ],
+      },
+    };
+
+    let classNames = [ ...menu.default.classNames ];
+
+    if (hidden) {
+      classNames = [ ...classNames, ...menu.hidden.classNames ];
+    }
+
+  ul(class=classNames role="menu")&attributes(attrs)
     block 
 
 mixin menuDivider
@@ -13,5 +40,5 @@ mixin menuHeading
 
 mixin menuLink
   li
-    +link(class="block px-3 py-2 mx-1 text-sm text-left rounded-md hover:bg-sky-light active:bg-sky focus:bg-sky-light")&attributes(attributes)
+    +link(class="flex gap-x-2 items-center px-3 py-2 mx-1 text-sm text-left rounded-md hover:bg-sky-light active:bg-sky focus:bg-sky-light")&attributes(attributes)
       block
