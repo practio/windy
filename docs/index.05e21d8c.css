@@ -8307,7 +8307,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   content: var(--tw-content);
 }:root {
   --sky-lighter: #f9fafb;
-  --sky-light: hsl(210, 22%, 96%);
+  --sky-light: #f4f6f8;
   --sky: #dfe3e8;
   --sky-dark: #c4cdd5;
   --ink-lightest: #919eab;
@@ -8338,8 +8338,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 0;
   max-width: calc(100% - 4rem);
   max-height: calc(100% - 4rem);
-}.invalid\:border-red:invalid {
-  border-color: var(--red);
 }.focus-within\:border-blue:focus-within {
   border-color: var(--blue);
 }.hover\:border-collapse:hover {

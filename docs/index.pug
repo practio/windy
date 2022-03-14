@@ -14,7 +14,7 @@ html(lang="en")
     link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
     link(href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet")
 
-  body(class="font-sans bg-sky-light")
+  body(class="font-sans bg-white")
     +container
       +heading1.mb-1 Windy
       +paragraph.mb-8 Practio ♥ Tailwind...
@@ -72,46 +72,46 @@ html(lang="en")
 
         +heading3.mb-1 List Page
         +paragraph.mb-8 A full page with a header, subheader, and filterable list
-        +example
-          +container("main")
-            +heading1.mb-1(size=3) Things
-            +paragraph.mb-8 List of all the things.
-            +navbar.mb-8
-              +form
-                +searchInputField(
-                  name="search"
-                  placeholder="Name"
-                  size="small"
-                )
-              +dropdown
-                +dropdownButton(data-target="#filter1") Filter 1
-                +dropdownMenu#filter1
-                  +menuLink(href="#") Value 1.1
-                  +menuLink(href="#") Value 1.2
-              +dropdown
-                +dropdownButton(data-target="#filter2") Filter 2
-                +dropdownMenu#filter2
-                  +menuLink(href="#") Value 2.1
-                  +menuLink(href="#") Value 2.2
-            .mb-8
-              +table
-                +thead
-                  +tr 
-                    +th Field 1
-                    +th Field 2
-                +tbody
-                  +tr 
-                    +td Value 1.1
-                    +td Value 1.2
-                  +tr 
-                    +td Value 2.1
-                    +td Value 2.2
-            .flex.gap-x-3.justify-end
-              +secondaryButton
-                +chevronLeftSolidIcon
-                | Previous
-              +secondaryButton
-                | Next
-                +chevronRightSolidIcon
+
+        +heading1.mb-1(size=3) Things
+        +paragraph.mb-8 List of all the things.
+        +navbar.mb-8
+          +form
+            +searchInputField(
+              name="search"
+              placeholder="Name"
+              size="small"
+            )
+          +primaryButton Submit
+          +dropdown
+            +dropdownButton(data-target="#filter1") Filter 1
+            +dropdownMenu#filter1
+              +menuLink(href="#") Value 1.1
+              +menuLink(href="#") Value 1.2
+          +dropdown
+            +dropdownButton(data-target="#filter2") Filter 2
+            +dropdownMenu#filter2
+              +menuLink(href="#") Value 2.1
+              +menuLink(href="#") Value 2.2
+        .mb-8
+          +table
+            +thead
+              +tr 
+                +th Field 1
+                +th Field 2
+            +tbody
+              +tr 
+                +td Value 1.1
+                +td Value 1.2
+              +tr 
+                +td Value 2.1
+                +td Value 2.2
+        .flex.gap-x-3.justify-end
+          +secondaryButton
+            +chevronLeftSolidIcon
+            | Previous
+          +secondaryButton
+            | Next
+            +chevronRightSolidIcon
 
 script(src="../js/windy.js")
