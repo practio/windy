@@ -20,7 +20,12 @@ mixin modal(tagName = "div")
           'rounded-lg',
           'bg-white',
           'shadow-xl',
+          'flex',
+          'flex-col'
         ],
+        style: {
+          'max-height': "80vh",
+        }
       },
       size: {
         small: {
@@ -36,7 +41,7 @@ mixin modal(tagName = "div")
       },
     };
 
-    const style = { ...modal.size[size].style };
+    const style = { ...modal.default.style, ...modal.size[size].style };
     const classNames = [ ...modal.default.classNames ];
 
   +element(tagName)(class=classNames style=style)&attributes(attributes)
@@ -53,6 +58,7 @@ mixin modalBody(tagName = "section")
       'border-y-sky': scroll,
       'scroll-auto': scroll,
       'scroll-smooth': scroll,
+      'overflow-scroll': true,
       'flex': true,
       'flex-col': true,
       'gap-y-6': true,
@@ -74,13 +80,15 @@ mixin modalFooter(tagName = "footer")
       'gap-4',
       'sm:flex-row',
       'sm:justify-end',
+      'grow-0',
+      'shrink-0'
     ];
 
   +element('footer')(class=classNames)&attributes(attributes)
     block 
 
 mixin modalHeader(tagName = "header")
-  header.px-6.pt-6.pb-4.flex.justify-between
+  header.px-6.pt-6.pb-4.flex.justify-between.grow-0.shrink-0
     .flex.flex-col.gap-y-1
       block
     +modalCloseButton
