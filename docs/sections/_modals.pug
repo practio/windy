@@ -27,8 +27,18 @@ include ../_mixins.pug
           +button(kind="ghost" data-action="close") Cancel
           +button(kind="primary") Primary Action
     +exampleSourceCode.
-      +button(data-action="showModal" data-target="#modal1") Show modal
-      +modalDialog#modal1
+      +button(data-action="showModal" data-target="#smallModal") Show small modal
+      +button(data-action="showModal" data-target="#largeModal") Show large modal
+      +modalDialog#smallModal(size="small")
+        +modalHeader
+          +modalTitle Modal title
+        +modalBody
+          +paragraph I forbindelse med rejsevacciner bliver der ofte lagt et program, hvor en vaccine skal gives over flere omgange.
+          +paragraph Alle doser, efter den første i et program, bliver betragtet som en re-vaccination, såfremt det er lagt af Sikker Vaccination.
+        +modalFooter
+          +button(kind="ghost" data-action="close") Cancel
+          +button(kind="primary") Primary Action
+      +modalDialog#largeModal(size="large")
         +modalHeader
           +modalTitle Modal title
         +modalBody
