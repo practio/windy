@@ -4,14 +4,42 @@ include ./dialog.pug
 include ./icons/solid/x.pug
 
 mixin modalDialog(tagName = "dialog")
+  - const { size } = attributes;
+
   +dialog&attributes(attributes)
-    +modal
+    +modal(size=size)
       block
 
 mixin modal(tagName = "div")
-  - const classNames = 'rounded-lg bg-white shadow-xl';
+  -
+    const { size = "small" } = attributes;
 
-  +element(tagName)(class=classNames style="width: min(552px, calc(100vw - 4rem))")&attributes(attributes)
+    const modal = {
+      default: {
+        classNames: [
+          'rounded-lg',
+          'bg-white',
+          'shadow-xl',
+        ],
+      },
+      size: {
+        small: {
+          style: {
+            width: "min(552px, calc(100vw - 4rem))",
+          },
+        },
+        large: {
+          style: {
+            width: "min(1104px, calc(100vw - 4rem))",
+          },
+        },
+      },
+    };
+
+    const style = { ...modal.size[size].style };
+    const classNames = [ ...modal.default.classNames ];
+
+  +element(tagName)(class=classNames style=style)&attributes(attributes)
     block
 
 mixin modalBody(tagName = "section")
