@@ -8343,13 +8343,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.first\:rounded-l-lg:first-child {
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
-}.first\:pl-4:first-child {
-  padding-left: 1rem;
 }.last\:rounded-r-lg:last-child {
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
-}.last\:pr-4:last-child {
-  padding-right: 1rem;
 }.focus-within\:border-blue:focus-within {
   border-color: var(--blue);
 }.hover\:border-collapse:hover {

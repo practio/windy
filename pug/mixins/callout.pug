@@ -11,6 +11,7 @@ mixin callout(tagName = "div")
       'rounded-md',
       'flex',
       'gap-x-2',
+      'w-full'
     ];
 
     const sizes = {
@@ -26,34 +27,46 @@ mixin callout(tagName = "div")
 
     const classNames = [...base, ...sizes[size]].sort();
     const blockClassNames = { 'pt-2px': icon };
+    const stackSize = { small: 4, medium: 6 }[size];
 
   +element(tagName)(class=classNames)&attributes(attrs)
     if icon
       +calloutIcon
-    div(class=blockClassNames)
+    +stack(size=stackSize class=blockClassNames)
       block
 
 mixin calloutIcon
   +informationCircleOutlineIcon.grow-0.shrink-0.text-blue
+
+mixin calloutText(tagName = "div")
+  -
+    const { size = 'medium', ...attrs } = attributes;
+
+    const stackSizes = {
+      small: 1,
+      medium: 2
+    };
+
+    const stackSize = stackSizes[size];
+
+  +stack(size=stackSize)&attributes(attrs)
+    block
 
 mixin calloutHeading(tagName = "h1")
   -
     const { size = 'medium', ...attrs } = attributes;
 
     const base = [
-      'font-bold'
+      'font-bold',
+      'leading-5',
     ];
 
     const sizes = {
       small: [
-        'mb-1',
         'text-sm',
-        'leading-4',
       ],
       medium: [
-        'mb-2',
         'text-base',
-        'leading-5',
       ]
     };
 
@@ -75,15 +88,31 @@ mixin calloutBody(tagName = "div")
     const sizes = {
       small: [
         'text-sm',
-        'gap-y-2',
+        'leading-5',
       ],
       medium: [
         'text-base',
-        'gap-y-4',
+        'leading-6',
       ]
     };
 
     const classNames = [...base, ...sizes[size]].sort();
 
   +element(tagName)(class=classNames)&attributes(attrs)
+    block
+
+mixin calloutAction
+  - const classNames = ['flex', 'flex-row', 'items-center', 'gap-x-4']
+ 
+  +element(class=classNames)
+    block
+
+mixin calloutButton
+  +primaryButton&attributes(attributes)
+    block
+
+mixin calloutLink
+  - const classNames = ['text-blue'];
+
+  +link(class=classNames)&attributes(attributes)
     block

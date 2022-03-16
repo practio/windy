@@ -10,23 +10,27 @@ include ../_mixins.pug
   +example.mb-8
     +exampleDisplay
       +callout(size="small")
-        +calloutHeading(size="small") This is the heading
-        +calloutBody(size="small") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
+        +calloutText(size="small")
+          +calloutHeading(size="small") This is the heading
+          +calloutBody(size="small") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
     +exampleSourceCode.
       +callout(size="small")
-        +calloutHeading(size="small") This is the heading
-        +calloutBody(size="small") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
+        +calloutText(size="small")
+          +calloutHeading(size="small") This is the heading
+          +calloutBody(size="small") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
   
   +heading4.mb-8 Medium
   +example.mb-8
     +exampleDisplay
       +callout(size="medium")
-        +calloutHeading(size="medium") This is the heading
-        +calloutBody(size="medium") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
+        +calloutText(size="medium")
+          +calloutHeading(size="medium") This is the heading
+          +calloutBody(size="medium") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
     +exampleSourceCode.
       +callout(size="medium")
-        +calloutHeading(size="medium") This is the heading
-        +calloutBody(size="medium") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
+        +calloutText(size="medium")
+          +calloutHeading(size="medium") This is the heading
+          +calloutBody(size="medium") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
 
   +heading3.mb-8 With Icon
 
@@ -35,24 +39,28 @@ include ../_mixins.pug
   +example.mb-8
     +exampleDisplay
       +callout(size="small" icon)
-        +calloutHeading(size="small") This is the heading
-        +calloutBody(size="small") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
+        +calloutText(size="small")
+          +calloutHeading(size="small") This is the heading
+          +calloutBody(size="small") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
     +exampleSourceCode.
       +callout(size="small" icon)
-        +calloutHeading(size="small") This is the heading
-        +calloutBody(size="small") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
+        +calloutText(size="small")
+          +calloutHeading(size="small") This is the heading
+          +calloutBody(size="small") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
 
   +heading4.mb-8 Medium
 
   +example.mb-8
     +exampleDisplay
       +callout(size="medium" icon)
-        +calloutHeading(size="medium") This is the heading
-        +calloutBody(size="medium") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
+        +calloutText(size="medium")
+          +calloutHeading(size="medium") This is the heading
+          +calloutBody(size="medium") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
     +exampleSourceCode.
       +callout(size="medium" icon)
-        +calloutHeading(size="medium") This is the heading
-        +calloutBody(size="medium") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
+        +calloutText(size="medium")
+          +calloutHeading(size="medium") This is the heading
+          +calloutBody(size="medium") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
 
   +heading3.mb-8 Without Heading
 
@@ -61,17 +69,63 @@ include ../_mixins.pug
   +example.mb-8
     +exampleDisplay
       +callout(size="small" icon)
-        +calloutBody(size="small") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
+        +calloutText(size="small")
+          +calloutBody(size="small") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
     +exampleSourceCode.
       +callout(size="small" icon)
-        +calloutBody(size="small") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
+        +calloutText(size="small")
+          +calloutBody(size="small") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
 
   +heading4.mb-8 Medium
 
   +example.mb-8
     +exampleDisplay
       +callout(size="medium" icon)
-        +calloutBody(size="medium") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
+        +calloutText(size="medium")
+          +calloutBody(size="medium") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
     +exampleSourceCode.
       +callout(size="medium" icon)
-        +calloutBody(size="medium") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
+        +calloutText(size="medium")      
+          +calloutBody(size="medium") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
+
+  +heading3.mb-8 With Button and Link
+
+  +heading4.mb-8 Small
+
+  +example.mb-8
+    +exampleDisplay
+      +callout(size="small" icon)
+        +calloutText(size="small")
+          +calloutHeading(size="small") This is the heading
+          +calloutBody(size="small") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
+        +calloutAction(size="small")
+          +calloutButton Label
+          +calloutLink(href="#") Read more
+    +exampleSourceCode.
+      +callout(size="small" icon)
+        +calloutText(size="small")
+          +calloutHeading(size="small") This is the heading
+          +calloutBody(size="small") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
+        +calloutAction(size="small")
+          +calloutButton Label
+          +calloutLink(href="#") Read more
+
+  +heading4.mb-8 Medium
+
+  +example.mb-8
+    +exampleDisplay
+      +callout(size="medium" icon)
+        +calloutText(size="medium")
+          +calloutHeading(size="medium") This is the heading
+          +calloutBody(size="medium") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
+        +calloutAction(size="medium")
+          +calloutButton Label
+          +calloutLink(href="#") Read more
+    +exampleSourceCode.
+      +callout(size="medium" icon)
+        +calloutText(size="medium")
+          +calloutHeading(size="medium") This is the heading
+          +calloutBody(size="medium") This is the body copy of this callout. This is the body copy of this callout. This is the body copy of this callout.
+        +calloutAction(size="medium")
+          +calloutButton Label
+          +calloutLink(href="#") Read more
