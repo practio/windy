@@ -8340,6 +8340,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-height: calc(100% - 4rem);
 }select {
   -webkit-appearance: none;
+}.first\:mt-2:first-child {
+  margin-top: 0.5rem;
+}.first\:rounded-l-lg:first-child {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}.first\:pl-4:first-child {
+  padding-left: 1rem;
+}.first\:pt-2:first-child {
+  padding-top: 0.5rem;
+}.last\:rounded-r-lg:last-child {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}.last\:pr-2:last-child {
+  padding-right: 0.5rem;
+}.last\:pr-4:last-child {
+  padding-right: 1rem;
 }.focus-within\:border-blue:focus-within {
   border-color: var(--blue);
 }.hover\:border-collapse:hover {
@@ -10810,6 +10826,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: var(--ink-lightest);
 }.disabled\:hover\:bg-transparent:hover:disabled {
   background-color: transparent;
+}.group:hover .group-hover\:bg-sky-light {
+  background-color: var(--sky-light);
 }.peer:invalid ~ .peer-invalid\:visible {
   visibility: visible;
 }.peer:invalid ~ .peer-invalid\:invisible {

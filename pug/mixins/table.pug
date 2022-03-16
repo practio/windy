@@ -1,42 +1,24 @@
 
 mixin table
-  .overflow-x-auto.rounded-lg.shadow-md
-    .inline-block.min-w-full.align-middle
-      .overflow-hidden
-        table.min-w-full.divide-y.divide-sky&attributes(attributes)
-          block
+  table.table-auto.w-full.divide-y.divide-sky&attributes(attributes)
+    block
 
 mixin thead
-  thead.bg-sky-lighter&attributes(attributes)
+  thead&attributes(attributes)
     block
 
 mixin tbody
-  tbody.w-full.bg-white.divide-y.divide-sky&attributes(attributes)
+  tbody&attributes(attributes)
     block
 
 mixin tr
-  tr&attributes(attributes)
+  tr(class="group")&attributes(attributes)
     block
 
 mixin td
-  td.px-5.py-4.text-sm.leading-none.min-w-max.text-ink.whitespace-nowrap.tracking-tight.tabular-nums&attributes(attributes)
+  td.h-12.px-8.py-0.items-center.text-sm.leading-none.min-w-max.text-ink.whitespace-nowrap.tracking-tight.tabular-nums(class="first:rounded-l-lg first:pl-4 last:rounded-r-lg last:pr-4 group-hover:bg-sky-light transition duration-75 ease-linear")&attributes(attributes)
     block
 
 mixin th
-  th.px-5.py-3.text-xs.font-semibold.tracking-wider.text-left.uppercase.min-w-max.text-ink-lighter(scope="col")&attributes(attributes)
+  th.h-6.px-8.py-0.align-top.text-xs.font-semibold.tracking-wider.text-left.uppercase.min-w-max.text-ink-lighter(scope="col" class="first:pl-4 last:pr-4 mb-1")&attributes(attributes)
     block
-
-
-mixin pagination(skip = 0, limit = 100, count = 0)
-  .d-flex.align-items-center&attributes(attributes)
-    p.mb-0= `${skip + 1} to ${Math.min(skip + limit, count)} of ${count}`
-    ul.pagination.my-0.ms-auto
-      li.page-item(class=[skip === 0 && 'disabled'])
-        a.page-link(href=href(null, { limit, skip: skip - limit } )) Previous
-      li.page-item(class=[(limit + skip) >= count && 'disabled'])
-        a.page-link(href=href(null, { limit, skip: skip + limit } )) Next
-
-mixin search(search)
-  .form-control-container
-    +icon("search").form-control-icon
-    input.form-control(type="search" name="search" value=search placeholder="Search")&attributes(attributes)

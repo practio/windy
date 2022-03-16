@@ -9,11 +9,33 @@ include ../_mixins.pug
       +table
         +thead
           +tr
-            +th Column 1
-            +th Column 2
-            +th Column 3
+            +th Time
+            +th Patient
+            +th Registered by
+            +th Service
+            +th
         +tbody
           +tr
-            +td Lorem ipsum
-            +td Lorem ipsum
-            +td Lorem ipsum
+            +td 09/10-2020・13:37
+            +td Claus Christian Malzahn
+            +td Alfred Hackensberger
+            +td
+              +badge(color="blue") Travel
+            +td.text-right
+              +dotsHorizontalSolidIcon()
+          +tr
+            +td 09/10-2020・13:37
+            +td Claus Christian Malzahn
+            +td Alfred Hackensberger
+            +td
+              +badge(color="blue") Travel
+            +td.text-right
+              +dotsHorizontalSolidIcon()
+          +tr
+            +td 09/10-2020・13:37
+            +td Claus Christian Malzahn
+            +td Alfred Hackensberger
+            +td
+              +badge(color="pink") COVID-19 test
+            +td.text-right
+              +dotsHorizontalSolidIcon()
