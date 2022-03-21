@@ -2,7 +2,7 @@ include ./element.pug
 
 mixin stack(tagName = "div")
   -
-    const { size = '1' } = attributes;
+    const { size = '0' } = attributes;
 
     const stack = {
       default: {
@@ -12,6 +12,11 @@ mixin stack(tagName = "div")
         ]
       },
       sizes: {
+        0: {
+          classNames: [
+            'gap-y-0'
+          ]
+        },
         1: {
           classNames: [
             'gap-y-1'
