@@ -10820,8 +10820,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: var(--sky-dark);
 }.disabled\:text-ink-lightest:disabled {
   color: var(--ink-lightest);
-}.checked\:disabled\:border-sky-dark:disabled:checked {
-  border-color: var(--sky-dark);
 }.disabled\:checked\:border-sky-dark:checked:disabled {
   border-color: var(--sky-dark);
 }.disabled\:hover\:bg-transparent:hover:disabled {
