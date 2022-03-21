@@ -11,10 +11,11 @@ mixin form
     block
 
 mixin fieldset
-  +stack("fieldset")(size=6)&attributes(attributes)
+  +stack("fieldset")(size=3)
     if attributes.legend
-      legend(class="sr-only")= attributes.legend
-    block
+      div= attributes.legend
+    +stack(size=6)&attributes(attributes)
+      block
 
 mixin fieldsetHeading
   h4(class="text-base font-medium text-ink")
@@ -25,7 +26,7 @@ mixin fieldsetSubheading
     block
 
 mixin label
-  label.text-sm.font-normal.block(class="label")&attributes(attributes)
+  label.text-sm.text-ink.font-normal.block&attributes(attributes)
     block
 
 mixin field
@@ -180,3 +181,74 @@ mixin searchInputField
 mixin textInputField
   +inputField(type="text")&attributes(attributes)
 
+mixin checkboxInput
+  -
+    const classNames = [
+      'appearance-none',
+      'border-sky-dark',
+      'border',
+      'checked:bg-blue',
+      'checked:border-blue',
+      'disabled:bg-sky-dark',
+      'disabled:checked:border-sky-dark',
+      'focus:border-blue',
+      'h-4',
+      'hover:border-ink-lightest',
+      'outline-0',
+      'rounded-md',
+      'w-4',
+    ];
+
+  input(type="checkbox" class=classNames style=style)&attributes(attributes)
+
+mixin checkboxInputField
+  -
+    const { label, errorText, helpText, ...checkboxAttributes } = attributes;
+    const fieldAttributes = { label, errorText, helpText };
+
+  +stack
+    label.flex.flex-row.gap-x-2.items-center.text-ink&attributes(fieldAttributes)
+      +checkboxInput&attributes(checkboxAttributes)
+      = label
+    if helpText
+      .text-ink-lighter.ml-6= helpText
+
+mixin checkboxInputFieldset
+  +fieldset(size=2)&attributes(attributes)
+    block
+
+mixin radioInput
+  -
+    const classNames = [
+      'appearance-none',
+      'border-sky-dark',
+      'border',
+      'checked:bg-blue',
+      'checked:border-blue',
+      'disabled:bg-sky-dark',
+      'disabled:checked:border-sky-dark',
+      'focus:border-blue',
+      'h-4',
+      'hover:border-ink-lightest',
+      'outline-0',
+      'rounded-full',
+      'w-4',
+    ];
+
+  input(type="radio" class=classNames style=style)&attributes(attributes)
+
+mixin radioInputField
+  -
+    const { label, errorText, helpText, ...checkboxAttributes } = attributes;
+    const fieldAttributes = { label, errorText, helpText };
+
+  +stack
+    label.flex.flex-row.gap-x-2.items-center.text-ink&attributes(fieldAttributes)
+      +radioInput&attributes(checkboxAttributes)
+      = label
+    if helpText
+      .text-ink-lighter.ml-6= helpText
+
+mixin radioInputFieldset
+  +fieldset(size=2)&attributes(attributes)
+    block

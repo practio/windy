@@ -98,6 +98,74 @@ include ../_mixins.pug
       +searchInputField(name="search2" label="Search" errorText="Lorem ipsum")
       +textInputField(name="text2" label="Text" errorText="Lorem ipsum")
 
+  +heading4.mb-8.flex.items-center.gap-x-2
+    | Checkbox Input Fieldset
+    +badge(color="pink") Experimental
+  +example.mb-8
+    +exampleDisplay
+      +checkboxInputFieldset(legend="Legend")
+        +checkboxInputField(label="Label")
+        +checkboxInputField(label="Checked" checked)
+        +checkboxInputField(label="Checked and Disabled" checked disabled)
+        +checkboxInputField(label="Disabled" disabled)
+    +exampleSourceCode.
+      +checkboxInputFieldset(legend="Legend")
+        +checkboxInputField(label="Label")
+        +checkboxInputField(label="Checked" checked)
+        +checkboxInputField(label="Checked and Disabled" checked disabled)
+        +checkboxInputField(label="Disabled" disabled)
+    
+  +heading4.mb-8.flex.items-center.gap-x-2
+    | Checkbox Input with Help Text
+    +badge(color="pink") Experimental
+  +example.mb-8
+    +exampleDisplay
+      +checkboxInputFieldset(legend="Legend")
+        +checkboxInputField(label="Label" helpText="Help text.")
+        +checkboxInputField(label="Checked" helpText="Help text." checked)
+        +checkboxInputField(label="Checked and Disabled" helpText="Help text." checked disabled)
+        +checkboxInputField(label="Disabled" helpText="Help text." disabled)
+    +exampleSourceCode.
+      +checkboxInputFieldset(legend="Legend")
+        +checkboxInputField(label="Label" helpText="Help text.")
+        +checkboxInputField(label="Checked" helpText="Help text." checked)
+        +checkboxInputField(label="Checked and Disabled" helpText="Help text." checked disabled)
+        +checkboxInputField(label="Disabled" helpText="Help text." disabled)
+
+  +heading4.mb-8.flex.items-center.gap-x-2
+    | Radio Input Fieldset
+    +badge(color="pink") Experimental
+  +example.mb-8
+    +exampleDisplay
+      +radioInputFieldset(legend="Legend")
+        +radioInputField(label="Label" name="radioInputField1")
+        +radioInputField(label="Checked" name="radioInputField1" checked)
+        +radioInputField(label="Checked and Disabled" name="radioInputField1" checked disabled)
+        +radioInputField(label="Disabled" name="radioInputField1" disabled)
+    +exampleSourceCode.
+      +radioInputFieldset(legend="Legend")
+        +radioInputField(label="Label" name="radioInputField1")
+        +radioInputField(label="Checked" name="radioInputField1" checked)
+        +radioInputField(label="Checked and Disabled" name="radioInputField1" checked disabled)
+        +radioInputField(label="Disabled" name="radioInputField1" disabled)
+
+  +heading4.mb-8.flex.items-center.gap-x-2
+    | Radio Input with Help Text
+    +badge(color="pink") Experimental
+  +example.mb-8
+    +exampleDisplay
+      +radioInputFieldset(legend="Legend")
+        +radioInputField(label="Label" helpText="Help text.")
+        +radioInputField(label="Checked" helpText="Help text." checked)
+        +radioInputField(label="Checked and Disabled" helpText="Help text." checked disabled)
+        +radioInputField(label="Disabled" helpText="Help text." disabled)
+    +exampleSourceCode.
+      +radioInputFieldset(legend="Legend")
+        +radioInputField(label="Label" helpText="Help text.")
+        +radioInputField(label="Checked" helpText="Help text." checked)
+        +radioInputField(label="Checked and Disabled" helpText="Help text." checked disabled)
+        +radioInputField(label="Disabled" helpText="Help text." disabled)
+
   +heading4.mb-8 Select Field
   +example.mb-8
     +exampleDisplay

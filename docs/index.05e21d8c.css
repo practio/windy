@@ -8346,6 +8346,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.last\:rounded-r-lg:last-child {
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
+}.checked\:border-blue:checked {
+  border-color: var(--blue);
+}.checked\:bg-blue:checked {
+  background-color: var(--blue);
 }.focus-within\:border-blue:focus-within {
   border-color: var(--blue);
 }.hover\:border-collapse:hover {
@@ -10812,8 +10816,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: transparent;
 }.disabled\:bg-red-light:disabled {
   background-color: var(--red-light);
+}.disabled\:bg-sky-dark:disabled {
+  background-color: var(--sky-dark);
 }.disabled\:text-ink-lightest:disabled {
   color: var(--ink-lightest);
+}.checked\:disabled\:border-sky-dark:disabled:checked {
+  border-color: var(--sky-dark);
+}.disabled\:checked\:border-sky-dark:checked:disabled {
+  border-color: var(--sky-dark);
 }.disabled\:hover\:bg-transparent:hover:disabled {
   background-color: transparent;
 }.group:hover .group-hover\:bg-sky-light {
